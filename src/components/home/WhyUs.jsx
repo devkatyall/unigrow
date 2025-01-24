@@ -23,7 +23,7 @@ export default function WhyUs() {
 
   const word = "why we’re your best bet for going online?".split(" ");
 
-  function generateScroll(index, number, scroll) {
+  const useGenerateScroll = (index, number, scroll) => {
     if (number <= 0 || index < 0) {
       throw new Error("Index and number must be positive");
     }
@@ -37,9 +37,9 @@ export default function WhyUs() {
       [parseFloat(start.toFixed(6)), parseFloat(end.toFixed(6))],
       ["#fff", "#4FB477"]
     );
-  }
+  };
 
-  function generateCardScroll(index, number, scroll) {
+  const useGenerateCardScroll = (index, number, scroll) => {
     if (number <= 0 || index < 0) {
       throw new Error("Index and number must be positive");
     }
@@ -53,9 +53,9 @@ export default function WhyUs() {
       [parseFloat(start.toFixed(6)), parseFloat(end.toFixed(6))],
       [70, 0]
     );
-  }
+  };
 
-  function generateCardOpacity(index, number, scroll) {
+  const useGenerateCardOpacity = (index, number, scroll) => {
     if (number <= 0 || index < 0) {
       throw new Error("Index and number must be positive");
     }
@@ -69,7 +69,7 @@ export default function WhyUs() {
       [parseFloat(start.toFixed(6)), parseFloat(end.toFixed(6))],
       [0, 1]
     );
-  }
+  };
 
   return (
     <section ref={ref} className="h-[200vh]">
@@ -84,7 +84,7 @@ export default function WhyUs() {
               {word.map((e, i) => (
                 <motion.span
                   key={i}
-                  style={{ color: generateScroll(i, word.length, 0.5) }}
+                  style={{ color: useGenerateScroll(i, word.length, 0.5) }}
                 >
                   {e}
                 </motion.span>
@@ -97,8 +97,8 @@ export default function WhyUs() {
             {corePointers.map((e, i) => (
               <motion.div
                 style={{
-                  y: generateCardScroll(i, corePointers.length, 0.5),
-                  opacity: generateCardOpacity(i, corePointers.length, 0.5),
+                  y: useGenerateCardScroll(i, corePointers.length, 0.5),
+                  opacity: useGenerateCardOpacity(i, corePointers.length, 0.5),
                 }}
                 key={i}
                 className=" py-6 px-8 flex flex-col gap-2 bg-emerald-700 rounded-2xl"
