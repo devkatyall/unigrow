@@ -3,11 +3,55 @@
 import React, { useRef } from "react";
 import {
   motion,
-  useMotionValueEvent,
   useScroll,
   useTransform,
+  useMotionValueEvent,
 } from "framer-motion";
 import { corePointers } from "@/data";
+
+// Word Component
+function Word({ text, index, totalWords, scrollYProgress }) {
+  const interval = 0.5 / totalWords;
+  const start = index * interval;
+  const end = start + interval;
+
+  const color = useTransform(
+    scrollYProgress,
+    [start, end],
+    ["#fff", "#4FB477"]
+  );
+
+  return (
+    <motion.span
+      style={{ color }}
+      className="text-4xl lg:text-7xl font-normal tracking-tight"
+    >
+      {text}
+    </motion.span>
+  );
+}
+
+// Card Component
+function Card({ title, description, index, totalCards, scrollYProgress }) {
+  const interval = 0.5 / totalCards;
+  const start = index * interval + 0.5;
+  const end = start + interval;
+
+  const y = useTransform(scrollYProgress, [start, end], [70, 0]);
+  const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
+
+  return (
+    <motion.div
+      style={{ y, opacity }}
+      className="py-6 px-8 flex flex-col gap-2 bg-emerald-700 rounded-2xl"
+    >
+      <h3 className="text-3xl leading-[1em] tracking-tight font-medium text-[#DCFFFD]">
+        {title}
+      </h3>
+      <p className="font-light">{description}</p>
+    </motion.div>
+  );
+}
 
 export default function WhyUs() {
   const ref = useRef(null);
@@ -21,39 +65,7 @@ export default function WhyUs() {
 
   useMotionValueEvent(scrollY, "change", (val) => console.log(val));
 
-  const word = "why we’re your best bet for going online?".split(" ");
-
-  const scrollColors = word.map((_, index) => {
-    const interval = 0.5 / word.length;
-    const start = index * interval;
-    const end = start + interval;
-
-    return useTransform(
-      scrollYProgress,
-      [parseFloat(start.toFixed(6)), parseFloat(end.toFixed(6))],
-      ["#fff", "#4FB477"]
-    );
-  });
-
-  // Precompute scroll and opacity transforms for cards
-  const cardTransforms = corePointers.map((_, index) => {
-    const interval = 0.5 / corePointers.length;
-    const start = index * interval + 0.5;
-    const end = start + interval;
-
-    return {
-      y: useTransform(
-        scrollYProgress,
-        [parseFloat(start.toFixed(6)), parseFloat(end.toFixed(6))],
-        [70, 0]
-      ),
-      opacity: useTransform(
-        scrollYProgress,
-        [parseFloat(start.toFixed(6)), parseFloat(end.toFixed(6))],
-        [0, 1]
-      ),
-    };
-  });
+  const words = "why we’re your best bet for going online?".split(" ");
 
   return (
     <section ref={ref} className="h-[200vh]">
@@ -62,33 +74,32 @@ export default function WhyUs() {
         style={{ opacity: scale, y }}
       >
         <div>
-          {/* heading */}
+          {/* Heading */}
           <div className="lg:px-[10%] lg:pb-[2%]">
             <h1 className="text-4xl lg:text-7xl font-normal text-center tracking-tight flex flex-wrap gap-3 justify-center">
-              {word.map((e, i) => (
-                <motion.span key={i} style={{ color: scrollColors[i] }}>
-                  {e}
-                </motion.span>
+              {words.map((word, index) => (
+                <Word
+                  key={index}
+                  text={word}
+                  index={index}
+                  totalWords={words.length}
+                  scrollYProgress={scrollYProgress}
+                />
               ))}
             </h1>
           </div>
 
-          {/* pointers */}
-          <div className=" flex gap-12 py-8 lg:px-[10%]">
-            {corePointers.map((e, i) => (
-              <motion.div
-                style={{
-                  y: cardTransforms[i].y,
-                  opacity: cardTransforms[i].opacity,
-                }}
-                key={i}
-                className=" py-6 px-8 flex flex-col gap-2 bg-emerald-700 rounded-2xl"
-              >
-                <h3 className="text-3xl leading-[1em] tracking-tight font-medium text-[#DCFFFD]">
-                  {e.title}
-                </h3>
-                <p className=" font-light">{e.description}</p>
-              </motion.div>
+          {/* Pointers */}
+          <div className="flex gap-12 py-8 lg:px-[10%]">
+            {corePointers.map((pointer, index) => (
+              <Card
+                key={index}
+                title={pointer.title}
+                description={pointer.description}
+                index={index}
+                totalCards={corePointers.length}
+                scrollYProgress={scrollYProgress}
+              />
             ))}
           </div>
         </div>
