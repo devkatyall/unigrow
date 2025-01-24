@@ -19,6 +19,18 @@ h6 {
   font-family: "DM Sans", serif;
 }
 
+.pattern{
+  background: linear-gradient(45deg, transparent 49%, #477bff 49% 51%, transparent 51%) , linear-gradient(-45deg, transparent 49%, #477bff 49% 51%, transparent 51%);
+  background-size: 2em 2em;
+  background-color: #ffffff00;
+  opacity: 1
+}
+
+.boxShadow{
+box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -182,7 +194,7 @@ a {
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: #f1f0ee;
     --foreground: 20 14.3% 4.1%;
     --card: 0 0% 100%;
     --card-foreground: 20 14.3% 4.1%;

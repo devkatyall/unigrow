@@ -23,26 +23,12 @@ export default function Header() {
     <nav className="z-20 w-full h-[100px]">
       <div className="py-5 lg:py-[32px] px-5 lg:px-20 flex justify-between items-center z-50">
         <div className="">
-          <svg
-            id="logo-35"
-            width="40"
-            height="29"
-            viewBox="0 0 50 39"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            {" "}
-            <path
-              d="M16.4992 2H37.5808L22.0816 24.9729H1L16.4992 2Z"
-              className="ccompli1"
-              fill="#007AFF"
-            ></path>{" "}
-            <path
-              d="M17.4224 27.102L11.4192 36H33.5008L49 13.0271H32.7024L23.2064 27.102H17.4224Z"
-              className="ccustom"
-              fill="#312ECB"
-            ></path>{" "}
-          </svg>
+          <Image
+            src={logo}
+            alt="logo of Unigrow.ca which is a web development agency"
+            width={60}
+            height={60}
+          />
         </div>
 
         <div className="flex items-center gap-6">
