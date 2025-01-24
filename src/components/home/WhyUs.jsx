@@ -23,12 +23,8 @@ export default function WhyUs() {
 
   const word = "why we’re your best bet for going online?".split(" ");
 
-  const useGenerateScroll = (index, number, scroll) => {
-    if (number <= 0 || index < 0) {
-      throw new Error("Index and number must be positive");
-    }
-
-    const interval = scroll / number;
+  const scrollColors = word.map((_, index) => {
+    const interval = 0.5 / word.length;
     const start = index * interval;
     const end = start + interval;
 
@@ -37,39 +33,27 @@ export default function WhyUs() {
       [parseFloat(start.toFixed(6)), parseFloat(end.toFixed(6))],
       ["#fff", "#4FB477"]
     );
-  };
+  });
 
-  const useGenerateCardScroll = (index, number, scroll) => {
-    if (number <= 0 || index < 0) {
-      throw new Error("Index and number must be positive");
-    }
-
-    const interval = scroll / number;
+  // Precompute scroll and opacity transforms for cards
+  const cardTransforms = corePointers.map((_, index) => {
+    const interval = 0.5 / corePointers.length;
     const start = index * interval + 0.5;
     const end = start + interval;
 
-    return useTransform(
-      scrollYProgress,
-      [parseFloat(start.toFixed(6)), parseFloat(end.toFixed(6))],
-      [70, 0]
-    );
-  };
-
-  const useGenerateCardOpacity = (index, number, scroll) => {
-    if (number <= 0 || index < 0) {
-      throw new Error("Index and number must be positive");
-    }
-
-    const interval = scroll / number;
-    const start = index * interval + 0.5;
-    const end = start + interval;
-
-    return useTransform(
-      scrollYProgress,
-      [parseFloat(start.toFixed(6)), parseFloat(end.toFixed(6))],
-      [0, 1]
-    );
-  };
+    return {
+      y: useTransform(
+        scrollYProgress,
+        [parseFloat(start.toFixed(6)), parseFloat(end.toFixed(6))],
+        [70, 0]
+      ),
+      opacity: useTransform(
+        scrollYProgress,
+        [parseFloat(start.toFixed(6)), parseFloat(end.toFixed(6))],
+        [0, 1]
+      ),
+    };
+  });
 
   return (
     <section ref={ref} className="h-[200vh]">
@@ -82,10 +66,7 @@ export default function WhyUs() {
           <div className="lg:px-[10%] lg:pb-[2%]">
             <h1 className="text-4xl lg:text-7xl font-normal text-center tracking-tight flex flex-wrap gap-3 justify-center">
               {word.map((e, i) => (
-                <motion.span
-                  key={i}
-                  style={{ color: useGenerateScroll(i, word.length, 0.5) }}
-                >
+                <motion.span key={i} style={{ color: scrollColors[i] }}>
                   {e}
                 </motion.span>
               ))}
@@ -97,8 +78,8 @@ export default function WhyUs() {
             {corePointers.map((e, i) => (
               <motion.div
                 style={{
-                  y: useGenerateCardScroll(i, corePointers.length, 0.5),
-                  opacity: useGenerateCardOpacity(i, corePointers.length, 0.5),
+                  y: cardTransforms[i].y,
+                  opacity: cardTransforms[i].opacity,
                 }}
                 key={i}
                 className=" py-6 px-8 flex flex-col gap-2 bg-emerald-700 rounded-2xl"
