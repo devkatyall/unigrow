@@ -1,49 +1,55 @@
-import Image from "next/image";
-import { Button } from "./ui/button";
+import { cn } from "@/lib/utils";
+import { Marquee } from "./ui/Macquee";
+import { reviews } from "@/data";
 
-export default function HeroSection() {
+const firstRow = reviews.slice(0, reviews.length / 2);
+const secondRow = reviews.slice(reviews.length / 2);
+
+const ReviewCard = ({ img, name, username, body }) => {
   return (
-    <div className=" flex h-full items-center justify-center lg:mt-[12%]">
-      {/* <div className='blobm block md:hidden absolute mt-10 -z-30'></div> */}
-
-      {/* hero-text */}
-      <div className=" lg:pl-16 flex flex-col  gap-5 lg:gap-8 h-full">
-        <span className="text-5xl font-semibold lg:text-[5.6em] 2xl:text-8xl text-center px-6 lg:p-0 lg:text-left capitalize lg:normal-case">
-          Building{" "}
-          <span className="dark:text-purple-400 text-purple-700 ">
-            The Digital Front
-          </span>{" "}
-          for Your Business
-        </span>
-        <p className=" text-md xl:text-[1.2em] 2xl:text-[1.4em] lg:text-left text-center px-6 lg:p-0 ">
-          Your business deserves more than just a website—it deserves a digital
-          solution that works. We combine smart strategy, intuitive design, and
-          powerful development to make it happen.
-        </p>
-        <div className="flex gap-4 items-center justify-center lg:justify-start">
-          <Button className="peer flex flex-nowrap items-center gap-3 px-6 py-6 dark:bg-white dark:text-black dark:stroke-black dark:hover:bg-purple-400 ring-2 rounded-full hover:drop-shadow-lg hover:ring-2 stroke-white hover:stroke-black hover:ring-black hover:bg-white hover:text-black hover:scale-105 transition-all duration-150 ease-in-out ring-white text-white font-semibold text-md bg-black">
-            Lets Talk Business
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={3}
-              className="size-4"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
-              />
-            </svg>
-          </Button>
-          <Button
-            variant="outline"
-            className="text-md px-6 py-6 rounded-full ring-2"
-          >
-            Our Service
-          </Button>
+    <figure
+      className={cn(
+        "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
+        // light styles
+        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+        // dark styles
+        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
+      )}
+    >
+      <div className="flex flex-row items-center gap-2">
+        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <div className="flex flex-col">
+          <figcaption className="text-sm font-medium">{name}</figcaption>
+          <p className="text-xs font-medium">{username}</p>
         </div>
+      </div>
+      <blockquote className="mt-2 text-sm">{body}</blockquote>
+    </figure>
+  );
+};
+
+export function MarqueeDemo() {
+  return (
+    <div className="md:my-[5%] md:flex items-center justify-center">
+      <div className="flex flex-col  justify-center md:pl-[4%] md:gap-4 text-center md:text-left">
+        <h3 className="md:text-6xl text-3xl">What Our Clients Say</h3>
+        <span className=" text-gray-400">
+          Here’s what our happy clients have to say about working with us.
+        </span>
+      </div>
+      <div className="relative flex h-[350px] w-full flex-col items-center justify-center overflow-hidden  md:shadow-xl">
+        <Marquee pauseOnHover className="[--duration:70s]">
+          {firstRow.map((review) => (
+            <ReviewCard key={review.username} {...review} />
+          ))}
+        </Marquee>
+        <Marquee reverse pauseOnHover className="[--duration:70s]">
+          {secondRow.map((review) => (
+            <ReviewCard key={review.username} {...review} />
+          ))}
+        </Marquee>
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
       </div>
     </div>
   );

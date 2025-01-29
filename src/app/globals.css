@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 :root {
   font-family: "DM Sans", serif;
@@ -19,86 +18,12 @@ h6 {
   font-family: "DM Sans", serif;
 }
 
-.pattern{
-  background: linear-gradient(45deg, transparent 49%, #477bff 49% 51%, transparent 51%) , linear-gradient(-45deg, transparent 49%, #477bff 49% 51%, transparent 51%);
-  background-size: 2em 2em;
-  background-color: #ffffff00;
-  opacity: 1
-}
-
-.boxShadow{
-box-shadow:  20px 20px 60px #bebebe,
-             -20px -20px 60px #ffffff;
+.boxShadow {
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
 }
 
 ::-webkit-scrollbar {
   display: none;
-}
-
-.hero-bg {
-  background-color: #b499ff;
-  background-image: radial-gradient(
-      at 10% 10%,
-      hsla(78, 95%, 0%, 1) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 1% 55%, hsla(78, 94%, 0%, 1) 0px, transparent 50%),
-    radial-gradient(at 77% 59%, hsla(256, 62%, 0%, 1) 0px, transparent 50%),
-    radial-gradient(at 15% 60%, hsla(326, 87%, 0%, 1) 0px, transparent 50%),
-    radial-gradient(at 5% 52%, hsla(35, 87%, 0%, 1) 0px, transparent 50%),
-    radial-gradient(at 82% 9%, hsla(63, 76%, 0%, 1) 0px, transparent 50%),
-    radial-gradient(at 8% 65%, hsla(284, 85%, 0%, 1) 0px, transparent 50%);
-}
-
-.pattern {
-  background-color: #000000;
-  opacity: 0.1;
-  background-image: linear-gradient(#005007 1.5px, transparent 1.5px),
-    linear-gradient(to right, #000000 1.5px, #00af3d 1.5px);
-  background-size: 30px 30px;
-}
-
-.pattern1 {
-  background: linear-gradient(90deg, transparent 50%, #0057ff 50%),
-    linear-gradient(to bottom, transparent 50%, #0057ff80 50%);
-  background-size: 3em 3em;
-  background-color: #323232;
-  opacity: 1;
-}
-
-.pattern2 {
-  background: linear-gradient(
-      45deg,
-      #00983d 10%,
-      transparent 10%,
-      transparent 90%,
-      #00983d 90%
-    ),
-    linear-gradient(
-      135deg,
-      transparent 40%,
-      #00983d80 40%,
-      #00983d80 60%,
-      transparent 0
-    ),
-    linear-gradient(
-      45deg,
-      transparent 40%,
-      #00983d 40%,
-      #00983d 60%,
-      transparent 0
-    );
-  background-size: 3em 3em;
-  background-color: #323232;
-  opacity: 1;
-}
-
-.pattern3 {
-  background: linear-gradient(135deg, #ffa10080 50%, transparent 0),
-    linear-gradient(-135deg, #ffa10080 50%, transparent 0);
-  background-size: 3em 3em;
-  background-color: #323232;
-  opacity: 1;
 }
 
 a {
@@ -126,62 +51,6 @@ a {
   background-size: 100% 0.5%, contain;
   /* background-blend-mode: hard-light; */
   /* background-position: 0 0, 1em 1em, 0 0; */
-}
-
-.blob1 {
-  width: 90rem;
-  height: 40rem;
-  border-radius: 16rem 10rem 10rem 20rem;
-  background: radial-gradient(
-      49.19% 88.28% at 72.99% 113.54%,
-      rgba(93, 227, 236, 0.73) 0%,
-      rgba(93, 227, 236, 0.1679) 59.78%,
-      rgba(93, 227, 236, 0) 100%
-    ),
-    linear-gradient(54.57deg, #862ab1 8.59%, rgba(185, 91, 230, 0) 80.49%),
-    radial-gradient(
-      118.75% 118.75% at 96.65% 74.22%,
-      #308ee6 0%,
-      rgba(48, 158, 230, 0) 73.91%
-    ),
-    radial-gradient(
-      114.51% 155.86% at 9.82% 10.94%,
-      rgba(255, 85, 85, 0.7) 0%,
-      rgba(255, 85, 85, 0.147) 61.98%,
-      rgba(255, 85, 85, 0) 100%,
-      #f2f5fa
-    );
-  background-blend-mode: normal, normal, normal, normal, normal, normal;
-  filter: blur(98px);
-}
-
-.blobm {
-  width: 20rem;
-  height: 20rem;
-  border-radius: 16rem;
-  background: radial-gradient(
-      77.73% 77.73% at 98.52% 96.25%,
-      #f98bda 0%,
-      rgba(128, 76, 239, 0.29) 50.52%,
-      rgba(91, 216, 216, 0) 100%
-    ),
-    radial-gradient(
-      141.73% 105.23% at 50% -7.16%,
-      #e1f8ff 0%,
-      rgba(160, 198, 255, 0) 50.73%,
-      rgba(162, 147, 255, 0) 100%
-    ),
-    radial-gradient(
-      112.27% 48.54% at 1.59% 50%,
-      rgba(255, 130, 227, 0.5) 0%,
-      rgba(255, 123, 234, 0.095) 53.91%,
-      rgba(254, 216, 255, 0) 100%
-    ),
-    linear-gradient(153.07deg, #8177f3 6.37%, rgba(255, 230, 166, 0) 83.82%);
-  background-blend-mode: saturation, darken, luminosity, multiply, overlay,
-    screen;
-  filter: blur(108px);
-  position: absolute;
 }
 
 @media (max-width: 600px) {
@@ -255,4 +124,27 @@ a {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.blob {
+  border-radius: 15rem;
+  background: linear-gradient(
+      197.37deg,
+      #003d5b -0.38%,
+      rgba(138, 234, 240, 0) 101.89%
+    ),
+    linear-gradient(
+      115.93deg,
+      #3e88f6 4.86%,
+      rgba(62, 180, 246, 0.33) 38.05%,
+      rgba(62, 235, 246, 0) 74.14%
+    ),
+    radial-gradient(
+      56.47% 76.87% at 6.92% 7.55%,
+      rgba(62, 136, 246, 0.7) 0%,
+      rgba(62, 158, 246, 0.182) 52.16%,
+      rgba(62, 246, 246, 0) 100%
+    ),
+    linear-gradient(306.53deg, #2ee4e3 19.83%, rgba(46, 228, 227, 0) 97.33%);
+  background-blend-mode: normal, normal, normal, normal, normal, normal;
 }

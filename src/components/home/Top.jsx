@@ -31,33 +31,46 @@ export default function Top() {
   }, []);
 
   return (
-    <div className="h-[115vh]">
+    <div className="">
       <motion.div
-        className="xl:px-20 px-6 sticky top-0 h-[calc(100vh)] flex items-center justify-center text-center w-full"
+        className="xl:px-20 px-6 h-[calc(100vh-100px)] flex items-center justify-center text-center w-full"
         style={{
           opacity: scale,
-          backgroundImage,
+          // backgroundImage,
           zIndex: 0,
         }}
       >
+        <motion.div
+          className="blob absolute -z-10 dark:opacity-100 opacity-50 blur-[130px]"
+          initial={{ width: 400, height: 400 }}
+          animate={{ scale: [1, 1.2, 1] }}
+          transition={{
+            duration: 5,
+            ease: "easeInOut",
+            repeat: Infinity,
+          }}
+        />
         <div className=" h-fit flex flex-col items-center ">
           <motion.span
-            className=" rounded-full py-1 px-4 border-2 w-fit my-4 border-gray-200 font-medium flex gap-1"
+            className=" rounded-full py-1 px-4 border-[1px] w-fit my-4 dark:border-gray-200 border-black font-medium flex gap-1 items-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 5 }}
           >
-            <span className="  bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-transparent bg-clip-text">
+            <motion.span className="  bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-transparent bg-clip-text">
               1K+ Businesses
-            </span>
+            </motion.span>
             trust Unigrow
           </motion.span>
-          <h1 className="lg:text-7xl xl:text-8xl text-5xl tracking-tight lg:tracking-tight font-normal">
+          <h1 className="lg:text-6xl xl:text-7xl text-[35px] leading-[38px] tracking-tight lg:tracking-tight font-normal">
             Your Business Online{" "}
-            <span className=" md:hidden">- Smart, Simple & Stunning</span>
+            <span className=" md:hidden font-bold bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-transparent bg-clip-text ">
+              {" "}
+              Smart, Simple & Stunning
+            </span>
           </h1>
           <div className=" hidden md:block w-full">
-            <motion.span className="py-2 overflow-visible flex flex-wrap gap-2 z-50 lg:gap-4 justify-center text-6xl drop-shadow-xl font-semibold bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-transparent bg-clip-text lg:text-7xl xl:text-8xl lg:whitespace-nowrap tracking-tight">
+            <motion.span className="pb-2 overflow-visible flex flex-wrap gap-2 z-50 lg:gap-4 justify-center text-6xl drop-shadow-xl font-semibold bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-transparent bg-clip-text lg:text-6xl xl:text-7xl lg:whitespace-nowrap tracking-tight">
               <motion.span
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

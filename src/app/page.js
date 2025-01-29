@@ -1,3 +1,4 @@
+import { MarqueeDemo } from "@/components/HeroSection";
 import ServicesSec from "@/components/ServicesSec";
 import Projects from "@/components/home/Projects";
 import Top from "@/components/home/Top";
@@ -7,8 +8,7 @@ export default function Home() {
   return (
     <>
       <Top />
-      <WhyUs />
-      <Projects />
+      <MarqueeDemo />
     </>
   );
 }
