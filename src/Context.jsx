@@ -12,7 +12,7 @@ export const AppProvider = ({ children }) => {
   useEffect(() => {
     const savedTheme = localStorage.getItem("dark") === "true"; // Convert to boolean
     setUser((prev) => ({ ...prev, dark: savedTheme }));
-    document.body.className = savedTheme ? "dark" : "light";
+    document.body.className = savedTheme ? "dark" : "dark";
   }, []);
 
   // Save theme to localStorage and update body class on change
