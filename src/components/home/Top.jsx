@@ -41,8 +41,18 @@ export default function Top() {
         }}
       >
         <motion.div
-          className="blob absolute -z-10 dark:opacity-100 opacity-50 blur-[130px]"
+          className="blob hidden md:block absolute -z-10 dark:opacity-100 opacity-50 blur-[130px]"
           initial={{ width: 400, height: 400 }}
+          animate={{ scale: [1, 1.2, 1] }}
+          transition={{
+            duration: 5,
+            ease: "easeInOut",
+            repeat: Infinity,
+          }}
+        />
+        <motion.div
+          className="blob absolute block md:hidden -z-10 dark:opacity-100 opacity-50 blur-[130px]"
+          initial={{ width: 120, height: 120 }}
           animate={{ scale: [1, 1.2, 1] }}
           transition={{
             duration: 5,
