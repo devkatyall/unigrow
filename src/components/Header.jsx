@@ -10,6 +10,7 @@ import { Switch } from "./ui/switch";
 import ThemeSwitch from "./ui/ThemeSwitch";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { usePathname } from "next/navigation";
+import ShinyButton from "./ui/ShinyButton";
 
 export default function Header() {
   const { user, setUser } = useAppContext();
@@ -111,9 +112,7 @@ export default function Header() {
               checked={user.dark ? true : false}
               onChange={updateTheme}
             /> */}
-            <Button className="font-medium drop-shadow-md hover:drop-shadow-lg py-2 px-6 rounded-full hover:scale-105 transition-all easy ease-in-out">
-              Get Started
-            </Button>
+            <ShinyButton>Get Started</ShinyButton>
           </div>
         </div>
       </div>

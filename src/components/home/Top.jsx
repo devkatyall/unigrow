@@ -75,7 +75,6 @@ export default function Top() {
           <h1 className="lg:text-6xl xl:text-7xl text-[35px] leading-[38px] tracking-tight lg:tracking-tight font-normal">
             Your Business Online{" "}
             <span className=" md:hidden font-bold bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-transparent bg-clip-text ">
-              {" "}
               Smart, Simple & Stunning
             </span>
           </h1>

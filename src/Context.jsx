@@ -9,17 +9,17 @@ export const AppProvider = ({ children }) => {
     dark: true,
   });
 
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("dark") === "true"; // Convert to boolean
-    setUser((prev) => ({ ...prev, dark: savedTheme }));
-    document.body.className = savedTheme ? "dark" : "dark";
-  }, []);
+  // useEffect(() => {
+  //   const savedTheme = localStorage.getItem("dark") === "true"; // Convert to boolean
+  //   setUser((prev) => ({ ...prev, dark: savedTheme }));
+  //   document.body.className = savedTheme ? "dark" : "dark";
+  // }, []);
 
-  // Save theme to localStorage and update body class on change
-  useEffect(() => {
-    localStorage.setItem("dark", user.dark);
-    document.body.className = user.dark ? "dark" : "light";
-  }, [user.dark]);
+  // // Save theme to localStorage and update body class on change
+  // useEffect(() => {
+  //   localStorage.setItem("dark", user.dark);
+  //   document.body.className = user.dark ? "dark" : "dark";
+  // }, [user.dark]);
 
   return (
     <AppContext.Provider value={{ user, setUser }}>

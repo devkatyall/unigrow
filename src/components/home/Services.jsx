@@ -3,6 +3,7 @@
 import React from "react";
 import { corePointers } from "@/data";
 import { motion } from "framer-motion";
+import SpotlightCard from "../SpotlightCard";
 
 export default function Services() {
   const bg = ["[#C17777]", "[#528F7C]", "[#CD9B6A]", "[#C87FA7]"];
@@ -20,12 +21,7 @@ export default function Services() {
       </div>
       <div className="flex flex-col gap-5 py-4 md:p-0 md:grid md:grid-cols-3 md:auto-rows-fr md:gap-6">
         {corePointers.map((e, i) => (
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{
-              duration: 1,
-            }}
+          <SpotlightCard
             key={i}
             className={`h-full w-full drop-shadow-2xl py-6 px-8 gap-2 ${
               i === 0 && "md:col-span-2"
@@ -44,7 +40,7 @@ export default function Services() {
             <div className=" font-extralight text-stone-400 text-sm md:text-base text-center md:text-left md:leading-[17px] tracking-wide">
               {e.description}
             </div>
-          </motion.div>
+          </SpotlightCard>
         ))}
       </div>
     </div>
