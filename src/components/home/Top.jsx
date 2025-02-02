@@ -11,6 +11,7 @@ import {
   useTransform,
 } from "framer-motion";
 import { Button } from "../ui/button";
+import { Particles } from "../ui/particles";
 
 export default function Top() {
   const COLOR = ["#6366F1", "#0EA5E9", "#10B981"];
@@ -40,6 +41,13 @@ export default function Top() {
           zIndex: 0,
         }}
       >
+        <Particles
+          className="absolute inset-0 z-0"
+          quantity={100}
+          ease={80}
+          color="#2ee4e3"
+          refresh
+        />
         <motion.div
           className="blob hidden md:block absolute -z-10 dark:opacity-100 opacity-50 blur-[130px]"
           initial={{ width: 400, height: 400 }}
