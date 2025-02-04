@@ -328,7 +328,7 @@ export { pricingPackages, addOns };
 
 export const customPackage = {
   name: "Custom",
-  price: "Starting at 499",
+  price: "0",
   suitableFor:
     "Businesses needing a fully tailored website with flexible features, including e-commerce and advanced integrations.",
   description:

@@ -8,6 +8,7 @@ import {
   useTransform,
   motion,
 } from "framer-motion";
+import CustomCard from "./CustomCard";
 
 export default function Packs() {
   const { scrollY } = useScroll();
@@ -37,7 +38,11 @@ export default function Packs() {
         {pricingPackages.map((e, i) => (
           <Card plan={e} key={i} i={i} />
         ))}
+        <div className=" md:col-span-3">
+          <CustomCard />
+        </div>
       </div>
+      <div className=""></div>
     </section>
   );
 }

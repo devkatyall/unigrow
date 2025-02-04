@@ -1,4 +1,5 @@
 import GradientText from "@/components/ui/GradText";
+import { Check } from "lucide-react";
 import React from "react";
 
 const Card = ({ plan, className, i }) => {
@@ -27,23 +28,8 @@ const Card = ({ plan, className, i }) => {
       <p className="text-gray-200 mb-4">{description}</p>
       <ul className=" mb-4 space-y-2">
         {features.map((feature, index) => (
-          <li key={index} className="text-cyan-500 flex  items-start gap-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m4.5 12.75 6 6 9-13.5"
-              />
-            </svg>
-
-            {feature}
+          <li key={index} className="text-cyan-500 flex items-start gap-3">
+            <Check className="h-full min-w-6" /> {feature}
           </li>
         ))}
       </ul>
