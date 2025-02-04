@@ -2,7 +2,8 @@ const ShinyButton = ({
   as: Component = "button",
   className = "",
   color = "white",
-  speed = "6s",
+  speed = "4s",
+  bg = "bg-black",
   children,
   ...rest
 }) => {
@@ -25,7 +26,9 @@ const ShinyButton = ({
           animationDuration: speed,
         }}
       ></div>
-      <div className="relative z-1 bg-gradient-to-b from-black to-gray-900 border border-gray-800 text-white text-center text-[16px] py-[10px] px-[26px] rounded-md">
+      <div
+        className={`relative z-1 ${bg} border border-gray-800 text-white text-center text-[16px] py-[12px] px-[26px] rounded-md`}
+      >
         {children}
       </div>
     </Component>

@@ -52,9 +52,9 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <nav
+    <motion.nav
       style={{}}
-      className={`z-20 w-full top-0 ${
+      className={`z-20 w-full top-0 transition-all ease-in-out duration-100 ${
         visible
           ? "sticky bg-black shadow-lg header border-b-[2px]"
           : "bg-transparent"
@@ -116,7 +116,7 @@ export default function Header() {
           </div>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 }
 

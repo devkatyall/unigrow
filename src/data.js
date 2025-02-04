@@ -13,9 +13,8 @@ export const projects = [
 
 export const corePointers = [
   {
-    title: "Design + Content Creation",
-    description:
-      "Stunning designs meet captivating words. Your website will both look and sound amazing.",
+    title: "Custom Website Design",
+    description: "No templates, fully tailored to your brand.",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -33,9 +32,8 @@ export const corePointers = [
     ),
   },
   {
-    title: "Digital Marketing Expertise",
-    description:
-      "SEO, campaigns, analytics, tag management—we’ll make your online presence work harder for you.",
+    title: "Content That Sells",
+    description: "Compelling, SEO-friendly copy for your site.",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -53,9 +51,8 @@ export const corePointers = [
     ),
   },
   {
-    title: "Business Tailored Solutions",
-    description:
-      "No templates here. Every website is tailored to fit your brand and business goals.",
+    title: "Modern Development",
+    description: "Built with the latest tech like Next.js & React.",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -73,9 +70,8 @@ export const corePointers = [
     ),
   },
   {
-    title: "End-to-End Support",
-    description:
-      "From launch to growth, we stick with you like your favorite playlist.",
+    title: "SEO Optimization",
+    description: "Be seen by the right people.",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -246,3 +242,101 @@ export const reviews = [
     img: "https://avatar.vercel.sh/henry",
   },
 ];
+const pricingPackages = [
+  {
+    name: "Starter",
+    price: 399,
+    suitableFor:
+      "Freelancers, startups, and small businesses looking for a simple, professional online presence.",
+    description:
+      "A sleek single-page website with everything you need to establish your brand online—fast, simple, and affordable.",
+    features: [
+      "Custom content writing",
+      "Modern website design",
+      "Fast & responsive development",
+      "Mobile-friendly & SEO-ready",
+    ],
+  },
+  {
+    name: "Pro",
+    price: 699,
+    suitableFor:
+      "Growing businesses that need a multi-page site to showcase services and attract more customers.",
+    description:
+      "A multi-page website with custom content, professional design, and SEO optimization—built to help your business grow.",
+    features: [
+      "Custom content writing",
+      "Custom website design",
+      "Multi-page website (Home, About, Services, Contact, etc.)",
+      "SEO-optimized & fast loading",
+      "Mobile-friendly & fully responsive",
+    ],
+  },
+  {
+    name: "Growth",
+    price: 999,
+    suitableFor:
+      "Businesses that want a scalable website with CMS integration to easily update content without coding.",
+    description:
+      "A high-performance website with CMS integration, so you can update content anytime—no tech skills needed.",
+    features: [
+      "Custom content writing",
+      "Premium website design",
+      "Advanced website development",
+      "Multi-page site with full SEO optimization",
+      "CMS integration (WordPress, Webflow, or Custom)",
+      "Mobile-friendly & fully responsive",
+    ],
+  },
+];
+
+const addOns = [
+  {
+    name: "Hosting",
+    price: 20,
+    suitableFor:
+      "Businesses needing reliable, secure hosting with 24/7 support.",
+    description:
+      "Fast, secure, and hassle-free hosting with round-the-clock support.",
+  },
+  {
+    name: "SEO",
+    price: 150,
+    suitableFor:
+      "Businesses that want to rank higher on Google and attract more visitors.",
+    description: "Boost your rankings and get found by the right audience.",
+  },
+  {
+    name: "Maintenance",
+    price: 75,
+    suitableFor:
+      "Business owners who want ongoing website updates, security patches, and technical support.",
+    description:
+      "Regular updates, security patches, and support to keep your site running smoothly.",
+  },
+  {
+    name: "E-commerce",
+    price: 299,
+    suitableFor:
+      "Businesses wanting to sell online with a fully integrated e-commerce solution.",
+    description:
+      "Turn your website into a store with seamless online shopping features.",
+  },
+];
+
+export { pricingPackages, addOns };
+
+export const customPackage = {
+  name: "Custom",
+  price: "Starting at 499",
+  suitableFor:
+    "Businesses needing a fully tailored website with flexible features, including e-commerce and advanced integrations.",
+  description:
+    "Need something unique? Choose the features you need and get a website tailored to your business goals.",
+  features: [
+    "Custom content & design",
+    "Single-page or multi-page options",
+    "CMS integration available",
+    "E-commerce & advanced features (optional)",
+  ],
+};

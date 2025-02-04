@@ -9,17 +9,17 @@ export default function Services() {
   const bg = ["[#C17777]", "[#528F7C]", "[#CD9B6A]", "[#C87FA7]"];
 
   return (
-    <div className="md:my-6 md:px-16 lg:py-16 px-8 py-3 my-6">
+    <section className="md:my-6 md:px-16 lg:py-16 px-8 py-3 my-6">
       <div className="my-2 md:my-4 lg:my-6 xl:my-8">
         <h2 className=" text-3xl md:text-6xl text-center font-medium">
-          Your One-Stop Shop for All Things Online.
+          Everything You Need. One Price. Zero Hassle.
         </h2>
         <p className="text-sm md:text-base text-center mb-4 mt-2 text-stone-400">
           everything you would need for your online business is here at one
           place.
         </p>
       </div>
-      <div className="flex flex-col gap-5 py-4 md:p-0 md:grid md:grid-cols-3 md:auto-rows-fr md:gap-6">
+      <div className="flex flex-col gap-5 py-4 md:p-0 md:grid md:grid-cols-3 md:auto-rows-fr md:gap-4">
         {corePointers.map((e, i) => (
           <SpotlightCard
             key={i}
@@ -27,13 +27,13 @@ export default function Services() {
               i === 0 && "md:col-span-2"
             } ${
               i === 3 && "md:col-span-2"
-            }  md:h-[200px] bg-opacity-50 bg-stone-900 flex items-center md:items-start md:gap-2 flex-col md:justify-end rounded-xl md:px-6 md:py-6 relative ring-1 ring-stone-800`}
+            } md:h-[200px] bg-opacity-50 bg-stone-900 flex items-center md:items-center md:gap-2 flex-col md:justify-center rounded-xl md:px-6 md:py-6 relative ring-1 ring-stone-800`}
           >
-            <span
-              className={` bg-${bg[i]} md:bg-opacity-40 w-fit p-3 rounded-full md:absolute top-4 right-4 drop-shadow-xl`}
+            {/* <span
+              className={` scale-[1.5] opacity-60 w-fit p-3 rounded-full drop-shadow-xl`}
             >
               {e.svg}
-            </span>
+            </span> */}
             <h3 className="md:text-4xl text-xl font-light md:leading-[32px]">
               {e.title}
             </h3>
@@ -43,6 +43,6 @@ export default function Services() {
           </SpotlightCard>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
