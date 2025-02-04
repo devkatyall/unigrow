@@ -30,8 +30,8 @@ const ReviewCard = ({ img, name, username, body }) => {
 
 export function MarqueeDemo() {
   return (
-    <div className="md:my-[5%] md:flex items-center justify-center">
-      <div className="flex flex-col  justify-center md:pl-[4%] md:gap-4 text-center md:text-left">
+    <div className=" md:my-[5%] md:flex items-center justify-center">
+      <div className="flex flex-col px-6 justify-center md:pl-[4%] md:gap-4 text-center md:text-left">
         <h3 className="md:text-6xl text-3xl">What Our Clients Say</h3>
         <span className=" text-gray-400">
           Here’s what our happy clients have to say about working with us.

@@ -1,13 +1,33 @@
+import airmob from "@/../public/projects/airgoddes/1.png";
+import air from "@/../public/projects/airgoddes/2.png";
+import elitemob from "@/../public/projects/elitedetailing/1.png";
+import elite from "@/../public/projects/elitedetailing/2.png";
+import copywrite from "@/../public/projects/copywriter.png";
+
 export const projects = [
   {
     title: "Polished Online Presence for Elite Car Detailing",
+    plan: "Starter",
+    imgMob: elitemob,
+    imgDesk: elite,
     description:
       "Crafted a sleek, one-page website for a local car detailing business, complete with SEO optimization, embedded analytics tools like Microsoft Clarity, and seamless call-to-action integration. Delivered end-to-end services, including design, development, hosting, and content, boosting local visibility and campaign performance.",
   },
   {
-    title: "Flawless Website for a Makeup Artist Extraordinaire",
+    title: "Flawless Website for Air Goddess Maquillage",
+    imgMob: airmob,
+    imgDesk: air,
+    plan: "Pro",
     description:
       "Designed a responsive, budget-friendly website for a makeup artist, integrating a cost-effective booking system via Nodemailer and optimizing SEO for increased visibility. Delivered custom content, design, and hosting while ensuring a seamless user experience that enhances client engagement.",
+  },
+  {
+    title: "Collaborative Writing Platform for Copywriters",
+    imgMob: copywrite,
+    imgDesk: copywrite,
+    plan: "Custom",
+    description:
+      "A full-stack web application designed to empower copywriters and content creators. Built using React.js for a dynamic frontend and Node.js with Express.js for a powerful backend. Features include secure user authentication, a rich text editor, content engagement tools, and writing challenges, fostering a thriving creative community.",
   },
 ];
 
@@ -332,7 +352,7 @@ export const customPackage = {
   suitableFor:
     "Businesses needing a fully tailored website with flexible features, including e-commerce and advanced integrations.",
   description:
-    "Need something unique? Choose the features you need and get a website tailored to your business goals.",
+    "Need something unique? Let’s build a website that perfectly fits your vision. Talk to an expert today and get a tailored quote based on your exact needs—no templates, no one-size-fits-all solutions, just a website designed for you.",
   features: [
     "Custom content & design",
     "Single-page or multi-page options",

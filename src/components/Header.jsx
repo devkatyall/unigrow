@@ -11,6 +11,8 @@ import ThemeSwitch from "./ui/ThemeSwitch";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { usePathname } from "next/navigation";
 import ShinyButton from "./ui/ShinyButton";
+import { PulsatingButton } from "./ui/pulsating-button";
+import { ScrollProgress } from "./ui/scroll-progress";
 
 export default function Header() {
   const { user, setUser } = useAppContext();
@@ -90,6 +92,14 @@ export default function Header() {
           <Tab
             setProps={setProps}
             pathname={pathname}
+            href={"/pricing"}
+            setPresent={setPresent}
+          >
+            Pricing
+          </Tab>
+          <Tab
+            setProps={setProps}
+            pathname={pathname}
             href={"/services"}
             setPresent={setPresent}
           >
@@ -112,10 +122,13 @@ export default function Header() {
               checked={user.dark ? true : false}
               onChange={updateTheme}
             /> */}
-            <ShinyButton>Get Started</ShinyButton>
+            <PulsatingButton>Talk To Expert</PulsatingButton>
           </div>
         </div>
       </div>
+      <ScrollProgress
+        className={`top-[88px] md:top-[84px] ${!visible && "hidden"}`}
+      />
     </motion.nav>
   );
 }

@@ -9,7 +9,7 @@ export default function CustomCard() {
   const { name, price, suitableFor, description, features } = customPackage;
 
   return (
-    <div className="relative h-[340px] overflow-hidden border-[2px] flex flex-col items-center justify-center rounded-2xl p-10 text-center">
+    <div className="relative h-full overflow-hidden border-[2px] flex flex-col items-center justify-center rounded-2xl p-10 text-center">
       <Meteors />
       <div className=" w-full h-full backdrop-blur-sm rounded-2xl flex flex-col justify-center items-center">
         <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-sky-500 text-center mb-4">

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { pricingPackages } from "@/data";
+import { addOns, pricingPackages } from "@/data";
 import Card from "./Cards";
 import {
   useMotionValueEvent,
@@ -16,7 +16,10 @@ export default function Packs() {
   useMotionValueEvent(scrollY, "change", (v) => console.log(v));
 
   return (
-    <section className="md:my-6 md:px-16 lg:py-16 px-8 py-3 my-6 relative">
+    <section
+      className="md:my-6 md:px-16 lg:py-16 px-8 py-3 my-6 relative"
+      id="pricing"
+    >
       <div className=" absolute left-0 -top-[45vh] lg:-top-[50vh] flex justify-center w-full overflow-x-hidden">
         <svg
           width="283"
@@ -42,7 +45,6 @@ export default function Packs() {
           <CustomCard />
         </div>
       </div>
-      <div className=""></div>
     </section>
   );
 }

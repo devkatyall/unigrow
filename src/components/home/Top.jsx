@@ -44,7 +44,7 @@ export default function Top() {
           zIndex: 0,
         }}
       >
-        <div className="relative h-fit flex flex-col items-center justify-center lg:py-24">
+        <div className="relative h-fit flex flex-col gap-2 items-center justify-center lg:py-24">
           <Squares
             speed={0.2}
             squareSize={40}
@@ -65,7 +65,7 @@ export default function Top() {
           </motion.span>
           <h1 className="lg:text-5xl xl:text-6xl text-[35px] leading-[38px] tracking-tight lg:tracking-normal font-medium lg:px-[10%]">
             Your Business Deserves a Website That Works{" "}
-            <motion.span className="lg:text-5xl xl:text-6xl font-bold text-[40px] bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-transparent bg-clip-text tracking-tight">
+            <motion.span className="lg:text-5xl xl:text-6xl font-light text-[40px] bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-transparent bg-clip-text tracking-tight">
               Without the Overpriced Drama.
             </motion.span>
           </h1>
@@ -74,12 +74,15 @@ export default function Top() {
             and even the tech setup. No hassle. No hidden fees. Just a modern,
             high-performing website that works.
           </p>
-          <div className="flex gap-2 my-4 w-full  lg:items-center justify-center ">
+          <div className="flex lg:flex-row flex-col-reverse gap-2 my-4 w-full items-center justify-center ">
+            <span className=" w-[60%] lg:w-[20%] text-xs lg:text-sm opacity-50 italic capitalize">
+              Get free 15 mins consultation to kickstart your online business
+            </span>
             <ShinyButton
               color="cyan"
               className=" hover:scale-110 scale-105 transition-all ease-in drop-shadow-[0px_0px_40px_#b8b8b859] hover:font-bold"
             >
-              Free Consultation
+              Get Started
             </ShinyButton>
           </div>
         </div>
