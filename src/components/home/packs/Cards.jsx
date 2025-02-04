@@ -9,7 +9,7 @@ const Card = ({ plan, className, i }) => {
     >
       {i === 1 && (
         <span className="absolute left-0 right-0 -top-4 w-full flex justify-center">
-          <span className=" px-4 py-2 rounded-full bg-black drop-shadow-[0px_0px_20px_#b8b8b859]">
+          <span className=" px-4 py-2 rounded-full bg-black drop-shadow-[0px_0px_10px_#b8b8b859] md:drop-shadow-[0px_0px_20px_#b8b8b859]">
             <GradientText colors={["#6366F1", "#0EA5E9", "#10B981"]}>
               Most Popular
             </GradientText>
