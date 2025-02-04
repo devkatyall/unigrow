@@ -5,7 +5,7 @@ const Card = ({ plan, className, i }) => {
   const { name, price, suitableFor, description, features } = plan;
   return (
     <div
-      className={` bg-neutral-900 rounded-2xl shadow-lg p-6 relative ${className}`}
+      className={` bg-neutral-900 rounded-2xl shadow-lg p-6 border-[2px] relative ${className}`}
     >
       {i === 1 && (
         <span className="absolute left-0 right-0 -top-4 w-full flex justify-center">
