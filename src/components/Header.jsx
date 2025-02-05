@@ -13,6 +13,8 @@ import { usePathname } from "next/navigation";
 import ShinyButton from "./ui/ShinyButton";
 import { PulsatingButton } from "./ui/pulsating-button";
 import { ScrollProgress } from "./ui/scroll-progress";
+import { cn } from "@/lib/utils";
+import { User } from "lucide-react";
 
 export default function Header() {
   const { user, setUser } = useAppContext();
@@ -55,14 +57,14 @@ export default function Header() {
 
   return (
     <motion.nav
-      style={{}}
-      className={`z-20 w-full top-0 transition-all ease-in-out duration-100 ${
-        visible
-          ? "sticky bg-black shadow-lg header border-b-[2px]"
-          : "bg-transparent"
+      style={{
+        zIndex: 100,
+      }}
+      className={` w-full top-0 transition-all ease-in-out duration-100 ${
+        visible ? "sticky bg-black shadow-lg header" : "bg-transparent"
       } `}
     >
-      <div className="py-5 lg:py-[18px] px-5 lg:px-16 flex justify-between items-center md:grid md:grid-cols-3 z-50">
+      <div className="py-5 lg:py-[18px] px-5 lg:px-16 flex justify-between items-center md:grid md:grid-cols-3">
         <div className="md:flex md:items-center md:gap-2">
           <Image
             src={logo}
@@ -92,14 +94,6 @@ export default function Header() {
           <Tab
             setProps={setProps}
             pathname={pathname}
-            href={"/pricing"}
-            setPresent={setPresent}
-          >
-            Pricing
-          </Tab>
-          <Tab
-            setProps={setProps}
-            pathname={pathname}
             href={"/services"}
             setPresent={setPresent}
           >
@@ -108,12 +102,80 @@ export default function Header() {
           <Tab
             setProps={setProps}
             pathname={pathname}
+            href={"/pricing"}
+            setPresent={setPresent}
+          >
+            Pricing
+          </Tab>
+
+          <Tab
+            setProps={setProps}
+            pathname={pathname}
             href={"/clients"}
             setPresent={setPresent}
           >
             Success Stories
           </Tab>
-
+          <motion.div className=" absolute top-6 peer-hover:block hover:block w-full z-10 transition-opacity duration-200">
+            <div className="grid grid-cols-2 grid-rows-3 gap-4 mt-6 p-6 bg-black bg-opacity-90 backdrop-blur-sm rounded-2xl drop-shadow-lg">
+              <div className="flex gap-2 items-center">
+                <div className=" bg-sky-600 p-2 flex items-center justify-center rounded-xl">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="size-[25px]"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+                    />
+                  </svg>
+                </div>
+                <div className=" flex flex-col">
+                  <p className=" text-base">Potfolio Creation</p>
+                  <span className=" text-xs leading-tight text-cyan-700">
+                    Get yourself a professional portfolio
+                  </span>
+                </div>
+              </div>
+              <div className="flex gap-2">
+                <div className=" flex flex-col">
+                  <p className=" text-lg">Potfolio Creation</p>
+                  <span className=" text-xs leading-tight text-cyan-700">
+                    Get yourself a professional portfolio
+                  </span>
+                </div>
+              </div>
+              <div className="flex gap-2">
+                <div className=" flex flex-col">
+                  <p className=" text-lg">Potfolio Creation</p>
+                  <span className=" text-xs leading-tight text-cyan-700">
+                    Get yourself a professional portfolio
+                  </span>
+                </div>
+              </div>
+              <div className="flex gap-2">
+                <div className=" flex flex-col">
+                  <p className=" text-lg">Potfolio Creation</p>
+                  <span className=" text-xs leading-tight text-cyan-700">
+                    Get yourself a professional portfolio
+                  </span>
+                </div>
+              </div>
+              <div className="flex gap-2">
+                <div className=" flex flex-col">
+                  <p className=" text-lg">Potfolio Creation</p>
+                  <span className=" text-xs leading-tight text-cyan-700">
+                    Get yourself a professional portfolio
+                  </span>
+                </div>
+              </div>
+            </div>
+          </motion.div>
           <Line style={props} />
         </div>
         <div className="flex items-center gap-6 place-self-end self-center">
@@ -128,9 +190,7 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <ScrollProgress
-        className={`top-[88px] md:top-[84px] ${!visible && "hidden"}`}
-      />
+      <ScrollProgress className={` ${!visible && "hidden"}`} />
     </motion.nav>
   );
 }
@@ -159,17 +219,22 @@ const Tab = ({ children, href, setProps, setPresent, pathname }) => {
   return (
     <Link
       ref={ref}
-      className="transition-all ease-in-out duration-200 relative z-10"
+      className={cn(
+        " transition-all ease-in-out duration-200 relative z-10",
+        href === "/services" && "peer"
+      )}
       href={href}
       onMouseEnter={() => {
         if (!ref.current) return;
 
-        const { width } = ref.current.getBoundingClientRect();
+        const { width, right } = ref.current.getBoundingClientRect();
 
         setProps({
           width,
           opacity: 1,
           left: ref.current.offsetLeft,
+          right: right,
+          href: href,
         });
       }}
     >
@@ -181,7 +246,7 @@ const Tab = ({ children, href, setProps, setPresent, pathname }) => {
 const Line = ({ style }) => {
   return (
     <motion.div
-      animate={{ ...style, width: style.width + 12, left: style.left - 6 }}
+      animate={{ width: style.width + 12, left: style.left - 6 }}
       className=" absolute z-0 -top-1 h-[35px] rounded-xl bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%"
     />
   );

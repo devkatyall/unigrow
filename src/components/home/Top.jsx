@@ -44,7 +44,7 @@ export default function Top() {
           zIndex: 0,
         }}
       >
-        <div className="relative h-fit flex flex-col gap-2 items-center justify-center lg:py-24">
+        <div className="relative h-fit flex flex-col gap-2 items-center justify-center lg:py-24 -z-10">
           <Squares
             speed={0.2}
             squareSize={40}

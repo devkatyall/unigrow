@@ -3,6 +3,7 @@ import ShinyButton from "@/components/ui/ShinyButton";
 import { Meteors } from "@/components/ui/meteors";
 import { Particles } from "@/components/ui/particles";
 import { customPackage } from "@/data";
+import Link from "next/link";
 import React from "react";
 
 export default function CustomCard() {
@@ -21,7 +22,7 @@ export default function CustomCard() {
           {description}
         </p>
         <ShinyButton className="font-bold hover:scale-105 transition-all ease-in-out">
-          Book a 15 min
+          <Link href="/book-free-consultation">Book a 15 min</Link>
         </ShinyButton>
       </div>
     </div>
