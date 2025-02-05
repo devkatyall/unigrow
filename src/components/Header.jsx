@@ -116,9 +116,9 @@ export default function Header() {
           >
             Success Stories
           </Tab>
-          <motion.div className=" absolute top-6 peer-hover:block hover:block w-full z-10 transition-opacity duration-200">
+          <motion.div className=" absolute top-6 hidden peer-hover:block hover:block w-full z-10 transition-opacity duration-200">
             <div className="grid grid-cols-2 grid-rows-3 gap-4 mt-6 p-6 bg-black bg-opacity-90 backdrop-blur-sm rounded-2xl drop-shadow-lg">
-              <div className="flex gap-2 items-center">
+              <div className="flex gap-3 items-center">
                 <div className=" bg-sky-600 p-2 flex items-center justify-center rounded-xl">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -137,38 +137,6 @@ export default function Header() {
                 </div>
                 <div className=" flex flex-col">
                   <p className=" text-base">Potfolio Creation</p>
-                  <span className=" text-xs leading-tight text-cyan-700">
-                    Get yourself a professional portfolio
-                  </span>
-                </div>
-              </div>
-              <div className="flex gap-2">
-                <div className=" flex flex-col">
-                  <p className=" text-lg">Potfolio Creation</p>
-                  <span className=" text-xs leading-tight text-cyan-700">
-                    Get yourself a professional portfolio
-                  </span>
-                </div>
-              </div>
-              <div className="flex gap-2">
-                <div className=" flex flex-col">
-                  <p className=" text-lg">Potfolio Creation</p>
-                  <span className=" text-xs leading-tight text-cyan-700">
-                    Get yourself a professional portfolio
-                  </span>
-                </div>
-              </div>
-              <div className="flex gap-2">
-                <div className=" flex flex-col">
-                  <p className=" text-lg">Potfolio Creation</p>
-                  <span className=" text-xs leading-tight text-cyan-700">
-                    Get yourself a professional portfolio
-                  </span>
-                </div>
-              </div>
-              <div className="flex gap-2">
-                <div className=" flex flex-col">
-                  <p className=" text-lg">Potfolio Creation</p>
                   <span className=" text-xs leading-tight text-cyan-700">
                     Get yourself a professional portfolio
                   </span>
