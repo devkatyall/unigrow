@@ -1,3 +1,4 @@
+import CalendlyEmbed from "@/components/CalendlyEmbed";
 import { MarqueeDemo } from "@/components/HeroSection";
 import ServicesSec from "@/components/ServicesSec";
 import Pricing from "@/components/home/Pricing";
@@ -8,13 +9,13 @@ import Projects from "@/components/home/projects";
 
 export default function Home() {
   return (
-    <>
+    <main>
       <Top />
       <Services />
       <Pricing />
       <Packs />
       <MarqueeDemo />
       <Projects />
-    </>
+    </main>
   );
 }

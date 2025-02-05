@@ -79,7 +79,7 @@ export default function Header() {
             setProps(present);
           }}
           ref={ref}
-          className="hidden relative md:flex md:items-center gap-6 drop-shadow-md text-md place-self-center self-center"
+          className="hidden relative md:flex md:items-center gap-8 drop-shadow-md text-md place-self-center self-center"
         >
           <Tab
             setProps={setProps}
@@ -122,7 +122,9 @@ export default function Header() {
               checked={user.dark ? true : false}
               onChange={updateTheme}
             /> */}
-            <PulsatingButton>Talk To Expert</PulsatingButton>
+            <PulsatingButton>
+              <Link href="/book-free-consultation">Talk To Expert</Link>
+            </PulsatingButton>
           </div>
         </div>
       </div>
