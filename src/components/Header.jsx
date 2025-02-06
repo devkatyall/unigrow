@@ -15,6 +15,7 @@ import { PulsatingButton } from "./ui/pulsating-button";
 import { ScrollProgress } from "./ui/scroll-progress";
 import { cn } from "@/lib/utils";
 import { User } from "lucide-react";
+import { services } from "@/data";
 
 export default function Header() {
   const { user, setUser } = useAppContext();
@@ -60,8 +61,10 @@ export default function Header() {
       style={{
         zIndex: 100,
       }}
-      className={` w-full top-0 transition-all ease-in-out duration-100 ${
-        visible ? "sticky bg-black shadow-lg header" : "bg-transparent"
+      className={` w-full top-0 transition-all ease-in-out duration-100 bg-black backdrop-blur-sm ${
+        visible
+          ? "fixed shadow-lg header bg-opacity-80"
+          : "absolute bg-opacity-55"
       } `}
     >
       <div className="py-5 lg:py-[18px] px-5 lg:px-16 flex justify-between items-center md:grid md:grid-cols-3">
@@ -111,37 +114,29 @@ export default function Header() {
           <Tab
             setProps={setProps}
             pathname={pathname}
-            href={"/clients"}
+            href={"/why-unigrow"}
             setPresent={setPresent}
           >
-            Success Stories
+            Why Unigrow?
           </Tab>
-          <motion.div className=" absolute top-6 hidden peer-hover:block hover:block w-full z-10 transition-opacity duration-200">
-            <div className="grid grid-cols-2 grid-rows-3 gap-4 mt-6 p-6 bg-black bg-opacity-90 backdrop-blur-sm rounded-2xl drop-shadow-lg">
-              <div className="flex gap-3 items-center">
-                <div className=" bg-sky-600 p-2 flex items-center justify-center rounded-xl">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="size-[25px]"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
-                    />
-                  </svg>
+          <motion.div className=" absolute hidden top-6 peer-hover:block hover:block w-[calc(40vw)] z-10 transition-opacity duration-200">
+            <div className="grid grid-cols-2 grid-rows-3 gap-1 mt-6 p-2 bg-black bg-opacity-90 backdrop-blur-sm rounded-2xl drop-shadow-lg ring-1">
+              {services.map((e, i) => (
+                <div
+                  key={i}
+                  className="flex gap-3 items-center hover:bg-blue-950 hover:bg-opacity-40 transition-all ease-in duration-100 rounded-xl p-2 cursor-pointer"
+                >
+                  <div className=" size-10 bg-blue-950 p-2 flex items-center justify-center rounded-xl">
+                    {e.icon}
+                  </div>
+                  <div className=" flex flex-col">
+                    <p className=" text-base">{e.name}</p>
+                    <span className=" text-xs leading-tight text-cyan-700">
+                      {e.description}
+                    </span>
+                  </div>
                 </div>
-                <div className=" flex flex-col">
-                  <p className=" text-base">Potfolio Creation</p>
-                  <span className=" text-xs leading-tight text-cyan-700">
-                    Get yourself a professional portfolio
-                  </span>
-                </div>
-              </div>
+              ))}
             </div>
           </motion.div>
           <Line style={props} />
@@ -167,9 +162,8 @@ const Tab = ({ children, href, setProps, setPresent, pathname }) => {
   const ref = useRef(null);
 
   useEffect(() => {
+    const { width } = ref.current.getBoundingClientRect();
     if (href === pathname) {
-      const { width } = ref.current.getBoundingClientRect();
-
       setPresent({
         opacity: 1,
         width,
@@ -188,7 +182,7 @@ const Tab = ({ children, href, setProps, setPresent, pathname }) => {
     <Link
       ref={ref}
       className={cn(
-        " transition-all ease-in-out duration-200 relative z-10",
+        " transition-all ease-in-out duration-200 relative z-10 text-white font-medium",
         href === "/services" && "peer"
       )}
       href={href}
@@ -214,8 +208,12 @@ const Tab = ({ children, href, setProps, setPresent, pathname }) => {
 const Line = ({ style }) => {
   return (
     <motion.div
-      animate={{ width: style.width + 12, left: style.left - 6 }}
-      className=" absolute z-0 -top-1 h-[35px] rounded-xl bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%"
+      animate={{
+        width: style?.width,
+        left: style?.left,
+        right: 0,
+      }}
+      className=" absolute z-0 -bottom-1 mix-blend-difference h-[3px] rounded-xl bg-cyan-300"
     />
   );
 };

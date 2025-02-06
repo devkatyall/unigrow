@@ -15,6 +15,7 @@ import { Button } from "../ui/button";
 import { Particles } from "../ui/particles";
 import Squares from "../ui/Squares";
 import ShinyButton from "../ui/ShinyButton";
+import Link from "next/link";
 
 export default function Top() {
   const COLOR = ["#6366F1", "#0EA5E9", "#10B981"];
@@ -37,14 +38,14 @@ export default function Top() {
   return (
     <div className="">
       <motion.div
-        className="xl:px-20 px-6 h-[calc(100vh-100px)] flex items-center justify-center text-center w-full"
+        className="xl:px-20 px-6 h-[calc(100vh)] flex items-center justify-center text-center w-full"
         style={{
           opacity: scale,
           // backgroundImage,
           zIndex: 0,
         }}
       >
-        <div className="relative h-fit flex flex-col gap-2 items-center justify-center lg:py-24 -z-10">
+        <div className="relative h-fit flex flex-col gap-2 items-center justify-center lg:py-24 ">
           <Squares
             speed={0.2}
             squareSize={40}
@@ -80,9 +81,9 @@ export default function Top() {
             </span>
             <ShinyButton
               color="cyan"
-              className=" hover:scale-110 scale-105 transition-all ease-in drop-shadow-[0px_0px_40px_#b8b8b859] hover:font-bold"
+              className=" cursor-pointer hover:scale-110 scale-105 transition-all ease-in drop-shadow-[0px_0px_40px_#b8b8b859] hover:font-bold"
             >
-              Get Started
+              <Link href={"/book-free-consultation"}>Get Started</Link>
             </ShinyButton>
           </div>
         </div>

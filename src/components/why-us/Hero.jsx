@@ -1,0 +1,42 @@
+import ParallaxImage from "@/components/parallax";
+import React from "react";
+import HeroPic from "@/../public/why-us/team.jpg";
+import GradientText from "@/components/ui/GradText";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+
+export default function Hero() {
+  return (
+    <>
+      <section style={{ zIndex: 0 }} className=" relative h-screen">
+        <ParallaxImage image={HeroPic} />
+        <div
+          style={{ zIndex: 10 }}
+          className="absolute rounded-t-xl -bottom-5 w-full h-[45vh] lg:h-[40vh] md:px-16 lg:py-8 px-8 py-6 flex md:flex-row flex-col items-center bg-black backdrop-blur-md bg-opacity-70"
+        >
+          <h1 className=" text-white text-opacity-65 text-[35px] leading-[35px] md:leading-none md:text-4xl lg:text-5xl xl:text-[4rem] w-full font-medium drop-shadow-xl">
+            Because Getting a Website Should Be Easy.
+          </h1>
+          <div className=" flex flex-col mt-4 md:m-0 gap-6 md:w-[80%]">
+            <p>
+              You have a business to run—you shouldn’t have to chase multiple
+              people for content, design, and development. Discover why Unigrow
+              is your best bet for your digital goals.
+            </p>
+            <div className="flex gap-2">
+              <Button className=" md:w-fit scale-95 hover:scale-100 hover:shadow-sm transition-all duration-150">
+                <Link href={"/book-free-consultation"}>Get Started</Link>
+              </Button>
+              <Button
+                variant="ghost"
+                className=" md:w-fit scale-95 hover:scale-100 hover:shadow-sm transition-all duration-150"
+              >
+                <Link href={"#we-are-easy"}>Learn More</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

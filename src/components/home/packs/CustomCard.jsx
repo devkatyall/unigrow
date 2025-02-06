@@ -18,7 +18,7 @@ export default function CustomCard() {
             {name} Plan
           </GradientText>
         </h2>
-        <p className="text-white text-lg md:text-xl lg:text-2xl xl:text-3xl mb-6 lg:px-[15%]">
+        <p className="text-white text-opacity-80 text-base md:text-lg lg:text-xl xl:text-xl mb-6 lg:px-[15%]">
           {description}
         </p>
         <ShinyButton className="font-bold hover:scale-105 transition-all ease-in-out">
