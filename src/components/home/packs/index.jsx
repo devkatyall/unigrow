@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import { addOns, pricingPackages } from "@/data";
 import Card from "./Cards";
 import {
@@ -10,11 +10,7 @@ import {
 } from "framer-motion";
 import CustomCard from "./CustomCard";
 
-export default function Packs() {
-  const { scrollY } = useScroll();
-  const path = useTransform(scrollY, [3510.5, 3680], [0, 1]);
-  useMotionValueEvent(scrollY, "change", (v) => console.log(v));
-
+export default function Packs({ path }) {
   return (
     <section
       className="md:my-6 md:px-16 lg:py-16 px-8 py-3 my-6 relative"
@@ -23,7 +19,7 @@ export default function Packs() {
       <div className=" absolute left-0 -top-[45vh] lg:-top-[50vh] xl:-top-[50vh] flex justify-center w-full overflow-x-hidden">
         <svg
           width="283"
-          height="509"
+          height="409"
           viewBox="0 0 253 809"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

@@ -213,7 +213,7 @@ const Line = ({ style }) => {
         left: style?.left,
         right: 0,
       }}
-      className=" absolute z-0 -bottom-1 mix-blend-difference h-[3px] rounded-xl bg-cyan-300"
+      className=" absolute z-0 -bottom-1 mix-blend-difference h-[3px] rounded-xl bg-cyan-300 cursor-pointer"
     />
   );
 };

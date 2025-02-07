@@ -13,7 +13,6 @@ export default function Home() {
       <Top />
       <Services />
       <Pricing />
-      <Packs />
       <MarqueeDemo />
       <Projects />
     </main>

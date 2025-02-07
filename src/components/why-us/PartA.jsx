@@ -6,7 +6,7 @@ export default function PartA() {
   return (
     <section
       id="we-are-easy"
-      className="lg:h-screen flex items-center justify-center py-6 my-6 lg:my-0 lg:py-0"
+      className="lg:h-screen flex items-center justify-center py-6 my-6 lg:my-0 lg:py-0 overflow-hidden"
     >
       <div className=" flex flex-col-reverse gap-4 lg:gap-12 lg:flex-row-reverse lg:justify-between w-full md:px-16 px-8">
         <div className="flex flex-col lg:w-[50%]">
@@ -86,7 +86,7 @@ export default function PartA() {
             </li>
           </ul>
         </div>
-        <div className=" h-[60vh] w-[80vw] lg:w-[50vw] rounded-xl overflow-hidden">
+        <div className=" h-[60vh]  lg:h-[70vh] w-[80vw] lg:w-[50vw] rounded-xl overflow-hidden">
           <ParallaxImage
             image={img}
             className={
@@ -98,21 +98,3 @@ export default function PartA() {
     </section>
   );
 }
-
-// Section 1: Experience Effortless Website Creation (3 Columns)
-// Heading: "Experience Effortless Website Creation"
-// Subtext: "Our streamlined process makes building a website stress-free, affordable, and hassle-free."
-// Column 1:
-// Icon (Heroicons): 🌟
-// Heading: "We Speak Your Language"
-// Text: "No confusing tech jargon—just clear, simple communication."
-
-// Column 2:
-// Icon (Heroicons): 💰
-// Heading: "No Hidden Fees"
-// Text: "Content, design, mobile optimization, and SEO included."
-
-// Column 3:
-// Icon (Heroicons): 🤝
-// Heading: "Proven Results"
-// Text: "Trusted by businesses who love our stress-free process."
