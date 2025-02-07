@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-export default function ParallaxImage({ image, children, className }) {
+export default function ParallaxImage({ image, children, className, disable }) {
   const container = useRef();
 
   const { scrollYProgress } = useScroll({
@@ -31,7 +31,7 @@ export default function ParallaxImage({ image, children, className }) {
         )}
       >
         <motion.div
-          style={{ y }}
+          style={{ y: !disable && y }}
           className="relative w-full h-full saturate-50"
         >
           <Image

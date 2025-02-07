@@ -12,7 +12,7 @@ import CustomCard from "./CustomCard";
 
 export default function Packs() {
   const { scrollY } = useScroll();
-  const path = useTransform(scrollY, [3083.5, 3300], [0, 1]);
+  const path = useTransform(scrollY, [3510.5, 3680], [0, 1]);
   useMotionValueEvent(scrollY, "change", (v) => console.log(v));
 
   return (
@@ -20,10 +20,10 @@ export default function Packs() {
       className="md:my-6 md:px-16 lg:py-16 px-8 py-3 my-6 relative"
       id="pricing"
     >
-      <div className=" absolute left-0 -top-[45vh] lg:-top-[50vh] flex justify-center w-full overflow-x-hidden">
+      <div className=" absolute left-0 -top-[45vh] lg:-top-[50vh] xl:-top-[50vh] flex justify-center w-full overflow-x-hidden">
         <svg
           width="283"
-          height="409"
+          height="509"
           viewBox="0 0 253 809"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
