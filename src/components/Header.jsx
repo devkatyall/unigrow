@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import logo from "./../../public/logo.png";
 import Link from "next/link";
 import { useAppContext } from "@/Context";
@@ -25,16 +25,21 @@ export default function Header() {
     }));
   };
 
-  const updateNav = () => {
-    if (window.scrollY > 200 && prevScroll > window.scrollY) {
-      setVisible(true);
-    } else {
-      setVisible(false);
-    }
-    setPrevScroll(window.scrollY);
-  };
+  const updateNav = useCallback(() => {
+    setPrevScroll((prev) => {
+      if (window.scrollY > 200 && prev > window.scrollY) {
+        setVisible(true);
+      } else {
+        setVisible(false);
+      }
+      return window.scrollY;
+    });
+  }, []);
 
-  useEffect(() => window.addEventListener("scroll", updateNav), [prevScroll]);
+  useEffect(() => {
+    window.addEventListener("scroll", updateNav);
+    return () => window.removeEventListener("scroll", updateNav);
+  }, [updateNav]);
 
   const ref = useRef(null);
 
