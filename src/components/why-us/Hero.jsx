@@ -12,9 +12,9 @@ export default function Hero() {
         <ParallaxImage image={HeroPic} className={"h-[200vh] lg:top-[-50%]"} />
         <div
           style={{ zIndex: 10 }}
-          className="absolute rounded-t-xl -bottom-5 w-full h-[45vh] lg:h-[40vh] md:px-16 lg:py-8 px-8 py-6 flex md:flex-row flex-col items-center bg-black backdrop-blur-md bg-opacity-70"
+          className="absolute rounded-t-xl -bottom-5 w-full h-[45vh] lg:h-[40vh] flex md:flex-row flex-col items-center bg-black backdrop-blur-md bg-opacity-70"
         >
-          <h1 className=" text-white text-opacity-65 text-[35px] leading-[35px] md:leading-none md:text-4xl lg:text-5xl xl:text-[4rem] w-full font-medium drop-shadow-xl">
+          <h1 className=" text-white text-opacity-65 text-5xl leading-[35px] md:leading-none md:text-4xl lg:text-5xl xl:text-[4rem] w-full font-medium drop-shadow-xl">
             Because Getting a Website Should Be Easy.
           </h1>
           <div className=" flex flex-col mt-4 md:m-0 gap-6 md:w-[80%]">

@@ -4,18 +4,14 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import logo from "./../../public/logo.png";
 import Link from "next/link";
-import { Button } from "./ui/button";
 import { useAppContext } from "@/Context";
-import { Switch } from "./ui/switch";
-import ThemeSwitch from "./ui/ThemeSwitch";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import ShinyButton from "./ui/ShinyButton";
 import { PulsatingButton } from "./ui/pulsating-button";
 import { ScrollProgress } from "./ui/scroll-progress";
 import { cn } from "@/lib/utils";
-import { User } from "lucide-react";
 import { services } from "@/data";
+import { AnimatedShinyText } from "./magicui/animated-shiny-text";
 
 export default function Header() {
   const { user, setUser } = useAppContext();
@@ -30,7 +26,7 @@ export default function Header() {
   };
 
   const updateNav = () => {
-    if (window.scrollY > 200) {
+    if (window.scrollY > 200 && prevScroll > window.scrollY) {
       setVisible(true);
     } else {
       setVisible(false);
@@ -67,6 +63,17 @@ export default function Header() {
           : "absolute bg-opacity-55"
       } `}
     >
+      <div className="w-full p-2 bg-gray-900 flex justify-center items-center">
+        <AnimatedShinyText
+          className="w-full max-w-full text-center"
+          shimmerWidth={300}
+        >
+          <span className="lg:text-nowrap">
+            Hold up! We're leveling up with a slick new makeover. Our site is
+            getting an epic upgrade.
+          </span>
+        </AnimatedShinyText>
+      </div>
       <div className="py-5 lg:py-[18px] px-5 lg:px-16 flex justify-between items-center md:grid md:grid-cols-3">
         <div className="md:flex md:items-center md:gap-2">
           <Image

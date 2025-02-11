@@ -126,6 +126,30 @@ module.exports = {
   				'50%': {
   					boxShadow: '0 0 0 8px var(--pulse-color)'
   				}
+  			},
+  			'shiny-text': {
+  				'0%, 90%, 100%': {
+  					'background-position': 'calc(-100% - var(--shiny-width)) 0'
+  				},
+  				'30%, 60%': {
+  					'background-position': 'calc(100% + var(--shiny-width)) 0'
+  				}
+  			},
+  			'accordion-down': {
+  				from: {
+  					height: '0'
+  				},
+  				to: {
+  					height: 'var(--radix-accordion-content-height)'
+  				}
+  			},
+  			'accordion-up': {
+  				from: {
+  					height: 'var(--radix-accordion-content-height)'
+  				},
+  				to: {
+  					height: '0'
+  				}
   			}
   		},
   		animation: {
@@ -137,7 +161,8 @@ module.exports = {
   			'star-movement-top': 'star-movement-top linear infinite alternate',
   			meteor: 'meteor 5s linear infinite',
   			gradient: 'gradient 8s linear infinite',
-  			pulse: 'pulse var(--duration) ease-out infinite'
+  			pulse: 'pulse var(--duration) ease-out infinite',
+  			'shiny-text': 'shiny-text 8s infinite'
   		}
   	}
   },

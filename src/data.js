@@ -485,3 +485,261 @@ export const customPackage = {
     "E-commerce & advanced features (optional)",
   ],
 };
+
+export const features = [
+  {
+    title: "We Speak Your Language",
+    description: "No confusing tech jargon—just clear, simple communication.",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1}
+        className="stroke-cyan-600 size-12 mb-2"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "No Hidden Fees",
+    description: "Content, design, mobile optimization, and SEO friendly code.",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1}
+        className="stroke-cyan-600 size-12 mb-2"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Proven Results",
+    description: "Trusted by businesses who love our stress-free process.",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1}
+        className="stroke-cyan-600 size-12 mb-2"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605"
+        />
+      </svg>
+    ),
+  },
+];
+
+export const questions = {
+  privacy_policy: [
+    {
+      question: "Does Unigrow collect or store my personal data?",
+      answer:
+        "No, Unigrow does not collect, store, or sell personal data. However, third-party tools like Calendly, which we use for scheduling, may process your information according to their privacy policies.",
+    },
+    {
+      question: "What third-party tools does Unigrow use?",
+      answer:
+        "We integrate with third-party services such as Calendly for booking calls and external hosting providers for website hosting. Each of these services has its own privacy policy.",
+    },
+    {
+      question: "Can I request the deletion of my data from third-party tools?",
+      answer:
+        "Yes, while Unigrow does not store your data, you can request data removal directly from third-party services such as Calendly.",
+    },
+    {
+      question: "How does Unigrow ensure data security?",
+      answer:
+        "We only work with trusted third-party services that comply with strict security and privacy policies to ensure your data is protected.",
+    },
+    {
+      question: "Does Unigrow share data with advertisers?",
+      answer:
+        "No, we do not share or sell your personal data to advertisers or third parties for marketing purposes.",
+    },
+  ],
+  use_of_cookies: [
+    {
+      question: "Does Unigrow use cookies?",
+      answer:
+        "Yes, we use essential and analytics cookies to improve website functionality and performance. We do not use intrusive tracking or advertising cookies.",
+    },
+    {
+      question: "Can I disable cookies?",
+      answer:
+        "Yes, you can manage or disable cookies in your browser settings. However, disabling essential cookies may affect website functionality.",
+    },
+    {
+      question: "What types of cookies does Unigrow use?",
+      answer:
+        "We use essential cookies for website functionality and analytics cookies to measure performance. We do not use tracking cookies for marketing or advertising.",
+    },
+    {
+      question: "How long does Unigrow store cookies?",
+      answer:
+        "Cookies may be stored for varying durations, typically between 30 days to 12 months, depending on their function.",
+    },
+    {
+      question: "Does Unigrow use third-party cookies?",
+      answer:
+        "No, we do not use third-party tracking cookies, but we do integrate with services like Google Analytics for website performance tracking.",
+    },
+  ],
+  terms_of_use: [
+    {
+      question: "What happens if I don’t renew my website hosting?",
+      answer:
+        "If you do not renew your hosting subscription, your website may be temporarily suspended. If payment is not made within a reasonable timeframe, your website may be permanently removed from our hosting servers.",
+    },
+    {
+      question: "Does Unigrow offer refunds for services?",
+      answer:
+        "No, all payments for website design, branding, and hosting services are non-refundable unless specified otherwise in a written agreement.",
+    },
+    {
+      question: "Can I migrate my website to another hosting provider?",
+      answer:
+        "Yes, you can migrate your website to another hosting provider at any time. We can assist with the migration process, and additional fees may apply.",
+    },
+    {
+      question: "Who owns the website once it’s built?",
+      answer:
+        "Once full payment is received, you own 100% of your website, including its design and content. Unigrow retains the right to showcase your project in our portfolio unless agreed otherwise.",
+    },
+    {
+      question: "What are the payment terms for Unigrow services?",
+      answer:
+        "We require upfront payment for most services, with the exception of custom agreements where payment plans are available.",
+    },
+  ],
+  pricing: [
+    {
+      question: "How much does a website cost with Unigrow?",
+      answer:
+        "We offer all-inclusive website packages with transparent pricing. Our plans include design, content, development, SEO, and hosting.",
+    },
+    {
+      question: "Are there any hidden fees?",
+      answer:
+        "No! Unigrow offers upfront pricing with no hidden costs. Everything—design, development, mobile optimization, and SEO—is included in our packages.",
+    },
+    {
+      question: "Do you offer custom pricing for unique projects?",
+      answer:
+        "Yes, we offer customized solutions for businesses that require specialized features or integrations.",
+    },
+    {
+      question: "What payment methods does Unigrow accept?",
+      answer:
+        "We accept major credit cards, PayPal, and direct bank transfers for our services.",
+    },
+    {
+      question: "Can I get a discount on multiple services?",
+      answer:
+        "Yes! We offer bundled pricing and discounts for businesses that need multiple services, such as website development and branding.",
+    },
+  ],
+  website_development: [
+    {
+      question: "What platforms does Unigrow use for website development?",
+      answer:
+        "We work with WordPress, Webflow, Wix, Shopify, and custom development solutions to match your needs.",
+    },
+    {
+      question: "How long does it take to build a website?",
+      answer:
+        "Most websites take 2-4 weeks, depending on the complexity and scope of the project.",
+    },
+    {
+      question: "Do you provide website maintenance after launch?",
+      answer:
+        "Yes! We offer ongoing maintenance services, including updates, security checks, and content changes.",
+    },
+    {
+      question: "Will my website be mobile-friendly?",
+      answer:
+        "Absolutely! All our websites are fully responsive and optimized for mobile devices.",
+    },
+    {
+      question: "Can you integrate third-party tools with my website?",
+      answer:
+        "Yes, we can integrate a wide range of tools, including CRM systems, email marketing platforms, payment gateways, and booking systems.",
+    },
+  ],
+  seo_optimization: [
+    {
+      question: "What SEO services does Unigrow provide?",
+      answer:
+        "We offer on-page SEO, keyword optimization, technical SEO, and local SEO strategies to help improve search rankings.",
+    },
+    {
+      question: "How long does it take to see SEO results?",
+      answer:
+        "SEO results vary, but most clients see noticeable improvements within 3-6 months.",
+    },
+    {
+      question: "Can you optimize my existing website for SEO?",
+      answer:
+        "Yes, we provide SEO audits and optimization services for existing websites.",
+    },
+    {
+      question: "Do you offer content creation for SEO?",
+      answer:
+        "Yes! We create SEO-optimized blog posts, landing pages, and website content to improve rankings.",
+    },
+    {
+      question: "Do you use only white-hat SEO techniques?",
+      answer:
+        "Yes, we follow ethical SEO practices that align with Google's guidelines.",
+    },
+  ],
+};
+
+export const allInOne = [
+  {
+    icon: "🎨",
+    title: "Tailored Website Design",
+    text: "Your business deserves a beautiful, high-converting website built for success.",
+  },
+  {
+    icon: "📈",
+    title: "SEO Optimization",
+    text: "We ensure your website ranks higher, drives more traffic, and reaches your ideal audience.",
+  },
+  {
+    icon: "🔒",
+    title: "Secure, Reliable Hosting",
+    text: "Enjoy fast-loading, secure, and fully managed hosting to keep your site running 24/7.",
+  },
+  {
+    icon: "✍️",
+    title: "Professional Content Creation",
+    text: "No need to hire writers—we create engaging, on-brand content for your site.",
+  },
+  {
+    icon: "🛠️",
+    title: "Up to 3 Free Revisions",
+    text: "We refine your website until it’s perfect—at no extra cost.",
+  },
+  {
+    icon: "💬",
+    title: "Dedicated Support & Maintenance",
+    text: "Our experts are here to help, even after your website goes live.",
+  },
+];

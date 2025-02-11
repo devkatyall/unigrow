@@ -10,22 +10,22 @@ export default function VideoSec() {
 
   const { scrollY } = useScroll();
 
-  const width = useTransform(scrollY, [100, 600], ["90vw", "70vw"]);
+  const width = useTransform(scrollY, [100, 400], ["70vw", "85vw"]);
 
   return (
     <section
       ref={ref}
-      className="lg:px-16 px-6 h-screen lg:h-auto lg:mt-[10%] flex flex-col items-center justify-center"
+      className="h-auto mt-[20vh] flex flex-col items-center justify-center"
     >
       <div className=" flex flex-col items-center justify-center mb-[2%]">
-        <div className=" text-center flex flex-col items-center gap-3 lg:gap-6">
+        <div className=" text-center flex flex-col items-center gap-3 lg:gap-6 mx-auto w-[87vw]">
           <h1 className=" px-4 py-1 rounded-full ring-2 w-fit text-cyan-600">
             Choose us! but why?
           </h1>
-          <h2 className=" text-[35px] tracking-tighter leading-tight lg:text-7xl lg:w-[60%]">
+          <h2 className="text-5xl lg:tracking-tighter lg:text-[80px] lg:w-[60%]">
             Because Getting a Website Should Be Easy.
           </h2>
-          <p className=" text-base lg:w-[60%] text-neutral-400">
+          <p className=" text-xl text-neutral-400 lg:w-[70%]">
             You have a business to run—you shouldn’t have to chase multiple
             people for content, design, and development. Discover why Unigrow is
             your best bet for your digital goals.

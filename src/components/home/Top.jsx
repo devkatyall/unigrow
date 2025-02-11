@@ -38,7 +38,7 @@ export default function Top() {
   return (
     <div className="">
       <motion.div
-        className="xl:px-20 px-6 h-[calc(100vh)] flex items-center justify-center text-center w-full"
+        className="xl:px-20 px-6 h-[calc(100vh+20vh)] flex items-center justify-center text-center w-full"
         style={{
           opacity: scale,
           // backgroundImage,
