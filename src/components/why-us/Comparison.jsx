@@ -10,7 +10,7 @@ export default function Comparison() {
           What Others Charge Extra Is Free With Us
         </h2>
         <p className="text-sm lg:text-lg text-slate-400">
-          Don't fall into the trap of agencies that nickel-and-dime you.
+          Don&apos;t fall into the trap of agencies that nickel-and-dime you.
         </p>
       </div>
       <div className="overflow-x-auto">
