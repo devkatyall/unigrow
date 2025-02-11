@@ -15,7 +15,7 @@ export default function VideoSec() {
   return (
     <section
       ref={ref}
-      className="h-auto mt-[20vh] flex flex-col items-center justify-center"
+      className="h-auto mt-[22vh] flex flex-col items-center justify-center"
     >
       <div className=" flex flex-col items-center justify-center mb-[2%]">
         <div className=" text-center flex flex-col items-center gap-3 lg:gap-6 mx-auto w-[87vw]">
@@ -25,7 +25,7 @@ export default function VideoSec() {
           <h2 className="text-5xl lg:tracking-tighter lg:text-[80px] lg:w-[60%]">
             Because Getting a Website Should Be Easy.
           </h2>
-          <p className=" text-xl text-neutral-400 lg:w-[70%]">
+          <p className=" text-base lg:text-lg text-neutral-400 lg:w-[70%]">
             You have a business to run—you shouldn’t have to chase multiple
             people for content, design, and development. Discover why Unigrow is
             your best bet for your digital goals.

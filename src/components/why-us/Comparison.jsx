@@ -50,26 +50,12 @@ export default function Comparison() {
                 <td className="p-4 font-medium">{row.service}</td>
                 <td className="p-4 text-red-500 gap-2 font-light">
                   <div className="flex lg:flex-row flex-col items-center gap-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="size-6"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                      />
-                    </svg>
                     {row.others}
                   </div>
                 </td>
                 <td className="p-4 text-green-500 font-light  gap-2">
                   <div className="flex lg:flex-row flex-col items-center gap-2 text-center md:text-start">
-                    <svg
+                    {/* <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -82,7 +68,7 @@ export default function Comparison() {
                         strokeLinejoin="round"
                         d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                       />
-                    </svg>
+                    </svg> */}
                     {row.us}
                   </div>
                 </td>

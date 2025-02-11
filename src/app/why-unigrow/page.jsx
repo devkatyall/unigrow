@@ -9,12 +9,21 @@ import { allInOne } from "@/data";
 
 export default function page() {
   return (
-    <>
+    <main className=" flex flex-col gap-[13vh]">
       <VideoSec />
-      {/* <Hero /> */}
       <PartA />
       <Comparison />
-      <AllinOne object={allInOne} />
-    </>
+      <AllinOne object={allInOne}>
+        <div className=" w-[87vw] mx-auto my-[2vh]">
+          <h2 className=" text-3xl md:text-5xl font-medium">
+            Everything You Need, All in One Plan
+          </h2>
+          <p className=" text-sm lg:text-lg mt-2 text-slate-400">
+            A fully managed process from design to launch—so you can focus on
+            growing your business.
+          </p>
+        </div>
+      </AllinOne>
+    </main>
   );
 }

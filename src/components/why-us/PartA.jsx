@@ -28,12 +28,12 @@ export default function PartA() {
               affordable, and hassle-free.
             </p>
           </div>
-          <Carousel className="">
-            <CarouselContent className="mr-[7vw] ">
+          <Carousel className="px-[6vw] lg:px-0">
+            <CarouselContent className=" lg:mr-[7vw] ">
               {features.map((feature, index) => (
                 <CarouselItem
                   key={index}
-                  className="md:basis-1/2 lg:basis-1/2 translate-x-[6vw]"
+                  className="md:basis-1/2 lg:basis-1/2 lg:translate-x-[6vw]"
                 >
                   <div className="p-1 h-full">
                     <MagicCard className={" h-full"}>
@@ -53,8 +53,8 @@ export default function PartA() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="w-full flex justify-end px-[9vh] py-[4vh]">
-              <div className="flex gap-2">
+            <div className="w-full flex lg:justify-end lg:px-[2vw] py-[2vh]">
+              <div className="flex gap-4">
                 <CarouselPrevious className=" w-12 h-12 " />
                 <CarouselNext className="  w-12 h-12 " />
               </div>

@@ -711,35 +711,54 @@ export const questions = {
   ],
 };
 
+import webdev from "@/../public/why-us/webdev.jpg";
+import seo from "@/../public/why-us/seo.jpg";
+import hosting from "@/../public/why-us/hosting.jpg";
+import content from "@/../public/why-us/content.jpg";
+import revision from "@/../public/why-us/revision.jpg";
+import support from "@/../public/why-us/support.jpg";
+
 export const allInOne = [
   {
     icon: "🎨",
     title: "Tailored Website Design",
     text: "Your business deserves a beautiful, high-converting website built for success.",
+    img: webdev,
+    alt: "a person on laptop working on website development",
   },
   {
     icon: "📈",
     title: "SEO Optimization",
     text: "We ensure your website ranks higher, drives more traffic, and reaches your ideal audience.",
+    img: seo,
+    alt: "seo words in picture",
   },
   {
     icon: "🔒",
     title: "Secure, Reliable Hosting",
     text: "Enjoy fast-loading, secure, and fully managed hosting to keep your site running 24/7.",
+    img: hosting,
+    alt: "hosting for websites",
   },
   {
     icon: "✍️",
     title: "Professional Content Creation",
     text: "No need to hire writers—we create engaging, on-brand content for your site.",
+    img: content,
+    alt: "content writing as services included in package",
   },
   {
     icon: "🛠️",
     title: "Up to 3 Free Revisions",
     text: "We refine your website until it’s perfect—at no extra cost.",
+    img: revision,
+    alt: "up to 3 free website revisions",
   },
   {
     icon: "💬",
     title: "Dedicated Support & Maintenance",
     text: "Our experts are here to help, even after your website goes live.",
+    img: support,
+    alt: "Dedicated support for all clients",
   },
 ];
