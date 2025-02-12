@@ -10,9 +10,7 @@ import { cn } from "@/lib/utils";
 export default function Faq({ questions, children, classname }) {
   return (
     <div className="px-[6vw]">
-      <h1 className={cn("lg:text-[56px] text-[30px] font-medium", classname)}>
-        {children}
-      </h1>
+      {children}
       <Accordion type="single" collapsible className="">
         {questions.map((question, index) => (
           <AccordionItem key={index} value={`item-${index}`}>

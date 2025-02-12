@@ -27,6 +27,7 @@ export default function AllinOne({ object, children }) {
                       src={e?.img}
                       fill
                       className=" opacity-20 -z-10 object-cover"
+                      priority
                     />
                   )}
                   <div>
