@@ -15,14 +15,14 @@ export const animatePageIn = () => {
     );
 
     animate(0, 100, {
-      duration: 0.5,
+      duration: 0.3,
       onUpdate: (latest) => {
         bannerOne.style.transform = `translateY(${latest}%)`;
       },
     });
 
     animate(0, 100, {
-      duration: 0.5,
+      duration: 0.3,
       delay: 0.2,
       onUpdate: (latest) => {
         bannerTwo.style.transform = `translateY(${latest}%)`;
@@ -30,7 +30,7 @@ export const animatePageIn = () => {
     });
 
     animate(0, 100, {
-      duration: 0.5,
+      duration: 0.3,
       delay: 0.4,
       onUpdate: (latest) => {
         bannerThree.style.transform = `translateY(${latest}%)`;
@@ -38,7 +38,7 @@ export const animatePageIn = () => {
     });
 
     animate(0, 100, {
-      duration: 0.5,
+      duration: 0.3,
       delay: 0.6,
       onUpdate: (latest) => {
         bannerFour.style.transform = `translateY(${latest}%)`;
