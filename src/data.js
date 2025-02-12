@@ -7,6 +7,7 @@ import copywrite from "@/../public/projects/copywriter.png";
 const services = [
   {
     name: "Website Development",
+    ref: "/services/website-development",
     description: "Custom, modern, high-performing websites",
     icon: (
       <svg
@@ -27,6 +28,7 @@ const services = [
   },
   {
     name: "SEO & Optimization",
+    ref: "/services/seo",
     description: "Rank higher, get more traffic",
     icon: (
       <svg
@@ -47,6 +49,7 @@ const services = [
   },
   {
     name: "E-commerce Solutions",
+    ref: "/services/ecommerce",
     description: "Sell online, grow revenue fast",
     icon: (
       <svg
@@ -67,6 +70,7 @@ const services = [
   },
   {
     name: "Portfolio Creation",
+    ref: "/services/portfolio-creation",
     description: "Showcase work, attract clients",
     icon: (
       <svg
@@ -87,6 +91,7 @@ const services = [
   },
   {
     name: "Branding & Design",
+    ref: "/services/branding-and-design",
     description: "Logos, visuals, strong identity",
     icon: (
       <svg
@@ -107,6 +112,7 @@ const services = [
   },
   {
     name: "Website Maintenance",
+    ref: "/services/website-maintenance",
     description: "Secure, updated, always running",
     icon: (
       <svg

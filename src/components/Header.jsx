@@ -130,7 +130,8 @@ export default function Header() {
           <motion.div className=" absolute hidden top-6 peer-hover:block hover:block w-[calc(40vw)] z-10 transition-opacity duration-200">
             <div className="grid grid-cols-2 grid-rows-3 gap-1 mt-6 p-2 bg-black bg-opacity-90 backdrop-blur-sm rounded-2xl drop-shadow-lg ring-1">
               {services.map((e, i) => (
-                <div
+                <AnimatedLink
+                  href={e.ref}
                   key={i}
                   className="flex gap-3 items-center hover:bg-blue-950 hover:bg-opacity-40 transition-all ease-in duration-100 rounded-xl p-2 cursor-pointer"
                 >
@@ -143,7 +144,7 @@ export default function Header() {
                       {e.description}
                     </span>
                   </div>
-                </div>
+                </AnimatedLink>
               ))}
             </div>
           </motion.div>
