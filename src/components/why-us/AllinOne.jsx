@@ -26,7 +26,7 @@ export default function AllinOne({ object, children }) {
                       alt={e?.alt}
                       src={e?.img}
                       fill
-                      className=" opacity-20 -z-10 object-cover"
+                      className=" opacity-30 bg-black -z-10 object-cover"
                       priority
                     />
                   )}

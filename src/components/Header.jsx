@@ -12,6 +12,7 @@ import { ScrollProgress } from "./ui/scroll-progress";
 import { cn } from "@/lib/utils";
 import { services } from "@/data";
 import { AnimatedShinyText } from "./magicui/animated-shiny-text";
+import AnimatedLink from "./AnimatedLink";
 
 export default function Header() {
   const { user, setUser } = useAppContext();
@@ -186,7 +187,7 @@ const Tab = ({ children, href, setProps, setPresent, pathname }) => {
   }, [href, pathname, setPresent]);
 
   return (
-    <Link
+    <AnimatedLink
       ref={ref}
       className={cn(
         " transition-all ease-in-out duration-200 relative z-10 text-white font-medium",
@@ -208,7 +209,7 @@ const Tab = ({ children, href, setProps, setPresent, pathname }) => {
       }}
     >
       {children}
-    </Link>
+    </AnimatedLink>
   );
 };
 

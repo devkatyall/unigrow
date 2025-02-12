@@ -13,9 +13,11 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <AppProvider>
         <body className="dark">
-          <Header />
-          <main className="mt-[22vh]">{children}</main>
-          <Footer />
+          <main className="mt-[22vh]">
+            <Header />
+            {children}
+            <Footer />
+          </main>
         </body>
       </AppProvider>
     </html>
