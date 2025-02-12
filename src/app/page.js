@@ -9,12 +9,12 @@ import Projects from "@/components/home/projects";
 
 export default function Home() {
   return (
-    <main>
+    <div>
       <Top />
       <Services />
       <Pricing />
       <MarqueeDemo />
       <Projects />
-    </main>
+    </div>
   );
 }

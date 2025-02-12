@@ -15,14 +15,14 @@ export default function VideoSec() {
   return (
     <section
       ref={ref}
-      className="h-auto mt-[22vh] flex flex-col items-center justify-center"
+      className="h-auto flex flex-col items-center justify-center"
     >
       <div className=" flex flex-col items-center justify-center mb-[2%]">
         <div className=" text-center flex flex-col items-center gap-3 lg:gap-6 mx-auto w-[87vw]">
           <h1 className=" px-4 py-1 rounded-full ring-2 w-fit text-cyan-600">
             Choose us! but why?
           </h1>
-          <h2 className="text-5xl lg:tracking-tighter lg:text-[80px] lg:w-[60%]">
+          <h2 className="text-5xl lg:tracking-tighter lg:text-7xl lg:w-[60%]">
             Because Getting a Website Should Be Easy.
           </h2>
           <p className=" text-base lg:text-lg text-neutral-400 lg:w-[70%]">

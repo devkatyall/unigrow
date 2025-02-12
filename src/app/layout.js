@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
       <AppProvider>
         <body className="dark">
           <Header />
-          {children}
+          <main className="mt-[22vh]">{children}</main>
           <Footer />
         </body>
       </AppProvider>

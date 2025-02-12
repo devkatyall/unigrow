@@ -161,3 +161,40 @@ a {
     scrollbar-width: none; /* Firefox */
   }
 }
+
+.footer {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(11, 10, 9, 1) 100%
+  );
+}
+
+/* HTML: <div class="ribbon">Your text content</div> */
+.ribbon {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+.ribbon {
+  --f: 0.3em; /* control the folded part*/
+  --r: 0.8em; /* control the ribbon shape */
+
+  position: absolute;
+  right: 20px;
+  top: calc(-1 * var(--f));
+  padding: 0.3em;
+  background: #00aff0;
+  border-right: var(--f) solid #0005;
+  border-bottom: var(--r) solid #0000;
+  clip-path: polygon(
+    calc(100% - var(--f)) 0,
+    0 0,
+    0 100%,
+    calc(50% - var(--f) / 2) calc(100% - var(--r)),
+    calc(100% - var(--f)) 100%,
+    calc(100% - var(--f)) var(--f),
+    100% var(--f)
+  );
+}

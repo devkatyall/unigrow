@@ -399,7 +399,7 @@ const pricingPackages = [
       "Custom content writing",
       "Modern website design",
       "Fast & responsive development",
-      "Mobile-friendly & SEO-ready",
+      "Mobile-friendly & Level 1 SEO-ready",
     ],
   },
   {
@@ -413,7 +413,7 @@ const pricingPackages = [
       "Custom content writing",
       "Custom website design",
       "Multi-page website (Home, About, Services, Contact, etc.)",
-      "SEO-optimized & fast loading",
+      "Level 2 SEO-optimized & fast loading",
       "Mobile-friendly & fully responsive",
     ],
   },
@@ -428,7 +428,7 @@ const pricingPackages = [
       "Custom content writing",
       "Premium website design",
       "Advanced website development",
-      "Multi-page site with full SEO optimization",
+      "Multi-page site with Level 3 SEO optimization",
       "CMS integration (WordPress, Webflow, or Custom)",
       "Mobile-friendly & fully responsive",
     ],
@@ -438,14 +438,14 @@ const pricingPackages = [
 const addOns = [
   {
     name: "Hosting",
-    price: 20,
+    price: "30/Yearly",
     suitableFor:
       "Businesses needing reliable, secure hosting with 24/7 support.",
     description:
       "Fast, secure, and hassle-free hosting with round-the-clock support.",
   },
   {
-    name: "SEO",
+    name: "On-Page SEO",
     price: 150,
     suitableFor:
       "Businesses that want to rank higher on Google and attract more visitors.",
@@ -630,29 +630,54 @@ export const questions = {
   ],
   pricing: [
     {
-      question: "How much does a website cost with Unigrow?",
+      question: "Why is Unigrow’s pricing better than other agencies?",
       answer:
-        "We offer all-inclusive website packages with transparent pricing. Our plans include design, content, development, SEO, and hosting.",
+        "Most agencies charge extra for essentials like SEO, content, and mobile responsiveness. At Unigrow, we bundle everything into one affordable price—no hidden fees.",
     },
     {
-      question: "Are there any hidden fees?",
+      question: "What if I need more pages?",
       answer:
-        "No! Unigrow offers upfront pricing with no hidden costs. Everything—design, development, mobile optimization, and SEO—is included in our packages.",
+        "You can easily add more pages to any plan. Just let us know your requirements, and we’ll customize your package.",
     },
     {
-      question: "Do you offer custom pricing for unique projects?",
+      question: "How long does it take to build my website?",
       answer:
-        "Yes, we offer customized solutions for businesses that require specialized features or integrations.",
+        "Our average turnaround time is 2-4 weeks, depending on the complexity of your site.",
     },
     {
-      question: "What payment methods does Unigrow accept?",
+      question: "Can I upgrade my plan later?",
       answer:
-        "We accept major credit cards, PayPal, and direct bank transfers for our services.",
+        "Yes! You can start with a lower plan and upgrade anytime as your business grows.",
     },
     {
-      question: "Can I get a discount on multiple services?",
+      question: "Do you provide ongoing maintenance?",
       answer:
-        "Yes! We offer bundled pricing and discounts for businesses that need multiple services, such as website development and branding.",
+        "Yes! We offer website maintenance packages to keep your site secure, updated, and running smoothly.",
+    },
+    {
+      question: "Is SEO included in all plans?",
+      answer:
+        "Yes! Every website we build includes SEO optimization to help your business rank higher in search engines.",
+    },
+    {
+      question: "Do I own my website?",
+      answer:
+        "Yes! You have full ownership of your website once it’s completed and launched.",
+    },
+    {
+      question: "Do you offer e-commerce website development?",
+      answer:
+        "Yes! Our Growth and Custom plans include full e-commerce functionality to help you sell online.",
+    },
+    {
+      question: "What type of businesses do you work with?",
+      answer:
+        "We specialize in websites for startups, small businesses, freelancers, and growing brands across various industries.",
+    },
+    {
+      question: "How do I get started?",
+      answer:
+        "Simply book a free consultation with us, and we’ll guide you through the process!",
     },
   ],
   website_development: [

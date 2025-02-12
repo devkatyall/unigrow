@@ -7,7 +7,7 @@ export default function page() {
   return (
     <main>
       <section className=" min-h-screen flex justify-center items-center">
-        <div className="md:my-[14vh] md:px-16 lg:py-10 px-0 py-3 mt-[14vh] flex flex-col items-center">
+        <div className="] md:px-16 lg:py-10 px-0 py-3 flex flex-col items-center">
           <div className=" px-8 md:px-0 flex flex-col items-center">
             <GradientText>
               <h1 className="text-3xl md:text-6xl text-center font-medium">

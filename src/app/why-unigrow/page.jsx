@@ -12,13 +12,13 @@ import Link from "next/link";
 
 export default function page() {
   return (
-    <main className=" flex flex-col gap-[13vh]">
+    <div className=" flex flex-col gap-[13vh]">
       <VideoSec />
       <PartA />
       <Comparison />
       <AllinOne object={allInOne}>
         <div className=" w-[87vw] mx-auto my-[2vh]">
-          <h2 className=" text-3xl md:text-5xl font-medium">
+          <h2 className=" lg:text-5xl xl:text-6xl text-3xl tracking-tight lg:tracking-normal font-medium">
             Everything You Need, All in One Plan
           </h2>
           <p className=" text-sm lg:text-lg mt-2 text-slate-400">
@@ -27,27 +27,6 @@ export default function page() {
           </p>
         </div>
       </AllinOne>
-      <CallToAction>
-        <div
-          className=" flex flex-col
-        gap-2  py-[5vh]"
-        >
-          <h2 className=" text-3xl md:text-5xl font-medium drop-shadow-lg">
-            {" "}
-            Ready to Build a Website Without the Headaches?
-          </h2>
-          <p className=" text-sm lg:text-lg text-slate-400">
-            Unigrow takes care of everything so you can focus on growing your
-            business. All-inclusive pricing. No hidden fees. Stress-free, fully
-            managed process
-          </p>
-          <div className="mt-4">
-            <Button>
-              <Link href="/book-free-consultation">Book a Free Call</Link>
-            </Button>
-          </div>
-        </div>
-      </CallToAction>
-    </main>
+    </div>
   );
 }
