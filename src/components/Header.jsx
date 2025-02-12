@@ -76,7 +76,7 @@ export default function Header() {
         </AnimatedShinyText>
       </div>
       <div className="py-5 lg:py-[18px] px-5 lg:px-16 flex justify-between items-center md:grid md:grid-cols-3">
-        <div className="md:flex md:items-center md:gap-2">
+        <AnimatedLink href={"/"} className="md:flex md:items-center md:gap-2">
           <Image
             src={logo}
             alt="logo of Unigrow.ca which is a web development agency"
@@ -86,7 +86,7 @@ export default function Header() {
           <span className="md:block hidden md:text-xl md:font-semibold">
             Unigrow
           </span>
-        </div>
+        </AnimatedLink>
         <div
           onMouseLeave={() => {
             setProps(present);
@@ -156,7 +156,9 @@ export default function Header() {
               onChange={updateTheme}
             /> */}
             <PulsatingButton>
-              <Link href="/book-free-consultation">Talk To Expert</Link>
+              <AnimatedLink href="/book-free-consultation">
+                Talk To Expert
+              </AnimatedLink>
             </PulsatingButton>
           </div>
         </div>

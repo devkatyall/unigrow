@@ -4,6 +4,7 @@ import HeroVideoDialog from "../hero-video-dialog";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
+import AnimatedLink from "../AnimatedLink";
 
 export default function VideoSec() {
   const ref = useRef(null);
@@ -33,7 +34,9 @@ export default function VideoSec() {
         </div>
         <div className="flex gap-2 my-6 lg:my-6">
           <Button className=" py-6  md:w-fit scale-95 hover:scale-100 hover:shadow-sm transition-all duration-150">
-            <Link href={"/book-free-consultation"}>Get Started</Link>
+            <AnimatedLink href={"/book-free-consultation"}>
+              Get Started
+            </AnimatedLink>
           </Button>
           <Button
             variant="ghost"

@@ -6,6 +6,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import CustomCard from "@/components/home/packs/CustomCard";
 import Faq from "@/components/Common/Faq";
+import AnimatedLink from "@/components/AnimatedLink";
 
 export default function page() {
   return (
@@ -56,7 +57,9 @@ export default function page() {
                   variant="outline"
                   className=" py-6 w-full scale-95 hover:scale-100 hover:shadow-sm transition-all duration-150"
                 >
-                  <Link href={"/book-free-consultation"}>Get Started</Link>
+                  <AnimatedLink href={"/book-free-consultation"}>
+                    Get Started
+                  </AnimatedLink>
                 </Button>
               </div>
             </div>

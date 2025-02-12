@@ -16,6 +16,7 @@ import { Particles } from "../ui/particles";
 import Squares from "../ui/Squares";
 import ShinyButton from "../ui/ShinyButton";
 import Link from "next/link";
+import AnimatedLink from "../AnimatedLink";
 
 export default function Top() {
   const COLOR = ["#6366F1", "#0EA5E9", "#10B981"];
@@ -83,7 +84,9 @@ export default function Top() {
               color="cyan"
               className=" cursor-pointer hover:scale-110 scale-105 transition-all ease-in drop-shadow-[0px_0px_40px_#b8b8b859] hover:font-bold"
             >
-              <Link href={"/book-free-consultation"}>Get Started</Link>
+              <AnimatedLink href={"/book-free-consultation"}>
+                Get Started
+              </AnimatedLink>
             </ShinyButton>
           </div>
         </div>
