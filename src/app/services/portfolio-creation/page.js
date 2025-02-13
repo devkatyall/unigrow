@@ -15,6 +15,8 @@ import students from "@/../public/services/students.jpg";
 import ImageSec from "@/components/services/ImageSec";
 import AnimatedLink from "@/components/AnimatedLink";
 import { Button } from "@/components/ui/button";
+import Faq from "@/components/Common/Faq";
+import { questions } from "@/data";
 // import { motion } from "framer-motion";
 
 export default function page() {
@@ -117,6 +119,11 @@ export default function page() {
           </AnimatedLink>
         </Sub>
       </ImageSec>
+      <section>
+        <Faq questions={questions.portfolio_creation}>
+          <SubHeading as="h3">Frequently Asked Questions</SubHeading>
+        </Faq>
+      </section>
     </main>
   );
 }

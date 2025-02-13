@@ -6,10 +6,11 @@ export function Main({ children, className }) {
   return (
     <div
       className={cn(
-        " w-[87vw] mx-auto flex flex-col items-center justify-center gap-[2vh] lg:gap-[3vh] text-center",
+        " w-[87vw] relative mx-auto flex flex-col items-center justify-center gap-[2vh] lg:gap-[3vh] text-center",
         className
       )}
     >
+      <div className=" blob opacity-70 absolute blur-[120px] mx-auto -z-10 h-[200px] w-[200px] md:h-[300px] md:w-[300px] lg:h-[400px] lg:w-[400px] " />
       {children}
     </div>
   );

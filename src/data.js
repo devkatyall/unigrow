@@ -686,6 +686,53 @@ export const questions = {
         "Simply book a free consultation with us, and we’ll guide you through the process!",
     },
   ],
+  portfolio_creation: [
+    {
+      question: "What industries do you create portfolios for?",
+      answer:
+        "We design portfolios for freelancers, creatives, students, agencies, consultants, and businesses across various industries.",
+    },
+    {
+      question: "Can I add new projects to my portfolio later?",
+      answer:
+        "Yes! You’ll have full control to update your portfolio or you can opt for our maintenance service.",
+    },
+    {
+      question: "Will my portfolio be SEO-optimized?",
+      answer:
+        "Absolutely! We ensure your portfolio ranks well in search results to attract more clients or recruiters.",
+    },
+    {
+      question: "Can I link my portfolio to my website or social media?",
+      answer:
+        "Yes! We integrate your portfolio seamlessly with your website, LinkedIn, and other platforms.",
+    },
+    {
+      question: "How long does it take to build my portfolio?",
+      answer:
+        "Most portfolios are completed within 2-4 weeks, depending on the complexity.",
+    },
+    {
+      question: "What if I need custom features?",
+      answer:
+        "Our Custom Plan offers tailored solutions, including API integrations and advanced functionalities.",
+    },
+    {
+      question: "Why do students need a portfolio?",
+      answer:
+        "A portfolio helps students stand out in job applications, showcase skills, and impress employers with real-world projects.",
+    },
+    {
+      question: "Is the portfolio mobile-friendly?",
+      answer:
+        "Yes! Your portfolio will be fully responsive and look great on all devices.",
+    },
+    {
+      question: "Can you help me write content for my portfolio?",
+      answer:
+        "Yes! Our team can create engaging and SEO-friendly content for your portfolio.",
+    },
+  ],
   website_development: [
     {
       question: "What platforms does Unigrow use for website development?",
