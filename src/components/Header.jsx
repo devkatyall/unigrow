@@ -342,7 +342,7 @@ const Drawer = () => {
             <SheetClose>Why us..?</SheetClose>
           </AnimatedLink>
         </div>
-        <div className="absolute bottom-6 right-0 w-full flex items-center justify-center px-[4vw]">
+        <div className="absolute bottom-[7vh] right-0 w-full flex items-center justify-center px-[4vw]">
           <AnimatedLink
             href="/book-free-consultation"
             className="bg-white py-3 px-6 rounded-full w-full flex items-center justify-center drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)]"
