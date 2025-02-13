@@ -23,7 +23,7 @@ export default function VideoSec() {
           <h1 className=" px-4 py-1 rounded-full ring-2 w-fit text-cyan-600">
             Choose us! but why?
           </h1>
-          <h2 className="text-5xl lg:tracking-tighter lg:text-7xl lg:w-[60%]">
+          <h2 className="text-4xl lg:tracking-tighter lg:text-7xl lg:w-[60%]">
             Because Getting a Website Should Be Easy.
           </h2>
           <p className=" text-base lg:text-lg text-neutral-400 lg:w-[70%]">

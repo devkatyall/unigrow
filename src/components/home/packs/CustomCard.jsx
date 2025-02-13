@@ -1,3 +1,4 @@
+import AnimatedLink from "@/components/AnimatedLink";
 import GradientText from "@/components/ui/GradText";
 import ShinyButton from "@/components/ui/ShinyButton";
 import { Meteors } from "@/components/ui/meteors";
@@ -22,7 +23,9 @@ export default function CustomCard() {
           {description}
         </p>
         <ShinyButton className="font-bold hover:scale-105 transition-all ease-in-out">
-          <Link href="/book-free-consultation">Book a 15 min</Link>
+          <AnimatedLink href="/book-free-consultation">
+            Book a 15 min
+          </AnimatedLink>
         </ShinyButton>
       </div>
     </div>

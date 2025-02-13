@@ -2,6 +2,8 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 import Header from "@/components/Header";
 import { AppProvider, useAppContext } from "@/Context";
+import AnimatedLink from "@/components/AnimatedLink";
+import { PulsatingButton } from "@/components/ui/pulsating-button";
 
 export const metadata = {
   title: "Create Next App",
@@ -12,12 +14,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <AppProvider>
-        <body className="dark">
-          <main className="mt-[22vh]">
-            <Header />
-            {children}
-            <Footer />
-          </main>
+        <body className="dark mt-[22vh]">
+          <Header />
+          {children}
+          <Footer />
         </body>
       </AppProvider>
     </html>

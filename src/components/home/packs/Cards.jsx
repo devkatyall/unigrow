@@ -1,3 +1,4 @@
+import AnimatedLink from "@/components/AnimatedLink";
 import GradientText from "@/components/ui/GradText";
 import { ArrowBigRight, Check } from "lucide-react";
 import Link from "next/link";
@@ -6,7 +7,7 @@ import React from "react";
 const Card = ({ plan, className, i }) => {
   const { name, price, suitableFor, description, features } = plan;
   return (
-    <Link
+    <AnimatedLink
       href="/pricing"
       className={` bg-neutral-900 rounded-2xl shadow-lg p-6 border-[2px] hover:scale-105 transition-all ease-in-out duration-150 relative ${className}`}
     >
@@ -35,7 +36,7 @@ const Card = ({ plan, className, i }) => {
         <span className="font-bold">Best For : </span>
         {suitableFor}
       </p>
-    </Link>
+    </AnimatedLink>
   );
 };
 

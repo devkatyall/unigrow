@@ -1,11 +1,12 @@
 import React from "react";
 import { cn } from "@/lib/utils";
+import { TextAnimate } from "../magicui/text-animate";
 
 export function Main({ children, className }) {
   return (
     <div
       className={cn(
-        " w-[87vw] mx-auto flex flex-col items-center justify-center gap-[3vh] text-center",
+        " w-[87vw] mx-auto flex flex-col items-center justify-center gap-[2vh] lg:gap-[3vh] text-center",
         className
       )}
     >
@@ -14,16 +15,22 @@ export function Main({ children, className }) {
   );
 }
 
-export function MainHeading({ children, className }) {
+export function MainHeading({ children, className, as = "h2", delay = 0.5 }) {
   return (
-    <h2
+    <TextAnimate
+      startOnView
+      by="word"
+      once={true}
+      delay={delay}
+      animation="fadeIn"
       className={cn(
-        " lg:text-5xl xl:text-7xl text-3xl tracking-tight lg:tracking-normal font-medium",
+        " lg:text-5xl xl:text-7xl text-4xl tracking-tight lg:tracking-normal font-medium",
         className
       )}
+      as={as}
     >
       {children}
-    </h2>
+    </TextAnimate>
   );
 }
 

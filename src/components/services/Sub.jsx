@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import React from "react";
+import { MainHeading } from "./Main";
 
 export function Sub({ children, className }) {
   return <div className={cn(" w-[87vw] mx-auto", className)}>{children}</div>;
@@ -13,15 +14,17 @@ export function SubText({ children, className }) {
   );
 }
 
-export function SubHeading({ children, className }) {
+export function SubHeading({ children, className, as = "h3" }) {
   return (
-    <h2
+    <MainHeading
+      delay={0}
       className={cn(
         "lg:text-5xl xl:text-6xl text-3xl tracking-tight lg:tracking-normal font-medium",
         className
       )}
+      as={as}
     >
       {children}
-    </h2>
+    </MainHeading>
   );
 }

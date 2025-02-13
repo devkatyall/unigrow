@@ -16,7 +16,7 @@ export default function page() {
         <span className=" px-4 py-1 my-4 rounded-full ring-2 w-fit text-cyan-600">
           Pricing
         </span>
-        <h1 className="text-5xl lg:tracking-tight lg:text-7xl">
+        <h1 className="text-4xl lg:tracking-tight lg:text-7xl">
           {" "}
           No Hidden Fees!
           <br /> Just One Simple Price for Everything

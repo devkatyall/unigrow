@@ -13,6 +13,7 @@ import { cn } from "@/lib/utils";
 import { services } from "@/data";
 import { AnimatedShinyText } from "./magicui/animated-shiny-text";
 import AnimatedLink from "./AnimatedLink";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "./ui/sheet";
 
 export default function Header() {
   const { user, setUser } = useAppContext();
@@ -56,7 +57,7 @@ export default function Header() {
   return (
     <motion.nav
       style={{
-        zIndex: 100,
+        zIndex: 50,
       }}
       className={` w-full top-0 transition-all ease-in-out duration-100 bg-black backdrop-blur-sm ${
         visible
@@ -156,7 +157,8 @@ export default function Header() {
               checked={user.dark ? true : false}
               onChange={updateTheme}
             /> */}
-            <PulsatingButton>
+            <Drawer />
+            <PulsatingButton className=" hidden md:block">
               <AnimatedLink href="/book-free-consultation">
                 Talk To Expert
               </AnimatedLink>
@@ -226,5 +228,32 @@ const Line = ({ style }) => {
       }}
       className=" absolute z-0 -bottom-1 mix-blend-difference h-[3px] rounded-xl bg-cyan-300 cursor-pointer"
     />
+  );
+};
+
+const Drawer = () => {
+  return (
+    <Sheet className="block md:hidden z-[10]">
+      <SheetTrigger className="block md:hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="size-10"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
+          />
+        </svg>
+      </SheetTrigger>
+      <SheetContent className="w-screen h-screen">
+        <SheetTitle className="text-5xl">Menu</SheetTitle>
+        <div>Hello</div>
+      </SheetContent>
+    </Sheet>
   );
 };

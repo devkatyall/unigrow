@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import CallToAction from "./Common/CallToAction";
 import { Button } from "./ui/button";
+import AnimatedLink from "./AnimatedLink";
 
 export default function Footer() {
   return (
@@ -23,37 +24,39 @@ export default function Footer() {
           </p>
           <div className="mt-4">
             <Button className=" hover:scale-105">
-              <Link href="/book-free-consultation">Book a Free Call</Link>
+              <AnimatedLink href="/book-free-consultation">
+                Book a Free Call
+              </AnimatedLink>
             </Button>
           </div>
         </div>
         <div className=" drop-shadow-lg lg:flex-row flex-col flex lg:items-center lg:justify-between w-full gap-y-2">
           <div className=" flex gap-x-4 gap-y-2 flex-wrap">
-            <Link href={"/privacy-policy"}>
+            <AnimatedLink href={"/privacy-policy"}>
               <p className=" text-xs hover:font-bold lg:text-sm border-r-2 border-white pr-4 text-white font-medium">
                 Privacy Policy
               </p>
-            </Link>
-            <Link href={"/cookies"}>
+            </AnimatedLink>
+            <AnimatedLink href={"/cookies"}>
               <p className=" text-xs hover:font-bold lg:text-sm border-r-2 border-white pr-4 text-white font-medium">
                 Use of Cookies
               </p>
-            </Link>
-            <Link href={"/terms"}>
+            </AnimatedLink>
+            <AnimatedLink href={"/terms"}>
               <p className=" text-xs hover:font-bold lg:text-sm border-r-2 border-white pr-4 text-white font-medium">
                 Terms of Use
               </p>
-            </Link>
-            <Link href={"/legal"}>
+            </AnimatedLink>
+            <AnimatedLink href={"/legal"}>
               <p className=" text-xs hover:font-bold lg:text-sm border-r-2 border-white pr-4 text-white font-medium">
                 Legal
               </p>
-            </Link>
-            <Link href={"/sitemap"}>
+            </AnimatedLink>
+            <AnimatedLink href={"/sitemap"}>
               <p className=" text-xs hover:font-bold lg:text-sm pr-4 text-white font-medium">
                 Site Map
               </p>
-            </Link>
+            </AnimatedLink>
           </div>
 
           <p className=" text-white selection:bg-cyan-500 selection:text-black text-xs lg:text-sm">
