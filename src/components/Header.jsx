@@ -82,7 +82,7 @@ export default function Header() {
           </span>
         </AnimatedShinyText>
       </div>
-      <div className="py-5 lg:py-[18px] px-5 lg:px-16 flex justify-between items-center md:grid md:grid-cols-3">
+      <div className="py-2 lg:py-[18px] px-5 lg:px-16 flex justify-between items-center md:grid md:grid-cols-3">
         <AnimatedLink href={"/"} className="md:flex md:items-center md:gap-2">
           <Image
             src={logo}
@@ -238,8 +238,32 @@ const Line = ({ style }) => {
 };
 
 const Drawer = () => {
+  const dropdownVariants = {
+    open: {
+      height: "auto",
+      opacity: 1,
+      marginTop: 8,
+      marginBottom: 8,
+      transition: { duration: 0.3 },
+    },
+    closed: {
+      height: 0,
+      opacity: 0,
+      marginTop: 0,
+      marginBottom: 0,
+      transition: { duration: 0.3 },
+    },
+  };
+
+  const arrowVariants = {
+    open: { rotate: 90, transition: { duration: 0.3 } },
+    closed: { rotate: 0, transition: { duration: 0.3 } },
+  };
+
+  const [open, setOpen] = useState(false);
+
   return (
-    <Sheet className="block md:hidden z-[10]">
+    <Sheet className="block md:hidden ">
       <SheetTrigger className="block md:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -247,7 +271,7 @@ const Drawer = () => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="size-10"
+          className="size-8"
         >
           <path
             strokeLinecap="round"
@@ -256,20 +280,76 @@ const Drawer = () => {
           />
         </svg>
       </SheetTrigger>
-      <SheetContent className="w-screen h-screen">
+      <SheetContent className="w-screen h-screen bg-black/30 backdrop-blur-sm flex flex-col justify-center z-[100]">
         <SheetTitle className="text-5xl">Menu</SheetTitle>
-        <div className="flex flex-col gap-2 my-[2vh] ml-[2vw]">
-          <AnimatedLink
-            href={"/services/portfolio-creation"}
-            className="text-2xl tracking-wide"
-          >
-            <SheetClose>Portfolio Creation</SheetClose>
+        <div className="flex flex-col gap-[2vh] my-[2vh] ml-[2vw] transition-all ease-in duration-300 cursor-pointer">
+          <AnimatedLink href={"/"} className="text-3xl tracking-wide">
+            <SheetClose>Home</SheetClose>
           </AnimatedLink>
+
+          <div className="cursor-pointer">
+            <div
+              className="text-3xl tracking-wide flex gap-2 items-center"
+              onClick={() => setOpen((prev) => !prev)}
+            >
+              Services
+              <motion.svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-7 h-7"
+                variants={arrowVariants}
+                animate={open ? "open" : "closed"}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                />
+              </motion.svg>
+            </div>
+            <motion.div
+              variants={dropdownVariants}
+              initial="closed"
+              animate={open ? "open" : "closed"}
+              className="flex flex-col gap-2 ml-[4vw] overflow-hidden"
+            >
+              {services.map((e, i) => (
+                <AnimatedLink
+                  key={i}
+                  href={e.ref}
+                  className="text-xl text-white/55 tracking-wide"
+                >
+                  <SheetClose>{e.name}</SheetClose>
+                </AnimatedLink>
+              ))}
+            </motion.div>
+          </div>
+
           <AnimatedLink
             href={"/why-unigrow"}
-            className="text-2xl tracking-wide"
+            className="text-3xl tracking-wide"
+          >
+            <SheetClose>Pricing</SheetClose>
+          </AnimatedLink>
+
+          <AnimatedLink
+            href={"/why-unigrow"}
+            className="text-3xl tracking-wide"
           >
             <SheetClose>Why us..?</SheetClose>
+          </AnimatedLink>
+        </div>
+        <div className="absolute bottom-6 right-0 w-full flex items-center justify-center px-[4vw]">
+          <AnimatedLink
+            href="/book-free-consultation"
+            className="bg-white py-3 px-6 rounded-full w-full flex items-center justify-center drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)]"
+          >
+            <SheetClose className="text-2xl font-medium text-black text-center">
+              Talk To Expert
+            </SheetClose>
           </AnimatedLink>
         </div>
       </SheetContent>

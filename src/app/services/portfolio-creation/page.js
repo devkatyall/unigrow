@@ -45,10 +45,8 @@ export default function page() {
         </Main>
         <VelocityScroll
           numRows={2}
-          defaultVelocity={0.5}
-          className={
-            " tracking-wide my-[4vh] text-neutral-900 border-dashed border-y-[2px] border-white py-2 bg-cyan-400/70"
-          }
+          defaultVelocity={1}
+          className={" tracking-wide my-[2vh] text-neutral-700/60"}
         >
           For Professionals. Students. Business Owners.
         </VelocityScroll>
