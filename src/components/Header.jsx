@@ -252,7 +252,20 @@ const Drawer = () => {
       </SheetTrigger>
       <SheetContent className="w-screen h-screen">
         <SheetTitle className="text-5xl">Menu</SheetTitle>
-        <div>Hello</div>
+        <div className="flex flex-col gap-2 my-[2vh] ml-[2vw]">
+          <AnimatedLink
+            href={"/services/portfolio-creation"}
+            className="text-2xl tracking-wide"
+          >
+            Portfolio Creation
+          </AnimatedLink>
+          <AnimatedLink
+            href={"/services/why-unigrow"}
+            className="text-2xl tracking-wide"
+          >
+            Why us..?
+          </AnimatedLink>
+        </div>
       </SheetContent>
     </Sheet>
   );
