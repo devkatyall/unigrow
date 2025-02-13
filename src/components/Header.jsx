@@ -13,7 +13,13 @@ import { cn } from "@/lib/utils";
 import { services } from "@/data";
 import { AnimatedShinyText } from "./magicui/animated-shiny-text";
 import AnimatedLink from "./AnimatedLink";
-import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "./ui/sheet";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from "./ui/sheet";
 
 export default function Header() {
   const { user, setUser } = useAppContext();
@@ -257,13 +263,13 @@ const Drawer = () => {
             href={"/services/portfolio-creation"}
             className="text-2xl tracking-wide"
           >
-            Portfolio Creation
+            <SheetClose>Portfolio Creation</SheetClose>
           </AnimatedLink>
           <AnimatedLink
-            href={"/services/why-unigrow"}
+            href={"/why-unigrow"}
             className="text-2xl tracking-wide"
           >
-            Why us..?
+            <SheetClose>Why us..?</SheetClose>
           </AnimatedLink>
         </div>
       </SheetContent>
