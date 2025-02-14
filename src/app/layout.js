@@ -4,7 +4,6 @@ import Header from "@/components/Header";
 import { AppProvider, useAppContext } from "@/Context";
 import AnimatedLink from "@/components/AnimatedLink";
 import { PulsatingButton } from "@/components/ui/pulsating-button";
-import Script from "next/script";
 
 export const metadata = {
   title: "Create Next App",
@@ -15,13 +14,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <Script
+        <script
           id="Cookiebot"
           src="https://consent.cookiebot.com/uc.js"
           data-cbid="cc27d4d8-4b44-42c0-9975-8242000510db"
-          strategy="afterInteractive" // Loads after the page is interactive
+          type="text/javascript"
           async
-        />
+        ></script>
       </head>
       <AppProvider>
         <body className="dark mt-[22vh]">
