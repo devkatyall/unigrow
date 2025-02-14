@@ -2,8 +2,7 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 import Header from "@/components/Header";
 import { AppProvider, useAppContext } from "@/Context";
-import AnimatedLink from "@/components/AnimatedLink";
-import { PulsatingButton } from "@/components/ui/pulsating-button";
+import Script from "next/script";
 
 export const metadata = {
   title: "Create Next App",
