@@ -72,6 +72,7 @@ export default function page() {
             </AnimatedLink>
           </Main>
         </section>
+        <section></section>
       </main>
       <Script
         type="application/ld+json"
