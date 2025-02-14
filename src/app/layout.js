@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import { AppProvider, useAppContext } from "@/Context";
 import Script from "next/script";
+import Transition from "@/components/Transition";
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +12,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning={true}>
       <head>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-8075XGQXG3"
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
       </head>
       <AppProvider>
         <body className="dark mt-[22vh]">
+          <Transition />
           <Header />
           {children}
           <Footer />
