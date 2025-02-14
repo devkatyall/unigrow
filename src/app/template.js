@@ -1,16 +1,19 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { animatePageIn } from "@/lib/animations";
 import Hamester from "@/components/Hamster";
+import { usePathname } from "next/navigation";
 
 export default function Template({ children }) {
-  React.useEffect(() => {
+  const pathname = usePathname();
+
+  useEffect(() => {
     animatePageIn();
-  }, []);
+  }, [pathname]);
 
   return (
-    <div>
+    <>
       <div
         id="banner-1"
         className="min-h-screen bg-[#35BCF1] z-[100] fixed top-0 left-0 min-w-full flex flex-col items-center justify-center"
@@ -33,6 +36,6 @@ export default function Template({ children }) {
         className="min-h-screen bg-black z-[100] fixed top-0 w-1/4 left-3/4 "
       /> */}
       {children}
-    </div>
+    </>
   );
 }

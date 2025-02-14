@@ -159,10 +159,6 @@ export default function Header() {
         </div>
         <div className="flex items-center gap-6 place-self-end self-center">
           <div className="flex items-center gap-4">
-            {/* <ThemeSwitch
-              checked={user.dark ? true : false}
-              onChange={updateTheme}
-            /> */}
             <Drawer />
             <PulsatingButton className=" hidden md:block">
               <AnimatedLink href="/book-free-consultation">
@@ -182,7 +178,7 @@ const Tab = ({ children, href, setProps, setPresent, pathname }) => {
 
   useEffect(() => {
     const { width } = ref.current.getBoundingClientRect();
-    if (href === pathname) {
+    if (href === pathname || pathname.startsWith(`${href}/`)) {
       setPresent({
         opacity: 1,
         width,
@@ -328,10 +324,7 @@ const Drawer = () => {
             </motion.div>
           </div>
 
-          <AnimatedLink
-            href={"/why-unigrow"}
-            className="text-3xl tracking-wide"
-          >
+          <AnimatedLink href={"/pricing"} className="text-3xl tracking-wide">
             <SheetClose>Pricing</SheetClose>
           </AnimatedLink>
 

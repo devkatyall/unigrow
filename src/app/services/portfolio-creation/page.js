@@ -1,5 +1,3 @@
-// "use client";
-
 import {
   Main,
   MainFlag,
@@ -17,7 +15,6 @@ import AnimatedLink from "@/components/AnimatedLink";
 import { Button } from "@/components/ui/button";
 import Faq from "@/components/Common/Faq";
 import { questions } from "@/data";
-// import { motion } from "framer-motion";
 
 export default function page() {
   return (

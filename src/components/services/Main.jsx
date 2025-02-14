@@ -25,7 +25,7 @@ export function MainHeading({ children, className, as = "h2", delay = 0.5 }) {
       delay={delay}
       animation="fadeIn"
       className={cn(
-        " lg:text-5xl xl:text-7xl text-4xl tracking-tight lg:tracking-normal font-medium",
+        " lg:text-5xl xl:text-7xl text-4xl tracking-tight lg:tracking-normal",
         className
       )}
       as={as}
@@ -39,7 +39,7 @@ export function MainText({ children, className }) {
   return (
     <p
       className={cn(
-        "text-base lg:text-lg text-neutral-400 lg:w-[70%]",
+        "text-base lg:text-lg text-neutral-400 lg:w-[75%]",
         className
       )}
     >
