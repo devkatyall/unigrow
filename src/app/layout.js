@@ -15,12 +15,14 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <head>
         <script
-          id="Cookiebot"
-          src="https://consent.cookiebot.com/uc.js"
-          data-cbid="cc27d4d8-4b44-42c0-9975-8242000510db"
-          type="text/javascript"
           async
+          src="https://www.googletagmanager.com/gtag/js?id=G-8075XGQXG3"
         ></script>
+        <script>
+          window.dataLayer = window.dataLayer || []; function gtag()
+          {dataLayer.push(arguments)}
+          gtag('js', new Date()); gtag('config', 'G-8075XGQXG3');
+        </script>
       </head>
       <AppProvider>
         <body className="dark mt-[22vh]">
