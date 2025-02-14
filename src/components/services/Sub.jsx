@@ -28,3 +28,11 @@ export function SubHeading({ children, className, as = "h3" }) {
     </MainHeading>
   );
 }
+
+export function SubFlag({ children, className }) {
+  return (
+    <h1 className={cn(" w-fit text-cyan-500 uppercase", className)}>
+      {children}
+    </h1>
+  );
+}
