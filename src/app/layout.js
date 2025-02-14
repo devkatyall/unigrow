@@ -14,15 +14,20 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script
-          async
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-8075XGQXG3"
-        ></script>
-        <script>
-          window.dataLayer = window.dataLayer || []; function gtag()
-          {dataLayer.push(arguments)}
-          gtag('js', new Date()); gtag('config', 'G-8075XGQXG3');
-        </script>
+          strategy="afterInteractive"
+          async
+        />
+        {/* Initialize GA */}
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-8075XGQXG3');
+          `}
+        </Script>
       </head>
       <AppProvider>
         <body className="dark mt-[22vh]">
