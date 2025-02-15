@@ -1,3 +1,8 @@
+import ui from "@/../public/services/ux.jpg";
+import web from "@/../public/services/coding.jpg";
+import ecommerce from "@/../public/services/ecommerce.png";
+import webmain from "@/../public/services/main.jpg";
+
 export const content = {
   title: "Custom Web Development Services in Canada",
   tagline:
@@ -47,209 +52,123 @@ export const content = {
   },
   services: {
     title: "Our Web Development Services",
-    items: [
+    subtitle: "Everything You Need in One Complete Package",
+    cards: [
       {
-        title: "Custom Website Design",
-        description: "Your brand is unique, and your website should be too.",
-        features: [
-          "Custom, modern, and conversion-focused design.",
-          "User-friendly navigation for a seamless experience.",
-        ],
-      },
-      {
-        title: "SEO & Performance Optimization",
-        description: "Without SEO, your website is invisible.",
-        features: [
-          "On-page SEO: meta tags, keyword optimization, internal linking.",
-          "Speed optimization: Google Core Web Vitals compliance.",
-        ],
-      },
-      {
-        title: "Mobile & Tablet Responsive",
-        description: "Your website will look perfect on every device.",
-        features: [
-          "100% responsive design for desktops, tablets, and mobile phones.",
-          "Touch-friendly navigation & fast mobile browsing.",
-        ],
-      },
-      {
-        title: "Lightning-Fast & Secure Websites",
+        color: "#C0B3FE",
+        img: ui,
+        heading: "UI/UX & Web Design",
         description:
-          "A slow or unsecured website can lose visitors and harm SEO.",
-        features: [
-          "Secure hosting with SSL encryption.",
-          "99.9% uptime guarantee & DDoS protection.",
-        ],
+          "We create stunning, user-friendly designs that offer a seamless experience across all devices.",
       },
       {
-        title: "E-commerce Development",
-        description: "Sell your products or services online with ease.",
-        features: [
-          "Shopify, WooCommerce & custom-built e-commerce solutions.",
-          "Payment gateway integration: Stripe, PayPal, Square, etc.",
-        ],
+        color: "#5677A7",
+        img: web,
+        heading: "Custom Web Development",
+        description:
+          "We build websites from scratch using clean, high-performance code tailored to your needs.",
       },
       {
-        title: "Content Writing & Copywriting",
-        description: "Don’t worry about writing—we handle it for you!",
-        features: [
-          "SEO-friendly, engaging content designed for conversions.",
-          "Blog setup for content marketing & lead generation.",
-        ],
+        color: "#6D97FF",
+        img: ecommerce,
+        heading: "E-commerce Development",
+        description:
+          "Sell products online with a powerful e-commerce website designed for seamless shopping.",
+      },
+      {
+        color: "#FC8200",
+        img: webmain,
+        heading: "Website Maintenance",
+        description:
+          "Keep your website secure, updated, and running at peak performance with ongoing support.",
       },
     ],
-    cta: "Let’s Build Your Website",
+    cta: "Get Started Today",
   },
   process: {
-    title: "Our Web Development Process",
-    steps: [
+    title: "How We Work: Our Process",
+    subtitle: "A Clear, Structured Approach to Web Development",
+    cards: [
       {
-        title: "Discovery & Strategy",
-        features: [
-          "Business goal analysis & competitor research.",
-          "Keyword research & SEO strategy planning.",
-        ],
+        icon: "icon-research.svg",
+        heading: "1. Discovery & Strategy",
+        description:
+          "We analyze your business goals, competitors, and audience to craft the perfect website plan.",
       },
       {
-        title: "Wireframing & UI/UX Design",
-        features: [
-          "Visual structure & navigation planning.",
-          "User experience (UX) optimization.",
-        ],
+        icon: "icon-wireframe.svg",
+        heading: "2. Wireframing & Design",
+        description:
+          "We create wireframes and prototypes to map out the user journey and design experience.",
       },
       {
-        title: "Custom Development & Coding",
-        features: [
-          "Clean, scalable, and SEO-friendly code.",
-          "CMS integration (WordPress, Shopify, etc.).",
-        ],
+        icon: "icon-code.svg",
+        heading: "3. Development & Testing",
+        description:
+          "We build your website with optimized code, ensuring speed, security, and mobile-friendliness.",
       },
       {
-        title: "SEO & Performance Optimization",
-        features: [
-          "Speed improvements: caching, image compression, minification.",
-          "Mobile & Google ranking optimization.",
-        ],
-      },
-      {
-        title: "Testing & Quality Assurance",
-        features: [
-          "Cross-browser testing & mobile compatibility checks.",
-          "Fixing bugs, speed issues & UI/UX improvements.",
-        ],
-      },
-      {
-        title: "Launch & Ongoing Support",
-        features: [
-          "Deployment & post-launch monitoring.",
-          "Optional website maintenance & SEO plans.",
-        ],
+        icon: "icon-launch.svg",
+        heading: "4. Launch & Ongoing Support",
+        description:
+          "We deploy your website and offer continuous support for future updates and maintenance.",
       },
     ],
-    cta: "Schedule a Consultation",
-  },
-  pricing: {
-    title: "Web Development Pricing – Transparent & Affordable",
-    plans: [
-      {
-        name: "Starter",
-        best_for: "Freelancers & Small Businesses",
-        price: "$XX/month",
-        features: ["3-page website", "Mobile-friendly", "Basic SEO"],
-      },
-      {
-        name: "Pro",
-        best_for: "Growing Startups & Agencies",
-        price: "$XX/month",
-        features: [
-          "Everything in Starter",
-          "Lead capture forms",
-          "Advanced SEO",
-        ],
-      },
-      {
-        name: "Growth",
-        best_for: "E-commerce & Scaling Businesses",
-        price: "$XX/month",
-        features: [
-          "Everything in Pro",
-          "E-commerce",
-          "Blog",
-          "Priority support",
-        ],
-      },
-      {
-        name: "Custom",
-        best_for: "Enterprises & Unique Needs",
-        price: "Let’s Talk!",
-        features: ["Fully tailored with API integrations, automation"],
-      },
-    ],
-    cta: "Get a Custom Quote",
+    cta: "Let’s Build Something Great",
   },
   analytics: {
     title: "Additional Service: Website Analytics & Performance Tracking",
-    items: [
+    subtitle: "Understand Your Traffic & Optimize for Growth",
+    cards: [
       {
-        title: "Google Analytics & Performance Reports",
-        features: [
-          "Track website visitors & behavior insights.",
-          "Conversion tracking for better decision-making.",
-        ],
+        icon: "icon-analytics.svg",
+        heading: "Google Analytics",
+        description:
+          "Track website visitors, traffic sources, and key performance metrics in real-time.",
       },
       {
-        title: "Heatmaps & User Behavior Analysis",
-        features: [
-          "Understand how users interact with your site.",
-          "Optimize pages for higher conversions & engagement.",
-        ],
+        icon: "icon-heatmap.svg",
+        heading: "Heatmaps & User Behavior",
+        description:
+          "See where users click, scroll, and engage the most on your website for better optimization.",
       },
       {
-        title: "SEO & Traffic Reports",
-        features: [
-          "Monthly SEO reports with keyword ranking insights.",
-          "Identify & fix traffic drops with real-time data tracking.",
-        ],
+        icon: "icon-seo-report.svg",
+        heading: "SEO & Traffic Reports",
+        description:
+          "Get monthly reports on your rankings, traffic trends, and actionable insights.",
       },
     ],
     cta: "Add Analytics to Your Website",
   },
-  service_areas: {
-    title: "Web Development Services Across Canada",
-    locations: [
-      "Toronto",
-      "Vancouver",
-      "Calgary",
-      "Edmonton",
-      "Ottawa",
-      "Montreal & More!",
+  faqs: {
+    title: "Frequently Asked Questions",
+    items: [
+      {
+        question: "How long does it take to build a website?",
+        answer: "Most websites take 2-4 weeks depending on complexity.",
+      },
+      {
+        question: "Will my website be SEO-optimized?",
+        answer:
+          "Yes! We include on-page SEO, speed optimization, and mobile responsiveness.",
+      },
+      {
+        question: "Do you provide ongoing maintenance?",
+        answer:
+          "Absolutely! We offer website maintenance packages for security and updates.",
+      },
+      {
+        question: "Can I update my website myself?",
+        answer:
+          "Yes! We provide CMS solutions so you can manage content easily.",
+      },
     ],
-    cta: "Book a Free Consultation",
+    cta: "Ask Us Anything",
   },
-  faqs: [
-    {
-      question: "How long does it take to build my website?",
-      answer:
-        "Our standard turnaround time is 2-4 weeks, depending on project complexity.",
-    },
-    {
-      question: "Do you provide SEO services with website development?",
-      answer:
-        "Yes! Every website we build includes SEO best practices to help you rank higher on Google.",
-    },
-    {
-      question: "Can I update my website myself?",
-      answer:
-        "Yes! We offer CMS integrations so you can easily update your content or opt for our maintenance service.",
-    },
-  ],
   final_cta: {
-    title: "Get a Custom, SEO-Optimized Website Today!",
-    features: [
-      "SEO-Optimized & Mobile-Responsive",
-      "Designed to Convert Visitors into Customers",
-      "No Hidden Fees—Everything Included",
-    ],
-    cta: "Start Your Website Today",
+    title: "Get a Website That Works for You",
+    features: ["SEO-Optimized", "Mobile-Friendly", "Lightning-Fast"],
+    cta: "Start Your Website Project",
   },
 };

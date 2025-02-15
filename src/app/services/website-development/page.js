@@ -113,48 +113,46 @@ export default function page() {
           </Sub>
         </section>
         <section className="">
-          <Sub>
-            <SubHeading>{content.services.title}</SubHeading>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 grid-rows-auto gap-4 lg:gap-[2vh] py-[2vh]">
-              {content.services.items.map((e, i) => (
+          <Sub className={"space-y-[2vh]"}>
+            <SubFlag>{content.services.title}</SubFlag>
+            <SubHeading>{content.services.subtitle}</SubHeading>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 grid-rows-auto gap-4 lg:gap-[2vh] py-[2vh] ">
+              {content.services.cards.map((e, i) => (
                 <div
                   key={i}
+                  style={{
+                    borderColor: e.color,
+                  }}
                   className={cn(
-                    "p-6 ring-1 ring-white/30 flex flex-col gap-1 h-full rounded-lg",
-                    i % 2 === 0 && "lg:row-span-2",
-                    i === 5 && ""
+                    `p-6 border-[1px] lg:col-span-1 flex flex-col gap-4 h-full rounded-lg hover:translate-y-0 transition-all duration-150 ease-in-out`,
+                    i % 2 !== 0
+                      ? "lg:translate-y-[5vh]"
+                      : "lg:hover:translate-y-[5vh]"
                   )}
                 >
-                  <h3 className="text-xl md:text-2xl my-[1vh]">{e.title}</h3>
-                  <SubText className={"mt-0"}>{e.description}</SubText>
-                  <div>
-                    {e.features.map((f, j) => (
-                      <div key={j} className="flex items-start gap-2">
-                        <span className="text-sm md:text-base  " key={j}>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth={1.5}
-                            stroke="currentColor"
-                            className="size-5 drop-shadow-[0px_0px_10px_#3D3C3B] fill-white/50"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
-                            />
-                          </svg>
-                        </span>
-                        <p className="text-white/50">{f}</p>
-                      </div>
-                    ))}
+                  <div
+                    style={{ background: e.color }}
+                    className="w-full overflow-hidden rounded-xl"
+                  >
+                    <div className="w-[100%] h-[40vh] overflow-hidden rounded-xl drop-shadow-2xl relative translate-x-[2vw] translate-y-[2vw]">
+                      <Image
+                        src={e.img}
+                        alt={e.heading}
+                        fill
+                        className=" object-cover"
+                      />
+                    </div>
                   </div>
+                  <h3 className="text-xl md:text-3xl font-medium">
+                    {e.heading}
+                  </h3>
+                  <SubText className={"mt-0"}>{e.description}</SubText>
                 </div>
               ))}
             </div>
           </Sub>
         </section>
+        <section></section>
       </main>
       <Script
         type="application/ld+json"
