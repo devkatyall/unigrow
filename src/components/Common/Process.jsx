@@ -60,7 +60,7 @@ const Circle = ({
           {icon}
         </motion.div>
         <div className=" flex flex-col items-start lg:items-center gap-2">
-          <h3 className="text-lg text-start leading-tight font-bold">
+          <h3 className="text-lg text-start lg:text-center leading-tight font-bold">
             {title}
           </h3>
           <p className="text-xs text-start lg:text-center">{description}</p>
@@ -98,7 +98,7 @@ export function ProcessSteps({ process }) {
               title={step.heading}
               description={step.description}
               icon={step.icon}
-              className={" lg:w-1/5"}
+              className={" lg:w-1/6"}
               length={process.cards.length}
               scrollY={scrollYProgress}
               index={index}

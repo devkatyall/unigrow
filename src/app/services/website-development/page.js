@@ -65,8 +65,8 @@ export const metadata = {
 export default function page() {
   return (
     <>
-      <main className=" space-y-[15vh]">
-        <section>
+      <main className=" flex flex-col gap-[10vh]">
+        <section className="">
           <Main className="lg:gap-[2vh] pt-[4vh]">
             <MainFlag>Web Development Services in Canada</MainFlag>
             <MainHeading className={"lg:w-[90%] 2xl:w-[80%]"}>
@@ -83,10 +83,11 @@ export default function page() {
               </Button>
             </AnimatedLink>
           </Main>
-          <div className=" mt-[4vh] mx-auto bg-blend-screen bg-transparent h-[30vh] w-[90vw]  lg:h-[70vh] lg:w-[70vw] relative drop-shadow-[0px_0px_30px_#163F4B] hover:scale-105 transition-all duration-150 ease-in-out">
+          <div className=" rounded-2xl mx-auto bg-blend-screen bg-transparent h-[30vh] w-[90vw]  lg:h-[75vh] lg:w-[80vw] relative drop-shadow-[0px_0px_60px_#163F4B] hover:scale-105 transition-all duration-150 ease-in-out">
             <Image
               fill
               src={image}
+              className="rounded-2xl"
               alt="responsive web development services in laptop and mobile"
               style={{ objectFit: "cover" }}
               priority
@@ -94,7 +95,7 @@ export default function page() {
           </div>
         </section>
         <section>
-          <Sub className="flex flex-col gap-y-[1vh] items-center justify-center py-[4vh] text-center">
+          <Sub className="flex flex-col gap-y-[1vh] items-center justify-center py-[1vh] text-center">
             <SubFlag>{content.why_choose_us.title}</SubFlag>
             <SubHeading className={"lg:w-[70%]"}>
               {content.why_choose_us.subtitle}
@@ -164,7 +165,7 @@ export default function page() {
           <WarpBackground>
             <Sub className=" w-auto flex flex-col gap-y-[1vh] items-center justify-center py-[4vh] text-center">
               <SubFlag>{content.analytics.title}</SubFlag>
-              <SubHeading className={"lg:w-[70%]"}>
+              <SubHeading className={"lg:w-[70%] drop-shadow-xl"}>
                 {content.analytics.subtitle}
               </SubHeading>
               <div className="grid lg:grid-cols-3 gap-[2vw] mt-[4vh]">

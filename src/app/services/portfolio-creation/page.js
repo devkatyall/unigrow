@@ -18,7 +18,7 @@ import { questions } from "@/data";
 
 export default function page() {
   return (
-    <main className=" flex flex-col gap-[7vh]">
+    <main className=" flex flex-col gap-[10vh]">
       <section>
         <Main className={"py-[4vh]"}>
           <MainFlag>Portfolio Creation</MainFlag>
