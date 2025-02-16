@@ -91,7 +91,7 @@ export function ProcessSteps({ process }) {
         <SubHeading className={" lg:text-center"}>
           {process.subtitle}
         </SubHeading>
-        <div className=" flex items-center justify-center flex-wrap gap-[2vh] px-[4vw] mt-[6vh]">
+        <div className=" flex items-center justify-center flex-wrap gap-[2vh] px-[4vw] mt-[2vh] lg:mt-[6vh]">
           {process.cards.map((step, index) => (
             <Circle
               key={index}
@@ -105,7 +105,7 @@ export function ProcessSteps({ process }) {
             />
           ))}
         </div>
-        <PulsatingButton className="mt-[10vh]">
+        <PulsatingButton className=" mt-[4vh] lg:mt-[10vh]">
           <AnimatedLink href={"/book-free-consultation"}>
             {process.cta}
           </AnimatedLink>

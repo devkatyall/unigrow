@@ -18,6 +18,9 @@ import Process, {
   AnimatedBeamDemo,
   ProcessSteps,
 } from "@/components/Common/Process";
+import { WarpBackground } from "@/components/magicui/warp-background";
+import { MagicCard } from "@/components/ui/magic-card";
+import { PulsatingButton } from "@/components/ui/pulsating-button";
 
 export const metadata = {
   title: "Custom Web Development Services in Canada | Unigrow",
@@ -71,9 +74,7 @@ export default function page() {
             <MainText className="lg:w-[75%]">
               Looking for custom web development services in Canada? A great
               website isn’t just about design—it needs to attract visitors,
-              generate leads, and drive conversions. At Unigrow, we provide
-              fully managed, all-inclusive web development solutions designed
-              for small businesses, startups, and growing brands.
+              generate leads, and drive conversions.
             </MainText>
             <AnimatedLink href={"/book-free-consultation"}>
               <Button className=" w-fit text-lg py-[3vh] font-bold">
@@ -158,7 +159,27 @@ export default function page() {
           </Sub>
         </section>
         <ProcessSteps process={content.process} />
-        <section></section>
+        <section className=" relative overflow-hidden">
+          <WarpBackground>
+            <Sub className=" w-auto flex flex-col gap-y-[1vh] items-center justify-center py-[4vh] text-center">
+              <SubFlag>{content.analytics.title}</SubFlag>
+              <SubHeading className={"lg:w-[70%]"}>
+                {content.analytics.subtitle}
+              </SubHeading>
+              <div className="grid lg:grid-cols-3 gap-[2vw] mt-[4vh]">
+                {content.analytics.cards.map((e, i) => (
+                  <MagicCard key={i} className={" col-span-1 drop-shadow-2xl"}>
+                    <div className="flex flex-col gap-2 items-center p-2 lg:p-6">
+                      <span className=" my-[1vh] block">{e.icon}</span>
+                      <h4 className="text-xl md:text-2xl">{e.heading}</h4>
+                      <SubText>{e.description}</SubText>
+                    </div>
+                  </MagicCard>
+                ))}
+              </div>
+            </Sub>
+          </WarpBackground>
+        </section>
       </main>
       <Script
         type="application/ld+json"
