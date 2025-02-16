@@ -85,7 +85,7 @@ export function ProcessSteps({ process }) {
   });
 
   return (
-    <section ref={ref} className=" h-[150vh] flex  justify-center">
+    <section ref={ref} className=" h-[120vh] flex  justify-center border-2">
       <Sub className="sticky h-screen top-0 flex flex-col lg:items-center justify-center">
         <SubFlag>{process.title}</SubFlag>
         <SubHeading className={" lg:text-center"}>

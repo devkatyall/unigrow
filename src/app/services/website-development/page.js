@@ -21,6 +21,7 @@ import Process, {
 import { WarpBackground } from "@/components/magicui/warp-background";
 import { MagicCard } from "@/components/ui/magic-card";
 import { PulsatingButton } from "@/components/ui/pulsating-button";
+import Faq from "@/components/Common/Faq";
 
 export const metadata = {
   title: "Custom Web Development Services in Canada | Unigrow",
@@ -68,21 +69,21 @@ export default function page() {
         <section>
           <Main className="lg:gap-[2vh] pt-[4vh]">
             <MainFlag>Web Development Services in Canada</MainFlag>
-            <MainHeading className={"lg:w-[90%]"}>
+            <MainHeading className={"lg:w-[90%] 2xl:w-[80%]"}>
               High-Performance, SEO-Optimized Websites for Businesses & Startups
             </MainHeading>
-            <MainText className="lg:w-[75%]">
+            <MainText className="lg:w-[75%] 2xl:w-[60%]">
               Looking for custom web development services in Canada? A great
               website isn’t just about design—it needs to attract visitors,
               generate leads, and drive conversions.
             </MainText>
             <AnimatedLink href={"/book-free-consultation"}>
-              <Button className=" w-fit text-lg py-[3vh] font-bold">
+              <Button className=" w-fit text-lg py-[3vh] mt-5 font-bold">
                 Book a Free Consultation
               </Button>
             </AnimatedLink>
           </Main>
-          <div className=" mx-auto bg-blend-screen bg-transparent h-[30vh] w-[90vw]  lg:h-[70vh] lg:w-[70vw] relative drop-shadow-[0px_0px_30px_#163F4B] hover:scale-105 transition-all duration-150 ease-in-out">
+          <div className=" mt-[4vh] mx-auto bg-blend-screen bg-transparent h-[30vh] w-[90vw]  lg:h-[70vh] lg:w-[70vw] relative drop-shadow-[0px_0px_30px_#163F4B] hover:scale-105 transition-all duration-150 ease-in-out">
             <Image
               fill
               src={image}
@@ -179,6 +180,11 @@ export default function page() {
               </div>
             </Sub>
           </WarpBackground>
+        </section>
+        <section>
+          <Faq questions={content.faqs.items}>
+            <SubHeading>{content.faqs.title}</SubHeading>
+          </Faq>
         </section>
       </main>
       <Script
