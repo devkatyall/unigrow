@@ -10,7 +10,7 @@ export const animatePageIn = () => {
     bannerOne.style.transform = "translateY(0%)";
     bannerOne.style.borderRadius = "0";
 
-    animate(0, 200, {
+    animate(0, 100, {
       duration: 0.5,
       onUpdate: (latest) => {
         bannerOne.style.transform = `translateY(${latest}%)`;

@@ -134,8 +134,8 @@ export default function Header() {
           >
             Why Unigrow?
           </Tab>
-          <motion.div className=" absolute hidden top-6 peer-hover:block hover:block w-[calc(40vw)] z-10 transition-opacity duration-200">
-            <div className="grid grid-cols-2 grid-rows-2 gap-1 mt-6 p-2 bg-black bg-opacity-90 backdrop-blur-sm rounded-2xl drop-shadow-lg ring-1">
+          <motion.div className=" absolute hidden top-6 peer-hover:block hover:block w-[calc(20vw)] z-10 transition-opacity duration-200">
+            <div className="grid grid-cols-1 grid-rows-3 gap-1 mt-6 p-2 bg-black bg-opacity-90 backdrop-blur-sm rounded-2xl drop-shadow-lg ring-1">
               {services.map((e, i) => (
                 <AnimatedLink
                   href={e.ref}
