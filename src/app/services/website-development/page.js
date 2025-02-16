@@ -14,6 +14,10 @@ import { BlurFade } from "@/components/magicui/blur-fade";
 import Image from "next/image";
 import image from "@/../public/services/webdev.png";
 import { cn } from "@/lib/utils";
+import Process, {
+  AnimatedBeamDemo,
+  ProcessSteps,
+} from "@/components/Common/Process";
 
 export const metadata = {
   title: "Custom Web Development Services in Canada | Unigrow",
@@ -57,7 +61,7 @@ export const metadata = {
 export default function page() {
   return (
     <>
-      <main className=" space-y-[10vh]">
+      <main className=" space-y-[15vh]">
         <section>
           <Main className="lg:gap-[2vh] pt-[4vh]">
             <MainFlag>Web Development Services in Canada</MainFlag>
@@ -113,10 +117,10 @@ export default function page() {
           </Sub>
         </section>
         <section className="">
-          <Sub className={"space-y-[2vh]"}>
+          <Sub className={""}>
             <SubFlag>{content.services.title}</SubFlag>
             <SubHeading>{content.services.subtitle}</SubHeading>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 grid-rows-auto gap-4 lg:gap-[2vh] py-[2vh] ">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 grid-rows-auto gap-4 lg:gap-[3vh] py-[4vh] ">
               {content.services.cards.map((e, i) => (
                 <div
                   key={i}
@@ -124,7 +128,7 @@ export default function page() {
                     borderColor: e.color,
                   }}
                   className={cn(
-                    `p-6 border-[1px] lg:col-span-1 flex flex-col gap-4 h-full rounded-lg hover:translate-y-0 transition-all duration-150 ease-in-out`,
+                    `p-6 border-[1px] lg:col-span-1 flex flex-col gap-4 h-full rounded-xl hover:translate-y-0 transition-all duration-150 ease-in-out bg-white/5`,
                     i % 2 !== 0
                       ? "lg:translate-y-[5vh]"
                       : "lg:hover:translate-y-[5vh]"
@@ -134,12 +138,13 @@ export default function page() {
                     style={{ background: e.color }}
                     className="w-full overflow-hidden rounded-xl"
                   >
-                    <div className="w-[100%] h-[40vh] overflow-hidden rounded-xl drop-shadow-2xl relative translate-x-[2vw] translate-y-[2vw]">
+                    <div className="w-[100%] h-[20vh] lg:h-[40vh] overflow-hidden rounded-xl drop-shadow-2xl relative translate-x-[6vw] translate-y-[6vw] lg:translate-x-[2vw] lg:translate-y-[2vw]">
                       <Image
                         src={e.img}
                         alt={e.heading}
                         fill
                         className=" object-cover"
+                        priority
                       />
                     </div>
                   </div>
@@ -152,6 +157,7 @@ export default function page() {
             </div>
           </Sub>
         </section>
+        <ProcessSteps process={content.process} />
         <section></section>
       </main>
       <Script
