@@ -76,7 +76,6 @@ export default function EnquiryForm() {
       // Validate the data using the Zod schema
       const validatedData = enquirySchema.parse(formData);
       await submitForm(validatedData);
-      console.log("Form submitted successfully", validatedData);
       // Reset the form and errors if needed
       setFormData({
         name: "",
