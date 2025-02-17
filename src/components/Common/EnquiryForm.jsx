@@ -98,6 +98,7 @@ export default function EnquiryForm() {
         const fieldErrors = err.flatten().fieldErrors;
         setErrors(fieldErrors);
       }
+      setDisable(false);
       setSubmitted(false);
     }
   };
