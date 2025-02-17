@@ -165,7 +165,7 @@ export default function page() {
           <WarpBackground>
             <Sub className=" w-auto flex flex-col gap-y-[1vh] items-center justify-center py-[4vh] text-center">
               <SubFlag>{content.analytics.title}</SubFlag>
-              <SubHeading className={"lg:w-[70%] drop-shadow-xl"}>
+              <SubHeading className={"w-full lg:w-[70%] drop-shadow-xl"}>
                 {content.analytics.subtitle}
               </SubHeading>
               <div className="grid lg:grid-cols-3 gap-[2vw] mt-[4vh]">

@@ -109,7 +109,7 @@ export default function EnquiryForm() {
           initial={{ opacity: 0, x: 10 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 1, x: 10 }}
-          className="lg:w-[50vw] px-[4vw] py-[1vw]"
+          className="lg:w-[50vw] px-[2vw] lg:px-[4vw] py-[1vw]"
         >
           {/* <SubHeading className="">Lets Get Started!</SubHeading>
         <SubText>
