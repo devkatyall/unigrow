@@ -43,7 +43,7 @@ export const metadata = {
       "High-performance, SEO-friendly web development for businesses & startups. Get a responsive, fast, and optimized website today!",
     images: [
       {
-        url: "https://unigrow.ca/images/web-development-banner.jpg",
+        url: "https://www.unigrow.ca/services/webdev.png",
         width: 1200,
         height: 630,
         alt: "Unigrow Web Development Services",
@@ -58,7 +58,7 @@ export const metadata = {
     title: "Custom Web Development Services in Canada | Unigrow",
     description:
       "SEO-optimized, mobile-friendly web development for businesses. Get your website designed & developed by experts.",
-    images: ["https://unigrow.ca/images/web-development-banner.jpg"],
+    images: ["https://www.unigrow.ca/services/webdev.png"],
   },
 };
 
@@ -198,7 +198,7 @@ export default function page() {
             url: "https://unigrow.ca/services/website-development",
             description:
               "SEO-optimized web development for businesses & startups in Canada. Get a mobile-friendly, high-performance website today!",
-            image: "https://unigrow.ca/images/web-development-banner.jpg",
+            image: "https://www.unigrow.ca/services/webdev.png",
             author: {
               "@type": "Organization",
               name: "Unigrow",

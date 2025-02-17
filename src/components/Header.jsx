@@ -4,7 +4,6 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import logo from "./../../public/logo.png";
 import Link from "next/link";
-import { useAppContext } from "@/Context";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { PulsatingButton } from "./ui/pulsating-button";
@@ -22,16 +21,8 @@ import {
 } from "./ui/sheet";
 
 export default function Header() {
-  const { user, setUser } = useAppContext();
   const [visible, setVisible] = useState();
   const [prevScroll, setPrevScroll] = useState();
-
-  const updateTheme = () => {
-    setUser((prev) => ({
-      ...prev,
-      dark: !prev.dark,
-    }));
-  };
 
   const updateNav = () => {
     if (window.scrollY > 200 && prevScroll > window.scrollY) {
