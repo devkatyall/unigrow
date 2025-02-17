@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <head>
-        <Script id="gtm-script" strategy="beforeInteractive">
+        {/* <Script id="gtm-script" strategy="beforeInteractive">
           {`
             (function(w,d,s,l,i){
               w[l]=w[l]||[];
@@ -27,18 +27,18 @@ export default function RootLayout({ children }) {
               f.parentNode.insertBefore(j, f);
             })(window,document,'script','dataLayer','GTM-5TG6KZHK');
           `}
-        </Script>
+        </Script> */}
       </head>
       <AppProvider>
         <body className="dark mt-[22vh]">
-          <noscript>
+          {/* <noscript>
             <iframe
               src="https://www.googletagmanager.com/ns.html?id=GTM-5TG6KZHK"
               height="0"
               width="0"
               style={{ display: "none", visibility: "hidden" }}
             />
-          </noscript>
+          </noscript> */}
           <Transition />
           <Header />
           {children}
