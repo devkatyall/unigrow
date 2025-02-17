@@ -53,7 +53,7 @@ export default function EnquiryForm() {
   });
 
   const [disable, setDisable] = useState(false);
-  const [submitted, setSubmitted] = useState(true);
+  const [submitted, setSubmitted] = useState(false);
 
   // We'll store errors as an object where each key maps to an array of messages
   const [errors, setErrors] = useState({});
