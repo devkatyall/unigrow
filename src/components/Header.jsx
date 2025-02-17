@@ -95,6 +95,9 @@ export default function Header() {
           </span>
         </AnimatedLink>
         <div
+          style={{
+            display: pathname === "/book-free-consultation" && "none",
+          }}
           onMouseLeave={() => {
             setProps(present);
           }}
@@ -157,7 +160,10 @@ export default function Header() {
           </motion.div>
           <Line style={props} />
         </div>
-        <div className="flex items-center gap-6 place-self-end self-center">
+        <div
+          style={{ display: pathname === "/book-free-consultation" && "none" }}
+          className="flex items-center gap-6 place-self-end self-center"
+        >
           <div className="flex items-center gap-4">
             <Drawer />
             <PulsatingButton className=" hidden md:block">

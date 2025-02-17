@@ -1,35 +1,42 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import CallToAction from "./Common/CallToAction";
 import { Button } from "./ui/button";
 import AnimatedLink from "./AnimatedLink";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const pathname = usePathname();
+
   return (
     <footer className="">
       <div className="footer h-12 w-full" />
       <CallToAction>
-        <div
-          className=" flex flex-col
+        {pathname !== "/book-free-consultation" && (
+          <div
+            className=" flex flex-col
         gap-2  py-[5vh]"
-        >
-          <h2 className=" text-3xl md:text-5xl font-medium drop-shadow-lg">
-            Ready to Build a Website Without the Headaches?
-          </h2>
-          <p className=" text-sm lg:text-lg text-slate-400">
-            Unigrow takes care of everything so you can focus on growing your
-            business. All-inclusive pricing. No hidden fees. Stress-free, fully
-            managed process
-          </p>
-          <div className="mt-4">
-            <Button className=" hover:scale-105">
-              <AnimatedLink href="/book-free-consultation">
-                Book a Free Call
-              </AnimatedLink>
-            </Button>
+          >
+            <h2 className=" text-3xl md:text-5xl font-medium drop-shadow-lg">
+              Ready to Build a Website Without the Headaches?
+            </h2>
+            <p className=" text-sm lg:text-lg text-slate-400">
+              Unigrow takes care of everything so you can focus on growing your
+              business. All-inclusive pricing. No hidden fees. Stress-free,
+              fully managed process
+            </p>
+
+            <div className="mt-4">
+              <Button className=" hover:scale-105">
+                <AnimatedLink href="/book-free-consultation">
+                  Book a Free Call
+                </AnimatedLink>
+              </Button>
+            </div>
           </div>
-        </div>
+        )}
         <div className=" drop-shadow-lg lg:flex-row flex-col flex lg:items-center lg:justify-between w-full gap-y-2">
           <div className=" flex gap-x-4 gap-y-2 flex-wrap">
             <AnimatedLink href={"/privacy-policy"}>

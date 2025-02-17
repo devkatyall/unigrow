@@ -150,6 +150,17 @@ module.exports = {
   				to: {
   					height: '0'
   				}
+  			},
+  			shine: {
+  				'0%': {
+  					'background-position': '0% 0%'
+  				},
+  				'50%': {
+  					'background-position': '100% 100%'
+  				},
+  				to: {
+  					'background-position': '0% 0%'
+  				}
   			}
   		},
   		animation: {
@@ -162,7 +173,8 @@ module.exports = {
   			meteor: 'meteor 5s linear infinite',
   			gradient: 'gradient 8s linear infinite',
   			pulse: 'pulse var(--duration) ease-out infinite',
-  			'shiny-text': 'shiny-text 8s infinite'
+  			'shiny-text': 'shiny-text 8s infinite',
+  			shine: 'shine var(--duration) infinite linear'
   		}
   	}
   },
