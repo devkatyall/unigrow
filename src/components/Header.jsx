@@ -199,7 +199,7 @@ const Tab = ({ children, href, setProps, setPresent, pathname }) => {
     }
   }, [href, pathname, setPresent]);
 
-  return (
+  return href !== "/services" ? (
     <AnimatedLink
       ref={ref}
       className={cn(
@@ -223,6 +223,29 @@ const Tab = ({ children, href, setProps, setPresent, pathname }) => {
     >
       {children}
     </AnimatedLink>
+  ) : (
+    <span
+      ref={ref}
+      className={cn(
+        " transition-all ease-in-out duration-200 relative z-10 text-white font-medium cursor-pointer",
+        href === "/services" && "peer"
+      )}
+      onMouseEnter={() => {
+        if (!ref.current) return;
+
+        const { width, right } = ref.current.getBoundingClientRect();
+
+        setProps({
+          width,
+          opacity: 1,
+          left: ref.current.offsetLeft,
+          right: right,
+          href: href,
+        });
+      }}
+    >
+      {children}
+    </span>
   );
 };
 
