@@ -195,7 +195,7 @@ export default function EnquiryForm() {
               <select
                 id="enquiry"
                 name="enquiry"
-                value={formData.preference}
+                value={formData.enquiry}
                 onChange={handleChange}
                 className="mt-1 block w-full p-2 rounded-md bg-gray-700 border border-gray-600 focus:outline-none"
               >
