@@ -21,7 +21,7 @@ export default function Home() {
         <Pricing />
         <MarqueeDemo />
         <Projects />
-        <section className="h-[80vh] flex items-center justify-center border-2 bg-blue-400/30 mt-[8vh]">
+        <section className=" h-auto lg:h-[80vh] flex items-center justify-center border-2 bg-blue-400/30 mt-[8vh]">
           <Main
             className={
               " flex lg:flex-row justify-between items-center gap-[4vw]"
