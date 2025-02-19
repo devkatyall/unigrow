@@ -39,7 +39,7 @@ export default function Footer() {
         )}
         <div className=" drop-shadow-lg lg:flex-row flex-col flex lg:items-center lg:justify-between w-full gap-y-2">
           <div className=" flex gap-x-4 gap-y-2 flex-wrap">
-            <AnimatedLink href={"/privacy-policy"}>
+            <AnimatedLink href={"/"}>
               <p className=" text-xs hover:font-bold lg:text-sm border-r-2 border-white pr-4 text-white font-medium">
                 Privacy Policy
               </p>
@@ -49,12 +49,12 @@ export default function Footer() {
                 Use of Cookies
               </p>
             </AnimatedLink>
-            <AnimatedLink href={"/terms"}>
+            <AnimatedLink href={"/"}>
               <p className=" text-xs hover:font-bold lg:text-sm border-r-2 border-white pr-4 text-white font-medium">
                 Terms of Use
               </p>
             </AnimatedLink>
-            <AnimatedLink href={"/legal"}>
+            <AnimatedLink href={"/"}>
               <p className=" text-xs hover:font-bold lg:text-sm border-r-2 border-white pr-4 text-white font-medium">
                 Legal
               </p>
