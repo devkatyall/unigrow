@@ -62,7 +62,7 @@ export default function Header() {
           : "absolute bg-opacity-55"
       } `}
     >
-      <div className="w-full p-2 bg-gray-900 flex justify-center items-center">
+      {/* <div className="w-full p-2 bg-gray-900 flex justify-center items-center">
         <AnimatedShinyText
           className="w-full max-w-full text-center"
           shimmerWidth={300}
@@ -72,7 +72,7 @@ export default function Header() {
             getting an epic upgrade.
           </span>
         </AnimatedShinyText>
-      </div>
+      </div> */}
       <div className="py-2 lg:py-[18px] px-5 lg:px-16 flex justify-between items-center md:grid md:grid-cols-3">
         <AnimatedLink href={"/"} className="md:flex md:items-center md:gap-2">
           <Image
