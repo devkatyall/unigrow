@@ -59,7 +59,7 @@ export default function Footer() {
                 Legal
               </p>
             </AnimatedLink>
-            <AnimatedLink href={"/sitemap"}>
+            <AnimatedLink href={"/sitemap.xml"}>
               <p className=" text-xs hover:font-bold lg:text-sm pr-4 text-white font-medium">
                 Site Map
               </p>
