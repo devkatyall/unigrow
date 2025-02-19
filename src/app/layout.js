@@ -48,7 +48,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <head></head>
-      <body className="dark mt-[22vh] ">
+      <body className="dark mt-[18vh] ">
         <Header />
         <div className="root">{children}</div>
         <Footer />
