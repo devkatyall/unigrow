@@ -115,7 +115,7 @@ export default function EnquiryForm() {
         <SubText>
           You are few details away from the best decision for your business
         </SubText> */}
-          <form onSubmit={handleSubmit} className="space-y-4 h-full">
+          <form onSubmit={handleSubmit} className="form space-y-4 h-full">
             <div className="grid grid-cols-2 gap-4">
               {/* Name */}
               <div>
