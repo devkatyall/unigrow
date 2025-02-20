@@ -41,22 +41,23 @@ export default function Footer() {
           <div className=" flex gap-x-4 gap-y-2 flex-wrap">
             <AnimatedLink href={"/"}>
               <p className=" text-xs hover:font-bold lg:text-sm border-r-2 border-white pr-4 text-white font-medium">
-                Privacy Policy
+                Home
+              </p>
+            </AnimatedLink>
+
+            <AnimatedLink href={"/services"}>
+              <p className=" text-xs hover:font-bold lg:text-sm border-r-2 border-white pr-4 text-white font-medium">
+                Services
+              </p>
+            </AnimatedLink>
+            <AnimatedLink href={"/pricing"}>
+              <p className=" text-xs hover:font-bold lg:text-sm border-r-2 border-white pr-4 text-white font-medium">
+                Pricing
               </p>
             </AnimatedLink>
             <AnimatedLink href={"/cookies"}>
               <p className=" text-xs hover:font-bold lg:text-sm border-r-2 border-white pr-4 text-white font-medium">
                 Use of Cookies
-              </p>
-            </AnimatedLink>
-            <AnimatedLink href={"/"}>
-              <p className=" text-xs hover:font-bold lg:text-sm border-r-2 border-white pr-4 text-white font-medium">
-                Terms of Use
-              </p>
-            </AnimatedLink>
-            <AnimatedLink href={"/"}>
-              <p className=" text-xs hover:font-bold lg:text-sm border-r-2 border-white pr-4 text-white font-medium">
-                Legal
               </p>
             </AnimatedLink>
             <AnimatedLink href={"/sitemap.xml"}>

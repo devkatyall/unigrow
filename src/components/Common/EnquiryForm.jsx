@@ -76,6 +76,16 @@ export default function EnquiryForm() {
       // Validate the data using the Zod schema
       const validatedData = enquirySchema.parse(formData);
       await submitForm(validatedData);
+
+      if (window.zaraz && typeof window.zaraz.track === "function") {
+        window.zaraz.track("lead_submission", {
+          formName: "enquiryForm", // Customize this identifier as needed
+          data: validatedData, // Optionally include validated data or specific fields
+          url: window.location.href,
+          timestamp: Date.now(),
+        });
+      }
+
       // Reset the form and errors if needed
       setFormData({
         name: "",
