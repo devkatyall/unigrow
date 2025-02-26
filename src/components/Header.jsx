@@ -81,7 +81,7 @@ export default function Header() {
             width={50}
             height={50}
           />
-          <span className="md:block hidden md:text-xl md:font-semibold">
+          <span className="md:block hidden md:text-md md:font-semibold">
             Unigrow
           </span>
         </AnimatedLink>
@@ -157,8 +157,11 @@ export default function Header() {
         >
           <div className="flex items-center gap-4">
             <Drawer />
-            <PulsatingButton className=" hidden md:block">
-              <AnimatedLink href="/book-free-consultation">
+            <PulsatingButton className=" hidden md:block text-base">
+              <AnimatedLink
+                href="/book-free-consultation"
+                className="text-base"
+              >
                 Talk To Expert
               </AnimatedLink>
             </PulsatingButton>
@@ -194,7 +197,7 @@ const Tab = ({ children, href, setProps, setPresent, pathname }) => {
     <AnimatedLink
       ref={ref}
       className={cn(
-        " transition-all ease-in-out duration-200 relative z-10 text-white font-medium",
+        " transition-all ease-in-out duration-200 relative z-10 text-white font-medium  text-base",
         href === "/services" && "peer"
       )}
       href={href}

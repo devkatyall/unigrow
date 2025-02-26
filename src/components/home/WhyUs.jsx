@@ -72,7 +72,7 @@ export default function WhyUs() {
   const words = "Your One-Stop Shop for All Things Online.".split(" ");
 
   return (
-    <section ref={ref} className="h-[200vh]">
+    <section ref={ref} className="h-[120vh]">
       <motion.div
         className="h-[100vh] sticky top-0 px-[6%] lg:px-[10%] overflow-hidden"
         style={{ opacity: scale }}

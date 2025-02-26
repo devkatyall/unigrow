@@ -19,22 +19,22 @@ import Link from "next/link";
 import AnimatedLink from "../AnimatedLink";
 
 export default function Top() {
-  const COLOR = ["#6366F1", "#0EA5E9", "#10B981"];
+  // const COLOR = ["#6366F1", "#0EA5E9", "#10B981"];
   const { scrollY } = useScroll();
-  const color = useMotionValue(COLOR[0]);
-  const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, transparent 50%, ${color})`;
+  // const color = useMotionValue(COLOR[0]);
+  // const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, transparent 50%, ${color})`;
 
   const y = useTransform(scrollY, [200, 530], [0, 300]);
   const scale = useTransform(scrollY, [100, 427], [1, 0]);
 
-  useEffect(() => {
-    animate(color, COLOR, {
-      ease: "easeInOut",
-      duration: 10,
-      repeat: Infinity,
-      repeatType: "mirror",
-    });
-  }, []);
+  // useEffect(() => {
+  //   animate(color, COLOR, {
+  //     ease: "easeInOut",
+  //     duration: 10,
+  //     repeat: Infinity,
+  //     repeatType: "mirror",
+  //   });
+  // }, []);
 
   return (
     <div className="">

@@ -2,6 +2,7 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 import Header from "@/components/Header";
 import Script from "next/script";
+import SmothScroll from "@/lib/SmothScroll";
 
 export const metadata = {
   title: "High-Performance Custom Websites – Unigrow",
@@ -50,7 +51,7 @@ export default function RootLayout({ children }) {
       <head></head>
       <body className="dark mt-[18vh] ">
         <Header />
-        <div className="root">{children}</div>
+        <SmothScroll>{children}</SmothScroll>
         <Footer />
       </body>
     </html>

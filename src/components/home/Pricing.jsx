@@ -48,7 +48,7 @@ export default function Pricing() {
     <>
       <section
         ref={ref}
-        className="md:my-6 md:px-16 lg:py-16 px-8 py-3 my-6 h-[300vh]"
+        className="md:my-6 md:px-16 lg:py-16 px-8 py-3 my-6 h-[200vh]"
       >
         <div className=" sticky top-0 h-screen flex flex-col items-center justify-center overflow-x-hidden ">
           <LetterGlitch scroll={scrollYProgress} />
