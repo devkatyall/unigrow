@@ -15,6 +15,7 @@ import {
 import ShinyButton from "../ui/ShinyButton";
 import AnimatedLink from "../AnimatedLink";
 import { PulsatingButton } from "../ui/pulsating-button";
+import StepperButton from "@/global/stepper-form";
 
 // A reusable Circle component that displays a title and description.
 const Circle = ({
@@ -78,7 +79,7 @@ const Circle = ({
 
 Circle.displayName = "Circle";
 
-export function ProcessSteps({ process }) {
+export function ProcessSteps({ process, ad }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -87,7 +88,7 @@ export function ProcessSteps({ process }) {
   return (
     <section
       ref={ref}
-      className=" h-auto lg:h-[120vh] flex  justify-center border-2"
+      className=" h-auto py-[6vh] lg:p-0 lg:h-[120vh] flex  justify-center"
     >
       <Sub className="sticky h-auto lg:h-screen top-0 flex flex-col lg:items-center justify-center">
         <SubFlag>{process.title}</SubFlag>
@@ -108,11 +109,19 @@ export function ProcessSteps({ process }) {
             />
           ))}
         </div>
-        <PulsatingButton className=" mt-[4vh] lg:mt-[10vh]">
-          <AnimatedLink href={"/book-free-consultation"}>
+        {ad ? (
+          <StepperButton
+            className={" mt-[4vh] lg:mt-[10vh] py-5 bg-white text-black"}
+          >
             {process.cta}
-          </AnimatedLink>
-        </PulsatingButton>
+          </StepperButton>
+        ) : (
+          <PulsatingButton className=" mt-[4vh] lg:mt-[10vh]">
+            <AnimatedLink href={"/book-free-consultation"}>
+              {process.cta}
+            </AnimatedLink>
+          </PulsatingButton>
+        )}
       </Sub>
     </section>
   );

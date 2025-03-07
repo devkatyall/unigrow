@@ -4,6 +4,9 @@ import StepperButton, { StepperForm } from "@/global/stepper-form";
 import React from "react";
 import dynamic from "next/dynamic";
 import ScrollLink from "@/global/ScrollLink";
+import Image from "next/image";
+import { ProcessSteps } from "@/components/Common/Process";
+import { content } from "@/webDev";
 
 const AbstractBack = dynamic(() => import("@/components/Common/AbstractBack"), {
   ssr: false,
@@ -13,7 +16,7 @@ export default function page() {
   return (
     <main className=" space-y-[9vh]">
       <AbstractBack />
-      <section className=" min-h-[calc(100vh-200px)] z-10 w-[90vw] lg:w-[87vw] mx-auto flex flex-row items-center gap-[2vw]">
+      <section className="hidden min-h-[calc(100vh-200px)] justify-between z-10 w-[90vw] lg:w-[87vw] mx-auto lg:flex flex-row items-center gap-[2vw]">
         <div className="space-y-[2vh] lg:w-1/2">
           <h1 className=" text-5xl lg:text-7xl tracking-wide font-semibold">
             Get a business website that makes{" "}
@@ -27,9 +30,9 @@ export default function page() {
             on investment.
           </p>
           <div className="py-2 flex items-center gap-[2vw]">
-            <StepperButton className="text-lg py-5 bg-green-600">
+            {/* <StepperButton className="text-lg py-5 bg-green-600">
               Get Started{" "}
-            </StepperButton>
+            </StepperButton> */}
             <ScrollLink targetId={"how-it-works"}>
               <span className="flex items-center gap-3">
                 <svg
@@ -51,12 +54,56 @@ export default function page() {
             </ScrollLink>
           </div>
         </div>
-        <div className=" hidden lg:w-1/2"></div>
+        <div className=" lg:w-1/2 flex items-center justify-center">
+          <StepperForm />
+        </div>
+      </section>
+
+      <section className=" min-h-[calc(100vh-200px)] justify-between z-10 w-[90vw] lg:w-[87vw] mx-auto lg:hidden flex flex-col items-center gap-[2vw]">
+        <div className="space-y-[2vh] lg:w-1/2">
+          <h1 className=" text-5xl lg:text-7xl tracking-wide font-semibold text-center">
+            Get a business website that makes{" "}
+            <span className="funky">money.</span>
+          </h1>
+          <StepperForm />
+          <p className="text-muted-foreground print:text-sm text-center">
+            Your website isn’t just an online brochure—it’s your most powerful
+            sales tool. At Unigrow, we build modern, high-performance websites
+            engineered to turn every click into a customer. Our approach is
+            laser-focused on increasing your revenue and maximizing your return
+            on investment.
+          </p>
+          <div className="py-2 flex items-center justify-center gap-[2vw]">
+            {/* <StepperButton className="text-lg py-5 bg-green-600">
+              Get Started{" "}
+            </StepperButton> */}
+            <ScrollLink targetId={"how-it-works"}>
+              <span className="flex items-center gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  />
+                </svg>
+                See how it works
+              </span>
+            </ScrollLink>
+          </div>
+        </div>
+        <div className=" lg:w-1/2 flex items-center justify-center"></div>
       </section>
 
       <section className="relative min-h-[200vh]">
         <div className="h-fit flex items-center justify-center sticky  rounded-lg mb-[10vh] top-[12vh] ">
-          <div className="relative h-[calc(100vh-200px)]  w-[90vw] p-[5vw] lg:w-[87vw] mx-auto flex flex-col lg:flex-row items-center justify-center bg-[#8A5FB4] rounded-lg">
+          <div className="relative h-[calc(100vh-200px)] lg:gap-[4vw]  w-[90vw] p-[5vw] lg:w-[87vw] mx-auto flex flex-col lg:flex-row items-center justify-center bg-[#8A5FB4] rounded-lg">
             <div className="lg:w-1/2 space-y-[2vh] lg:space-y-[3vh]">
               <h2 className=" text-3xl lg:text-6xl text-black">
                 From Blank Mind to{" "}
@@ -71,11 +118,17 @@ export default function page() {
                 stunning digital presence that drives measurable results.
               </p>
             </div>
-            <div className="lg:w-1/2"></div>
+            <div className=" w-[80%] lg:w-1/2 relative">
+              <img
+                src="https://i.ibb.co/b5LD8dd1/sec1.png"
+                alt="image of a guy thinking about business idea for his website"
+                className="lg:p-8"
+              />
+            </div>
           </div>
         </div>
         <div className="h-fit flex items-center justify-center sticky  rounded-lg mb-[10vh] top-[14vh] ">
-          <div className=" relative h-[calc(100vh-200px)]  w-[90vw] p-[5vw] lg:w-[87vw] mx-auto flex flex-col lg:flex-row-reverse items-center justify-center bg-[#CC975E] rounded-lg">
+          <div className=" gap-[4vw] relative h-[calc(100vh-200px)]  w-[90vw] p-[5vw] lg:w-[87vw] mx-auto flex flex-col lg:flex-row-reverse items-center justify-center bg-[#CC975E] rounded-lg">
             <div className="lg:w-1/2 space-y-[2vh] lg:space-y-[3vh]">
               <h2 className=" text-3xl lg:text-6xl text-black">
                 Crafting a <span className="funky">Design</span> That Sells
@@ -88,11 +141,17 @@ export default function page() {
                 also compels visitors to take action.
               </p>
             </div>
-            <div className="lg:w-1/2"></div>
+            <div className="lg:w-1/2">
+              <img
+                src="https://i.ibb.co/HDZkQ0Vq/Frame-2.png"
+                alt="different kinds of designs offered by Unigrow"
+                className="rounded-xl"
+              />
+            </div>
           </div>
         </div>
         <div className="h-fit flex items-center justify-center sticky  rounded-lg mb-[10vh] top-[16vh] ">
-          <div className=" relative h-[calc(100vh-200px)]  w-[90vw] p-[5vw] lg:w-[87vw] mx-auto flex flex-col lg:flex-row items-center justify-center bg-[#6B8DB4] rounded-lg">
+          <div className=" relative h-[calc(100vh-200px)] gap-[4vw] w-[90vw] p-[5vw] lg:w-[87vw] mx-auto flex flex-col lg:flex-row items-center justify-center bg-[#6B8DB4] rounded-lg">
             <div className="lg:w-1/2 space-y-[2vh] lg:space-y-[3vh]">
               <h2 className=" text-3xl lg:text-6xl text-black">
                 Engineered for <span className="funky">Revenue </span>Growth
@@ -105,11 +164,17 @@ export default function page() {
                 every click into a potential sale.
               </p>
             </div>
-            <div className="lg:w-1/2"></div>
+            <div className="lg:w-1/2">
+              <img
+                src="https://i.ibb.co/c7Bq7Xj/section3.png"
+                alt="business owner happy about earnign revenue through website"
+                className="rounded-xl transform-[scaleX(-1)] scale-x-[-1]"
+              />
+            </div>
           </div>
         </div>
-        <div className="h-fit flex items-center justify-center sticky  rounded-lg mb-[10vh] top-[18vh] ">
-          <div className=" relative h-[calc(100vh-200px)]  w-[90vw] p-[5vw] lg:w-[87vw] mx-auto flex flex-col lg:flex-row-reverse items-center justify-center bg-[#CECECE] rounded-lg">
+        <div className="h-fit  flex items-center justify-center sticky  rounded-lg mb-[10vh] top-[18vh] ">
+          <div className=" relative h-[calc(100vh-200px)] lg:gap-[4vw] w-[90vw] p-[5vw] lg:w-[87vw] mx-auto flex flex-col lg:flex-row-reverse items-center justify-center bg-[#CECECE] rounded-lg">
             <div className="lg:w-1/2 space-y-[2vh] lg:space-y-[3vh]">
               <h2 className=" text-3xl lg:text-6xl text-black">
                 Advanced <span className="funky">Analytics </span> & Ad{" "}
@@ -128,7 +193,12 @@ export default function page() {
                 data-driven decision-making.
               </p>
             </div>
-            <div className="lg:w-1/2"></div>
+            <div className=" w-[80%] lg:w-1/2">
+              <img
+                src="https://i.ibb.co/GQvcggJr/section4.png"
+                alt="business owner tracking everything"
+              />
+            </div>
           </div>
         </div>
         <div className=" flex items-center justify-center"></div>
@@ -144,7 +214,9 @@ export default function page() {
         </div>
       </section>
 
-      <section id="how-it-works" className=""></section>
+      <section id="how-it-works" className="">
+        <ProcessSteps process={content.process} ad={true} />
+      </section>
     </main>
   );
 }

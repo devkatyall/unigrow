@@ -107,6 +107,14 @@ export function StepperForm({ onClose }) {
         // Simulate API call
         await landingPage(updatedData);
         console.log("Form submitted:", updatedData);
+        if (window.zaraz && typeof window.zaraz.track === "function") {
+          window.zaraz.track("lead_submission", {
+            formName: "adEnquiry", // Customize this identifier as needed
+            data: updatedData, // Optionally include validated data or specific fields
+            url: window.location.href,
+            timestamp: Date.now(),
+          });
+        }
         setIsSuccess(true);
       } catch (error) {
         console.error("Error submitting form:", error);
@@ -127,7 +135,7 @@ export function StepperForm({ onClose }) {
   };
 
   return (
-    <div className="bg-muted-background rounded-lg shadow-lg w-full max-w-md relative">
+    <div className="bg-black/70 rounded-lg shadow-lg w-full max-w-md relative">
       {onClose && (
         <button
           onClick={handleClose}
