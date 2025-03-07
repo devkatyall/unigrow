@@ -49,7 +49,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <head></head>
-      <body className="dark mt-[18vh] ">
+      <body className="dark mt-[15vh] ">
         <Header />
         <SmothScroll>{children}</SmothScroll>
         <Footer />

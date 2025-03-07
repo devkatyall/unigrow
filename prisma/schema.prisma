@@ -25,3 +25,19 @@ model FormEnquiry {
   createdAt   DateTime @default(now())
   preference  String
 }
+
+model AdEnquiry {
+  id               String   @id @default(uuid())
+  firstName        String   @default("")
+  lastName         String   @default("")
+  email            String   @default("")
+  phone            String   @default("")
+  companyName      String   @default("")
+  companySize      String   @default("")
+  industry         String   @default("")
+  budget           String   @default("")
+  message          String   @default("")
+  marketingConsent Boolean  @default(false)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}

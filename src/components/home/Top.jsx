@@ -1,22 +1,11 @@
 "use client";
 
 import React, { useEffect } from "react";
-import {
-  animate,
-  easeInOut,
-  motion,
-  useMotionTemplate,
-  useMotionValue,
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
-} from "framer-motion";
-import { Button } from "../ui/button";
-import { Particles } from "../ui/particles";
-import Squares from "../ui/Squares";
+import { motion, useScroll, useTransform } from "framer-motion";
 import ShinyButton from "../ui/ShinyButton";
 import Link from "next/link";
 import AnimatedLink from "../AnimatedLink";
+import KokonutBackground from "./NextPage";
 
 export default function Top() {
   // const COLOR = ["#6366F1", "#0EA5E9", "#10B981"];
@@ -46,14 +35,8 @@ export default function Top() {
           zIndex: 0,
         }}
       >
+        <KokonutBackground />
         <div className="relative h-fit flex flex-col gap-2 items-center justify-center lg:py-24 ">
-          <Squares
-            speed={0.2}
-            squareSize={40}
-            direction="diagonal" // up, down, left, right, diagonal
-            borderColor="#fff"
-            hoverFillColor="#222"
-          />
           <motion.span
             className=" rounded-full py-1 px-4 border-[1px] w-fit my-6 dark:border-gray-200 border-black font-medium flex gap-1 items-center"
             initial={{ opacity: 0 }}

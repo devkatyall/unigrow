@@ -10,6 +10,7 @@ import { Main, MainHeading, MainText } from "@/components/services/Main";
 import { Sub, SubHeading, SubText } from "@/components/services/Sub";
 import Image from "next/image";
 import business from "@/../public/services/smallbusiness.png";
+import KokonutBackground from "@/components/home/NextPage";
 
 export const metadata = {
   title: "High-Performance Custom Websites – Unigrow",
@@ -56,7 +57,7 @@ export default function Home() {
   return (
     <>
       <StructuredData />
-      <main>
+      <main className="">
         <Top />
         <Services />
         <Pricing />

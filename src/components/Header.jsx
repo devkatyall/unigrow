@@ -10,7 +10,6 @@ import { PulsatingButton } from "./ui/pulsating-button";
 import { ScrollProgress } from "./ui/scroll-progress";
 import { cn } from "@/lib/utils";
 import { services } from "@/data";
-import { AnimatedShinyText } from "./magicui/animated-shiny-text";
 import AnimatedLink from "./AnimatedLink";
 import {
   Sheet,
@@ -56,9 +55,9 @@ export default function Header() {
       style={{
         zIndex: 50,
       }}
-      className={` w-full top-0 transition-all ease-in-out duration-100 bg-black backdrop-blur-sm ${
+      className={` w-full top-0 transition-all ease-in-out duration-100  ${
         visible
-          ? "fixed shadow-lg header bg-opacity-80"
+          ? "fixed shadow-lg header bg-opacity-80 bg-black backdrop-blur-sm"
           : "absolute bg-opacity-55"
       } `}
     >
