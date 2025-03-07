@@ -60,19 +60,20 @@ export default function page() {
       </section>
 
       <section className=" min-h-[calc(100vh-200px)] justify-between z-10 w-[90vw] lg:w-[87vw] mx-auto lg:hidden flex flex-col items-center gap-[2vw]">
-        <div className="space-y-[2vh] lg:w-1/2">
-          <h1 className=" text-5xl lg:text-7xl tracking-wide font-semibold text-center">
+        <div className="space-y-[2vh] lg:w-1/2 ">
+          <h1 className=" text-5xl lg:text-7xl tracking-wide font-semibold ">
             Get a business website that makes{" "}
             <span className="funky">money.</span>
           </h1>
-          <StepperForm />
-          <p className="text-muted-foreground print:text-sm text-center">
+
+          <p className="text-muted-foreground print:text-sm  text-sm">
             Your website isn’t just an online brochure—it’s your most powerful
             sales tool. At Unigrow, we build modern, high-performance websites
             engineered to turn every click into a customer. Our approach is
             laser-focused on increasing your revenue and maximizing your return
             on investment.
           </p>
+          <StepperForm />
           <div className="py-2 flex items-center justify-center gap-[2vw]">
             {/* <StepperButton className="text-lg py-5 bg-green-600">
               Get Started{" "}
@@ -103,13 +104,13 @@ export default function page() {
 
       <section className="relative min-h-[200vh]">
         <div className="h-fit flex items-center justify-center sticky  rounded-lg mb-[10vh] top-[12vh] ">
-          <div className="relative h-[calc(100vh-200px)] lg:gap-[4vw]  w-[90vw] p-[5vw] lg:w-[87vw] mx-auto flex flex-col lg:flex-row items-center justify-center bg-[#8A5FB4] rounded-lg">
+          <div className="relative lg:h-[calc(100vh-200px)] lg:gap-[4vw]  w-[90vw] p-[5vw] lg:w-[87vw] mx-auto flex flex-col lg:flex-row items-center justify-center bg-[#8A5FB4] rounded-lg">
             <div className="lg:w-1/2 space-y-[2vh] lg:space-y-[3vh]">
               <h2 className=" text-3xl lg:text-6xl text-black">
                 From Blank Mind to{" "}
                 <span className="funky">Brilliant Ideas..</span>
               </h2>
-              <p className="text-black print:text-sm ">
+              <p className="text-black print:text-sm text-sm lg:text-base">
                 Start with a spark—even if you’re not sure where to begin. At
                 Unigrow, we take your initial, undeveloped ideas and transform
                 them into innovative, conversion-driven concepts that propel
@@ -128,12 +129,12 @@ export default function page() {
           </div>
         </div>
         <div className="h-fit flex items-center justify-center sticky  rounded-lg mb-[10vh] top-[14vh] ">
-          <div className=" gap-[4vw] relative h-[calc(100vh-200px)]  w-[90vw] p-[5vw] lg:w-[87vw] mx-auto flex flex-col lg:flex-row-reverse items-center justify-center bg-[#CC975E] rounded-lg">
+          <div className=" gap-[4vw] relative lg:h-[calc(100vh-200px)]  w-[90vw] p-[5vw] lg:w-[87vw] mx-auto flex flex-col lg:flex-row-reverse items-center justify-center bg-[#CC975E] rounded-lg">
             <div className="lg:w-1/2 space-y-[2vh] lg:space-y-[3vh]">
               <h2 className=" text-3xl lg:text-6xl text-black">
                 Crafting a <span className="funky">Design</span> That Sells
               </h2>
-              <p className="text-black print:text-sm ">
+              <p className="text-black print:text-sm text-sm lg:text-base">
                 Our design process is more than just aesthetics—it’s about
                 building a site that converts. With custom visuals, intuitive
                 navigation, and responsive layouts, we create a seamless digital
@@ -151,12 +152,12 @@ export default function page() {
           </div>
         </div>
         <div className="h-fit flex items-center justify-center sticky  rounded-lg mb-[10vh] top-[16vh] ">
-          <div className=" relative h-[calc(100vh-200px)] gap-[4vw] w-[90vw] p-[5vw] lg:w-[87vw] mx-auto flex flex-col lg:flex-row items-center justify-center bg-[#6B8DB4] rounded-lg">
+          <div className=" relative lg:h-[calc(100vh-200px)] gap-[4vw] w-[90vw] p-[5vw] lg:w-[87vw] mx-auto flex flex-col lg:flex-row items-center justify-center bg-[#6B8DB4] rounded-lg">
             <div className="lg:w-1/2 space-y-[2vh] lg:space-y-[3vh]">
               <h2 className=" text-3xl lg:text-6xl text-black">
                 Engineered for <span className="funky">Revenue </span>Growth
               </h2>
-              <p className="text-black print:text-sm ">
+              <p className="text-black print:text-sm text-sm lg:text-base">
                 Every element of your website is strategically optimized for
                 maximum ROI. From integrated e-commerce features to targeted SEO
                 and performance analytics, we ensure your site attracts the
@@ -174,14 +175,14 @@ export default function page() {
           </div>
         </div>
         <div className="h-fit  flex items-center justify-center sticky  rounded-lg mb-[10vh] top-[18vh] ">
-          <div className=" relative h-[calc(100vh-200px)] lg:gap-[4vw] w-[90vw] p-[5vw] lg:w-[87vw] mx-auto flex flex-col lg:flex-row-reverse items-center justify-center bg-[#CECECE] rounded-lg">
+          <div className=" relative lg:h-[calc(100vh-200px)] lg:gap-[4vw] w-[90vw] p-[5vw] lg:w-[87vw] mx-auto flex flex-col lg:flex-row-reverse items-center justify-center bg-[#CECECE] rounded-lg">
             <div className="lg:w-1/2 space-y-[2vh] lg:space-y-[3vh]">
               <h2 className=" text-3xl lg:text-6xl text-black">
                 Advanced <span className="funky">Analytics </span> & Ad{" "}
                 <span className="funky">Tracking </span>
                 Support
               </h2>
-              <p className="text-black print:text-sm ">
+              <p className="text-black print:text-sm text-sm lg:text-base">
                 Once your website is live, the real work begins—optimizing your
                 ad campaigns based on real-time data. We ensure your site is
                 fully equipped with advanced tracking tools like Google

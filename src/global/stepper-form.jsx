@@ -135,7 +135,7 @@ export function StepperForm({ onClose }) {
   };
 
   return (
-    <div className="bg-black/70 rounded-lg shadow-lg w-full max-w-md relative">
+    <div className="bg-black/70 ring-1 ring-muted-foreground rounded-lg shadow-lg w-full max-w-md relative">
       {onClose && (
         <button
           onClick={handleClose}
@@ -149,13 +149,16 @@ export function StepperForm({ onClose }) {
         {!isSuccess ? (
           <>
             <div className="mb-6">
-              <h2 className="text-2xl font-bold mb-2">
+              <h2 className="text-2xl font-bold ">
                 {step === 1
                   ? "Personal Information"
                   : step === 2
                   ? "Company Details"
                   : "Your Interests"}
               </h2>
+              <p className="mb-4 text-muted-foreground text-sm">
+                Fill this form to get started
+              </p>
               <div className="flex items-center mb-4">
                 <div
                   className={`h-2 rounded-full ${

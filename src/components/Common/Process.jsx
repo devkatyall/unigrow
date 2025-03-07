@@ -61,7 +61,7 @@ const Circle = ({
           {icon}
         </motion.div>
         <div className=" flex flex-col items-start lg:items-center gap-2">
-          <h3 className="text-lg text-start lg:text-center leading-tight font-bold">
+          <h3 className=" text-base lg:text-lg text-start lg:text-center leading-tight font-bold">
             {title}
           </h3>
           <p className="text-xs text-start lg:text-center">{description}</p>
@@ -92,10 +92,10 @@ export function ProcessSteps({ process, ad }) {
     >
       <Sub className="sticky h-auto lg:h-screen top-0 flex flex-col lg:items-center justify-center">
         <SubFlag>{process.title}</SubFlag>
-        <SubHeading className={" lg:text-center"}>
+        <SubHeading className={" lg:text-center text-3xl lg:text-5xl"}>
           {process.subtitle}
         </SubHeading>
-        <div className=" flex items-center justify-center flex-wrap gap-[2vh] px-[4vw] mt-[2vh] lg:mt-[6vh]">
+        <div className=" flex items-center justify-center flex-wrap gap-[2vh] px-[4vw] mt-[5vh] lg:mt-[6vh]">
           {process.cards.map((step, index) => (
             <Circle
               key={index}
