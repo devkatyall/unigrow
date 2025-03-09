@@ -35,8 +35,6 @@ const Circle = ({
   const Bgstart = index * Bginterval;
   const Bgend = Bgstart + interval;
 
-  console.log(start, end);
-
   const color = useTransform(scrollY, [start, end], ["#3C3B3A", "#36BBF1"]);
   const bgcolor = useTransform(
     scrollY,

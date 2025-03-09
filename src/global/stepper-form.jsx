@@ -106,7 +106,7 @@ export function StepperForm({ onClose, analyticalName = "Google_Ad_Lead" }) {
       try {
         // Simulate API call
         await landingPage(updatedData);
-        console.log("Form submitted:", updatedData);
+        console.log("Form submitted:");
         if (window.dataLayer && typeof window.dataLayer.push === "function") {
           window.dataLayer.push({
             event: analyticalName, // your custom event name
@@ -116,12 +116,8 @@ export function StepperForm({ onClose, analyticalName = "Google_Ad_Lead" }) {
             hashed_email: updatedData.email, // Consider hashing this if it’s PII
             form_type: "lead_capture",
           });
-          console.log(
-            "DataLayer event pushed for GA with event:",
-            analyticalName
-          );
         } else {
-          console.error("dataLayer.push is not defined. GA event not sent.");
+          console.error("dataLayer.push is not defined. Event not sent.");
         }
         setIsSuccess(true);
       } catch (error) {
