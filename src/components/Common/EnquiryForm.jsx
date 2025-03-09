@@ -77,22 +77,21 @@ export default function EnquiryForm() {
       const validatedData = enquirySchema.parse(formData);
       await submitForm(validatedData);
 
-      if (typeof gtag === "function") {
-        // Send an event to GA
-        gtag("event", "booking_page_lead", {
+      if (window.dataLayer && typeof window.dataLayer.push === "function") {
+        window.dataLayer.push({
+          event: "Booking_Page_Lead", // your custom event name
           event_category: "Forms",
           event_label: "Contact Form",
           value: 1,
-          hashed_email: validatedData.email,
+          hashed_email: validatedData.email, // Consider hashing this if it’s PII
           form_type: "lead_capture",
-          event_callback: function () {
-            console.log("GA event sent successfully.");
-          },
-
-          event_timeout: 2000,
         });
+        console.log(
+          "DataLayer event pushed for GA with event:",
+          analyticalName
+        );
       } else {
-        console.error("gtag is not defined. GA event not sent.");
+        console.error("dataLayer.push is not defined. GA event not sent.");
       }
 
       // Reset the form and errors if needed
