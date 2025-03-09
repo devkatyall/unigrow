@@ -86,7 +86,7 @@ export default function Header() {
         </AnimatedLink>
         <div
           style={{
-            display: pathname === "/book-free-consultation" && "none",
+            display: pathname === "/lp" && "none",
           }}
           onMouseLeave={() => {
             setProps(present);
@@ -151,7 +151,11 @@ export default function Header() {
           <Line style={props} />
         </div>
         <div
-          style={{ display: pathname === "/book-free-consultation" && "none" }}
+          style={{
+            display:
+              (pathname === "/book-free-consultation" || pathname === "/lp") &&
+              "none",
+          }}
           className="flex items-center gap-6 place-self-end self-center"
         >
           <div className="flex items-center gap-4">
