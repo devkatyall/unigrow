@@ -65,7 +65,7 @@ const formSchema = z.object({
   ...step3Schema.shape,
 });
 
-export function StepperForm({ onClose }) {
+export function StepperForm({ onClose, analyticalName = "Google_Ad_Lead" }) {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -107,13 +107,22 @@ export function StepperForm({ onClose }) {
         // Simulate API call
         await landingPage(updatedData);
         console.log("Form submitted:", updatedData);
-        if (window.zaraz && typeof window.zaraz.track === "function") {
-          window.zaraz.track("lead_submission", {
-            formName: "adEnquiry", // Customize this identifier as needed
-            data: updatedData, // Optionally include validated data or specific fields
-            url: window.location.href,
-            timestamp: Date.now(),
+        if (typeof gtag === "function") {
+          // Send an event to GA
+          gtag("event", analyticalName, {
+            event_category: "Forms",
+            event_label: "Contact Form",
+            value: 1,
+            hashed_email: updatedData.email,
+            form_type: "lead_capture",
+            event_callback: function () {
+              console.log("GA event sent successfully.");
+            },
+
+            event_timeout: 2000,
           });
+        } else {
+          console.error("gtag is not defined. GA event not sent.");
         }
         setIsSuccess(true);
       } catch (error) {

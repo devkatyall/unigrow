@@ -77,13 +77,22 @@ export default function EnquiryForm() {
       const validatedData = enquirySchema.parse(formData);
       await submitForm(validatedData);
 
-      if (window.zaraz && typeof window.zaraz.track === "function") {
-        window.zaraz.track("lead_submission", {
-          formName: "enquiryForm", // Customize this identifier as needed
-          data: validatedData, // Optionally include validated data or specific fields
-          url: window.location.href,
-          timestamp: Date.now(),
+      if (typeof gtag === "function") {
+        // Send an event to GA
+        gtag("event", "booking_page_lead", {
+          event_category: "Forms",
+          event_label: "Contact Form",
+          value: 1,
+          hashed_email: validatedData.email,
+          form_type: "lead_capture",
+          event_callback: function () {
+            console.log("GA event sent successfully.");
+          },
+
+          event_timeout: 2000,
         });
+      } else {
+        console.error("gtag is not defined. GA event not sent.");
       }
 
       // Reset the form and errors if needed
