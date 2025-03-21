@@ -18,19 +18,14 @@ export function Main({ children, className }) {
 
 export function MainHeading({ children, className, as = "h2" }) {
   return (
-    <TextAnimate
-      startOnView
-      by="word"
-      once={true}
-      animation="fadeIn"
+    <h2
       className={cn(
         " lg:text-5xl xl:text-7xl text-4xl tracking-tight lg:tracking-normal",
         className
       )}
-      as={as}
     >
       {children}
-    </TextAnimate>
+    </h2>
   );
 }
 

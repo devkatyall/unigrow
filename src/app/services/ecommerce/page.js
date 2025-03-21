@@ -133,7 +133,10 @@ export default function page() {
             <SubHeading>{content.why_choose_us.subtitle}</SubHeading>
             <div className=" grid lg:grid-cols-3 gap-6 mt-[2vh] lg:mt-[5vh]">
               {content.why_choose_us.cards.map((item, index) => (
-                <div className="flex lg:flex-col items-center lg:items-start lg:gap-0 gap-[5vw] p-3">
+                <div
+                  key={index}
+                  className="flex lg:flex-col items-center lg:items-start lg:gap-0 gap-[5vw] p-3"
+                >
                   <div className=" p-3 bg-cyan-800 h-full flex items-center lg:items-start lg:w-fit lg:rounded-full">
                     {item.icon}
                   </div>
