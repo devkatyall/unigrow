@@ -69,7 +69,7 @@ export default function RootLayout({ children }) {
           ></iframe>
         </noscript>
         <Header />
-        <SmothScroll>{children}</SmothScroll>
+        {children}
         <Footer />
       </body>
     </html>
