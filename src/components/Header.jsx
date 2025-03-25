@@ -55,10 +55,10 @@ export default function Header() {
       style={{
         zIndex: 50,
       }}
-      className={` w-full top-0 transition-all ease-in-out duration-100  ${
+      className={` w-full top-0 transition-all ease-in-out duration-100 fixed ${
         visible
-          ? "fixed shadow-lg header bg-opacity-80 bg-black backdrop-blur-sm"
-          : "absolute bg-opacity-55"
+          ? " shadow-lg header bg-opacity-80 bg-black backdrop-blur-sm"
+          : " bg-opacity-55"
       } `}
     >
       {/* <div className="w-full p-2 bg-gray-900 flex justify-center items-center">
@@ -171,7 +171,7 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <ScrollProgress className={` ${!visible && "hidden"}`} />
+      <ScrollProgress />
     </motion.nav>
   );
 }

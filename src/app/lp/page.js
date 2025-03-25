@@ -18,11 +18,11 @@ export default function page() {
       <AbstractBack />
       <section className="hidden min-h-[calc(100vh-200px)] justify-between z-10 w-[90vw] lg:w-[87vw] mx-auto lg:flex flex-row items-center gap-[2vw]">
         <div className="space-y-[2vh] lg:w-1/2">
-          <h1 className=" text-5xl lg:text-7xl tracking-wide font-semibold">
+          <h1 className=" text-5xl lg:text-7xl xl:text-[85px] tracking-wide font-semibold">
             Get a business website that makes{" "}
             <span className="funky">money.</span>
           </h1>
-          <p className="text-muted-foreground print:text-sm">
+          <p className="text-muted-foreground xl:text-lg print:text-sm">
             Your website isn’t just an online brochure—it’s your most powerful
             sales tool. At Unigrow, we build modern, high-performance websites
             engineered to turn every click into a customer. Our approach is
@@ -59,14 +59,14 @@ export default function page() {
         </div>
       </section>
 
-      <section className=" min-h-[calc(100vh-200px)] justify-between z-10 w-[90vw] lg:w-[87vw] mx-auto lg:hidden flex flex-col items-center gap-[2vw]">
-        <div className="space-y-[2vh] lg:w-1/2 ">
-          <h1 className=" text-5xl lg:text-7xl tracking-wide font-semibold ">
+      <section className=" min-h-[calc(100vh-200px)] justify-between z-10 w-[90vw] lg:w-[87vw] mx-auto lg:hidden flex flex-col items-center ">
+        <div className="space-y-[3vh] lg:w-1/2 ">
+          <h1 className=" text-5xl lg:text-7xl xl:text-[85px] tracking-wide font-semibold text-center">
             Get a business website that makes{" "}
             <span className="funky">money.</span>
           </h1>
 
-          <p className="text-muted-foreground print:text-sm  text-sm">
+          <p className="text-muted-foreground print:text-sm hidden  text-sm">
             Your website isn’t just an online brochure—it’s your most powerful
             sales tool. At Unigrow, we build modern, high-performance websites
             engineered to turn every click into a customer. Our approach is

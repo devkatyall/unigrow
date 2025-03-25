@@ -139,7 +139,7 @@ export function StepperForm({ onClose, analyticalName = "Google_Ad_Lead" }) {
   };
 
   return (
-    <div className="bg-black/70 ring-1 ring-muted-foreground rounded-lg shadow-lg w-full max-w-md relative">
+    <div className="bg-black/70 ring-1 ring-muted-foreground rounded-lg shadow-lg w-full max-w-xl relative shadow-sm shadow-white">
       {onClose && (
         <button
           onClick={handleClose}

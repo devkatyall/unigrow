@@ -59,7 +59,7 @@ export default function RootLayout({ children }) {
           `}
         </Script>
       </head>
-      <body className="dark mt-[15vh] ">
+      <body className="dark ">
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-5TG6KZHK"
@@ -68,9 +68,12 @@ export default function RootLayout({ children }) {
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
-        <Header />
-        {children}
-        <Footer />
+
+        <div className="mt-[15vh] ">
+          <Header />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
