@@ -204,7 +204,7 @@ export default function page() {
         </div>
         <div className=" flex items-center justify-center"></div>
         <div className=" h-screen lg:h-[calc(100vh+100px)] sticky top-[0vh] bg-blue-800 rounded-t-3xl flex flex-col items-center justify-center">
-          <h4 className=" text-3xl lg:text-5xl w-[80vw] mx-auto text-center">
+          <h4 className=" text-3xl lg:text-5xl w-[80vw] mx-auto text-center w-fit">
             And that's not all—at Unigrow, every service you need is bundled in
             <span className="funky text-sky-500"> one place</span> {""}, so you
             can focus on growing your business while we handle the rest!

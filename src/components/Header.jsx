@@ -24,7 +24,7 @@ export default function Header() {
   const [prevScroll, setPrevScroll] = useState();
 
   const updateNav = () => {
-    if (window.scrollY > 200 && prevScroll > window.scrollY) {
+    if (window.scrollY > 300) {
       setVisible(true);
     } else {
       setVisible(false);
@@ -55,10 +55,10 @@ export default function Header() {
       style={{
         zIndex: 50,
       }}
-      className={` w-full top-0 transition-all ease-in-out duration-100 fixed ${
+      className={` w-full top-0 transition-all ease-in-out bg-black duration-100  ${
         visible
-          ? " shadow-lg header bg-opacity-80 bg-black backdrop-blur-sm"
-          : " bg-opacity-55"
+          ? " sticky shadow-lg header bg-opacity-80 bg-black backdrop-blur-sm"
+          : " bg-opacity-55 bg-transparent"
       } `}
     >
       {/* <div className="w-full p-2 bg-gray-900 flex justify-center items-center">

@@ -2,22 +2,26 @@
 
 import React from "react";
 import { corePointers } from "@/data";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import SpotlightCard from "../SpotlightCard";
+import { Indie_Flower } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const DeliusFont = Indie_Flower({ weight: "400", subsets: ["latin"] });
 
 export default function Services() {
-  const bg = ["[#C17777]", "[#528F7C]", "[#CD9B6A]", "[#C87FA7]"];
+  // const bg = ["[#C17777]", "[#528F7C]", "[#CD9B6A]", "[#C87FA7]"];
 
   return (
-    <section className="md:my-6 md:px-16 lg:py-16 px-8 py-3 my-6">
+    <section className="md:my-6 md:px-16 lg:py-16 px-8 py-3 my-6 container">
       <div className="my-2 md:my-4 lg:my-6 xl:my-8">
-        <h2 className=" text-3xl md:text-6xl text-center font-medium">
+        <h2
+          className={
+            " text-3xl md:text-5xl tracking-tight text-center font-medium"
+          }
+        >
           Everything You Need. One Price. Zero Hassle.
         </h2>
-        <p className="text-sm md:text-base text-center mb-4 mt-2 text-stone-400">
-          everything you would need for your online business is here at one
-          place.
-        </p>
       </div>
       <div className="flex flex-col gap-5 py-4 md:p-0 md:grid md:grid-cols-3 md:auto-rows-fr md:gap-4">
         {corePointers.map((e, i) => (
@@ -34,10 +38,15 @@ export default function Services() {
             >
               {e.svg}
             </span> */}
-            <h3 className="md:text-4xl text-xl font-light md:leading-[32px]">
+            <h3 className="md:text-3xl text-xl font-light md:leading-[32px]">
               {e.title}
             </h3>
-            <div className=" font-extralight text-stone-400 text-sm md:text-base text-center md:text-left md:leading-[17px] tracking-wide">
+            <div
+              className={cn(
+                " font-extralight text-stone-400 text-sm md:text-base text-center md:text-left md:leading-[17px] tracking-wide",
+                DeliusFont.className
+              )}
+            >
               {e.description}
             </div>
           </SpotlightCard>

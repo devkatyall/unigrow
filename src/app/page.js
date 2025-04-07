@@ -1,16 +1,18 @@
-import CalendlyEmbed from "@/components/CalendlyEmbed";
+// import CalendlyEmbed from "@/components/CalendlyEmbed";
 import { MarqueeDemo } from "@/components/HeroSection";
-import ServicesSec from "@/components/ServicesSec";
-import Pricing from "@/components/home/Pricing";
+// import ServicesSec from "@/components/ServicesSec";
+// import Pricing from "@/components/home/Pricing";
 import Services from "@/components/home/Services";
-import Top from "@/components/home/Top";
-import Packs from "@/components/home/packs";
+// import Top from "@/components/home/Top";
+// import Packs from "@/components/home/packs";
 import Projects from "@/components/home/projects";
 import { Main, MainHeading, MainText } from "@/components/services/Main";
 import { Sub, SubHeading, SubText } from "@/components/services/Sub";
 import Image from "next/image";
 import business from "@/../public/services/smallbusiness.png";
-import KokonutBackground from "@/components/home/NextPage";
+// import KokonutBackground from "@/components/home/NextPage";
+import AboutUs from "@/components/newHome/about-us";
+import HeroSection from "@/components/newHome/hero-section";
 
 export const metadata = {
   title: "High-Performance Custom Websites – Unigrow",
@@ -58,15 +60,18 @@ export default function Home() {
     <>
       <StructuredData />
       <main className="">
-        <Top />
+        <HeroSection />
+        {/* <AboutUs /> */}
         <Services />
-        <Pricing />
         <MarqueeDemo />
-        <Projects />
-        <section className=" h-auto py-[4vh] lg:p-0 lg:h-[80vh] flex items-center justify-center border-2 bg-blue-400/30 mt-[8vh]">
+        {/* <Top />
+
+  <Pricing /> */}
+
+        <section className=" h-auto py-[4vh] lg:p-0 lg:h-[80vh] flex items-center justify-center border-2 bg-blue-400/30 mt-[8vh] ">
           <Main
             className={
-              " flex lg:flex-row justify-between items-center gap-[4vw]"
+              " flex lg:flex-row justify-between items-center gap-[4vw] container"
             }
           >
             <div className=" lg:w-1/2 text-start space-y-[2vh]">

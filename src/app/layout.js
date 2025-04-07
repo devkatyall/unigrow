@@ -3,6 +3,13 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Script from "next/script";
 import SmothScroll from "@/lib/SmothScroll";
+import { Inter } from "next/font/google";
+
+// Configure the font with options such as subsets and weight
+const inter = Inter({
+  subsets: ["latin"], // Define the subsets you need
+  weight: ["400", "700"], // Optionally, define the weights you plan to use
+});
 
 export const metadata = {
   title: "High-Performance Custom Websites – Unigrow",
@@ -47,7 +54,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning={true}>
+    <html lang="en" suppressHydrationWarning={true} className={inter.className}>
       <head>
         <Script id="gtm-script" strategy="afterInteractive">
           {`
@@ -68,12 +75,9 @@ export default function RootLayout({ children }) {
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
-
-        <div className="mt-[15vh] ">
-          <Header />
-          {children}
-          <Footer />
-        </div>
+        <Header />
+        <div className="mt-[5vh]">{children}</div>
+        <Footer />
       </body>
     </html>
   );

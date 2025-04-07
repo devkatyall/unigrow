@@ -202,8 +202,8 @@ export const corePointers = [
     ),
   },
   {
-    title: "Modern Development",
-    description: "Built with the latest tech like Next.js & React.",
+    title: "Digital Marketing",
+    description: "Market your services around all the media.",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"

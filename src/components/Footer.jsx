@@ -61,10 +61,15 @@ export default function Footer() {
               </p>
             </AnimatedLink>
             <AnimatedLink href={"/sitemap.xml"}>
-              <p className=" text-xs hover:font-bold lg:text-sm pr-4 text-white font-medium">
+              <p className=" text-xs hover:font-bold lg:text-sm pr-4 border-r-2 border-white text-white font-medium">
                 Site Map
               </p>
             </AnimatedLink>
+            <Link href="tel:+14376635954">
+              <p className=" text-xs hover:font-bold lg:text-sm pr-4 text-white font-medium">
+                Call us
+              </p>
+            </Link>
           </div>
 
           <p className=" text-white selection:bg-cyan-500 selection:text-black text-xs lg:text-sm">

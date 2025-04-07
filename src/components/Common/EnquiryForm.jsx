@@ -2,12 +2,15 @@
 
 import { submitForm } from "@/app/api/formEnquiry";
 import React, { useState } from "react";
-import { z } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { SubHeading, SubText } from "../services/Sub";
 import { ShineBorder } from "../magicui/shine-border";
 import { PulsatingButton } from "../ui/pulsating-button";
-import Hamester from "../Hamster";
-import Loader from "../Hamster";
 import { motion } from "framer-motion";
 
 // Define the Zod schema for our form data
@@ -123,7 +126,7 @@ export default function EnquiryForm() {
                 <label htmlFor="name" className="block text-base text-white/70">
                   Name
                 </label>
-                <input
+                <Input
                   type="text"
                   id="name"
                   name="name"
@@ -144,7 +147,7 @@ export default function EnquiryForm() {
                 >
                   Phone
                 </label>
-                <input
+                <Input
                   type="text"
                   id="number"
                   name="number"
@@ -166,7 +169,7 @@ export default function EnquiryForm() {
               <label htmlFor="email" className="block text-base text-white/70">
                 Email
               </label>
-              <input
+              <Input
                 type="email"
                 id="email"
                 name="email"
@@ -270,7 +273,7 @@ export default function EnquiryForm() {
               >
                 Please tell us something about your project or business
               </label>
-              <textarea
+              <Textarea
                 id="message"
                 name="message"
                 placeholder="Unigrow will get back to you within 24 hours."
@@ -298,15 +301,15 @@ export default function EnquiryForm() {
             </div>
 
             {!disable ? (
-              <PulsatingButton
+              <Button
                 type="submit"
                 className="w-full font-semibold text-blue-500 text-lg mt-auto"
               >
                 Submit
-              </PulsatingButton>
+              </Button>
             ) : (
               <div className=" flex items-center justify-center">
-                <Loader />
+                <p>Loading...</p>
               </div>
             )}
           </form>

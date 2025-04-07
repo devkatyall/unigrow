@@ -18,7 +18,7 @@ export default function Projects() {
   return (
     <section className="md:my-6 md:px-16 lg:py-16 px-8 py-3 my-6">
       <div className=" flex flex-col gap-2 mb-6 text-center">
-        <h2 className="text-[30px] md:text-6xl font-normal tracking-tight leading-[30px] lg:leading-none">
+        <h2 className="text-[30px] md:text-5xl font-normal tracking-tight leading-[30px] lg:leading-none">
           Our Work – Websites That Speak for Themselves
         </h2>
         <p>
