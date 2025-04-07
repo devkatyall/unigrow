@@ -24,7 +24,7 @@ export default function Header() {
   const [prevScroll, setPrevScroll] = useState();
 
   const updateNav = () => {
-    if (window.scrollY > 300) {
+    if (window.scrollY > 100) {
       setVisible(true);
     } else {
       setVisible(false);
@@ -55,10 +55,10 @@ export default function Header() {
       style={{
         zIndex: 50,
       }}
-      className={` w-full top-0 transition-all ease-in-out bg-black duration-100  ${
+      className={` w-full sticky top-0  transition-all ease-in-out bg-black duration-100 z-[50] ${
         visible
-          ? " sticky shadow-lg header bg-opacity-80 bg-black backdrop-blur-sm"
-          : " bg-opacity-55 bg-transparent"
+          ? "  shadow-lg header bg-opacity-80 bg-black backdrop-blur-sm"
+          : "block bg-opacity-55 bg-transparent"
       } `}
     >
       {/* <div className="w-full p-2 bg-gray-900 flex justify-center items-center">
@@ -72,7 +72,7 @@ export default function Header() {
           </span>
         </AnimatedShinyText>
       </div> */}
-      <div className="py-2 lg:py-[18px] px-5 lg:px-16 flex justify-between items-center md:grid md:grid-cols-3">
+      <div className="py-2 lg:py-[18px] px-5 lg:px-16 flex justify-between items-center md:grid md:grid-cols-3 z-[50]">
         <AnimatedLink href={"/"} className="md:flex md:items-center md:gap-2">
           <Image
             src={logo}

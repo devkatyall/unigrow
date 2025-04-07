@@ -179,13 +179,13 @@ export default function HeroSection({
   return (
     <div
       className={cn(
-        " min-h-screen h-full w-full overflow-hidden bg-neutral-950 pb-[8vh]",
+        " min-h-screen h-full w-full overflow-hidden bg-neutral-950",
         className
       )}
     >
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 h-full w-full"
+        className="absolute inset-0 h-full w-full z-0"
         style={{
           filter: performanceMode === "low" ? "blur(8px)" : "blur(15px)",
           willChange: "transform",
@@ -207,8 +207,8 @@ export default function HeroSection({
         }}
       />
 
-      <div className=" container relative z-10 flex flex-col w-full items-center justify-center">
-        <div className="py-1 px-4 ring-[1px] ring-muted z-[100] rounded-full mt-[1vh] bg-muted/50">
+      <div className=" container relative z-0 flex flex-col w-full items-center justify-center">
+        <div className="py-1 px-4 ring-[1px] ring-muted rounded-full mt-[1vh] bg-muted/50">
           <ShinyText
             text="#1 Digital Agency in Canada"
             disabled={false}
