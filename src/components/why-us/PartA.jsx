@@ -1,6 +1,4 @@
 import React from "react";
-import ParallaxImage from "../parallax";
-import img from "@/../public/why-us/heroImage.jpg";
 import {
   Carousel,
   CarouselContent,
