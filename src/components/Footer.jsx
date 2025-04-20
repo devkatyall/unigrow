@@ -67,7 +67,7 @@ export default function Footer() {
             </AnimatedLink>
             <Link href="tel:+14376635954">
               <p className=" text-xs hover:font-bold lg:text-sm pr-4 text-white font-medium">
-                Call us
+                +14376635954
               </p>
             </Link>
           </div>
