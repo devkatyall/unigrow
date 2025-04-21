@@ -2,7 +2,6 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 import Header from "@/components/Header";
 import Script from "next/script";
-import SmothScroll from "@/lib/SmothScroll";
 import { Inter } from "next/font/google";
 
 // Configure the font with options such as subsets and weight

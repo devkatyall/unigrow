@@ -19,7 +19,7 @@ export default function Footer() {
             className=" flex flex-col
         gap-2  py-[5vh]"
           >
-            <h2 className=" text-3xl md:text-5xl font-medium drop-shadow-lg">
+            <h2 className=" text-3xl md:text-4xl font-medium drop-shadow-lg">
               Ready to Build a Website Without the Headaches?
             </h2>
             <p className=" text-sm lg:text-lg text-slate-400">
