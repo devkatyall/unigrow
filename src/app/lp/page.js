@@ -33,7 +33,7 @@ export default function page() {
             {/* <StepperButton className="text-lg py-5 bg-green-600">
               Get Started{" "}
             </StepperButton> */}
-            <ScrollLink targetId={"how-it-works"}>
+            <Link href={"how-it-works"}>
               <span className="flex items-center gap-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +51,7 @@ export default function page() {
                 </svg>
                 See how it works
               </span>
-            </ScrollLink>
+            </Link>
           </div>
         </div>
         <div className=" lg:w-1/2 flex items-center justify-center">
