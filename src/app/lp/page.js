@@ -3,10 +3,10 @@ import { Button } from "@/components/ui/button";
 import StepperButton, { StepperForm } from "@/global/stepper-form";
 import React from "react";
 import dynamic from "next/dynamic";
-import ScrollLink from "@/global/ScrollLink";
 import Image from "next/image";
 import { ProcessSteps } from "@/components/Common/Process";
 import { content } from "@/webDev";
+import Link from "next/link";
 
 const AbstractBack = dynamic(() => import("@/components/Common/AbstractBack"), {
   ssr: false,
@@ -78,7 +78,7 @@ export default function page() {
             {/* <StepperButton className="text-lg py-5 bg-green-600">
               Get Started{" "}
             </StepperButton> */}
-            <ScrollLink targetId={"how-it-works"}>
+            <Link href={"#how-it-works"}>
               <span className="flex items-center gap-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +96,7 @@ export default function page() {
                 </svg>
                 See how it works
               </span>
-            </ScrollLink>
+            </Link>
           </div>
         </div>
         <div className=" lg:w-1/2 flex items-center justify-center"></div>
